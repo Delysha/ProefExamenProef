@@ -1,16 +1,36 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Customer : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private GameObject _customer;
+    private float _moveSpeed = 4f;
+    private int _index = 0;
+    [SerializeField] private List<Transform> targets;
+    
+
+    private void Awake()
     {
-        
+        _customer = gameObject;
+    }
+    
+    private void Update()
+    {
+        ToTarget();
+        if (!Input.GetKeyDown(KeyCode.Space)) return;
+        NextTarget();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void ToTarget()
     {
-        
+        _customer.transform.position = Vector2.MoveTowards(transform.position, targets[_index].position, _moveSpeed * Time.deltaTime);
+    }
+    
+    private void NextTarget()
+    {
+        _index += 1;
+            
+        if (_index > targets.Count -1)
+            _index = 0;
     }
 }
