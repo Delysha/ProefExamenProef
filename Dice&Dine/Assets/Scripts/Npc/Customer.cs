@@ -9,6 +9,8 @@ public class Customer : MonoBehaviour
     [SerializeField] private int money;
     [SerializeField] private int patience;
     [SerializeField] private List<Transform> targets;
+    public int money;
+    public int patience;
     
 
     private void Awake()
