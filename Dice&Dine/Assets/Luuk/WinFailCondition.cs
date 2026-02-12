@@ -4,7 +4,7 @@ public class WinFailCondition : MonoBehaviour
 {
     private MainEconomy _mainEconoyScript;
 
-    private void Start()
+    private void Awake()
     {
         _mainEconoyScript = FindAnyObjectByType<MainEconomy>();
     }

@@ -8,19 +8,17 @@ public class AmountGroupsLeave : MonoBehaviour
     [SerializeField] private int maxAmount;
     [SerializeField] private int minAmount;
 
-    private void Start()
+    private void Awake()
     {
         _mainEconnomyScript = FindAnyObjectByType<MainEconomy>();
+    }
 
+    private void Start()
+    {
         /*GroupOne();
         GroupTwo();
         GroupThree();
         GroupFour();*/
-    }
-
-    private void Update()
-    {
-        
     }
 
     //This groups holds 1 person

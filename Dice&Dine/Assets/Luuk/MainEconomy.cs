@@ -37,7 +37,7 @@ public class MainEconomy : MonoBehaviour
         }
     }
 
-    public void CustomerLeavesMoney()
+    private void CustomerLeavesMoney()
     {
         //Remove Input, this is just for testing
         if (Input.GetKeyDown(KeyCode.P))

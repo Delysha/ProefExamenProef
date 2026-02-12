@@ -15,7 +15,7 @@ public class EconomyUI : MonoBehaviour
     [SerializeField] private TMP_Text moneyText;
     [SerializeField] private string moneyTX;
 
-    private void Start()
+    private void Awake()
     {
         _mainEconomyScript = FindAnyObjectByType<MainEconomy>();
     }
