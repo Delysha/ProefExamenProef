@@ -678,26 +678,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1354271826}
-  - component: {fileID: 1354271825}
+  - component: {fileID: 1354271827}
   m_Layer: 0
-  m_Name: WinCondition
+  m_Name: WinFailCondition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1354271825
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1354271824}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e49732ac2a114345a80d3c7f5defd37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WinCondition
 --- !u!4 &1354271826
 Transform:
   m_ObjectHideFlags: 0
@@ -713,6 +701,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1354271827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354271824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 150cdedace938744bb7be3d60825e24b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WinFailCondition
 --- !u!1 &1547324567
 GameObject:
   m_ObjectHideFlags: 0
@@ -899,50 +899,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -25}
   m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1916720674
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1916720676}
-  - component: {fileID: 1916720675}
-  m_Layer: 0
-  m_Name: FailCondition
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1916720675
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1916720674}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdee46b7de975644f9bde18205d942f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FailCondition
---- !u!4 &1916720676
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1916720674}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -950,7 +906,6 @@ SceneRoots:
   - {fileID: 1160091800}
   - {fileID: 1204849133}
   - {fileID: 1547324569}
-  - {fileID: 1916720676}
   - {fileID: 1354271826}
   - {fileID: 558470702}
   - {fileID: 965997988}
