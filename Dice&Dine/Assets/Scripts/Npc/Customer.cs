@@ -1,40 +1,38 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Customer : MonoBehaviour
+public class Customer : MonoBehaviour, IWalkable, IWaitable
 {
-    private GameObject _customer;
-    private float _moveSpeed = 4f;
-    private int _index = 0;
-    [SerializeField] private int money;
-    [SerializeField] private int patience;
-    [SerializeField] private List<Transform> targets;
+    public StateMachine StateMachine { get; set; }
+    public EatingState EatingState { get; set; }
+    public WaitState WaitState { get; set; }
+    public WalkState WalkState { get; set; }
+    
     public int money;
     public int patience;
+    public List<Transform> targets;
     
-
+    public float MoveSpeed = 4f;
+    
     private void Awake()
     {
-        _customer = gameObject;
-    }
-    
-    private void Update()
-    {
-        ToTarget();
-        if (!Input.GetKeyDown(KeyCode.Space)) return;
-        NextTarget();
+        StateMachine = new StateMachine();
+
+        EatingState = new EatingState(this, StateMachine);
+        WaitState = new WaitState(this, StateMachine);
+        WalkState = new WalkState(this, StateMachine);
+
     }
 
-    internal void ToTarget()
+    private void Start()
     {
-        _customer.transform.position = Vector2.MoveTowards(transform.position, targets[_index].position, _moveSpeed * Time.deltaTime);
+        StateMachine.Initialize(WalkState);
+    }
+
+    private void Update()
+    {
+        StateMachine.currentState.FrameUpdate();
     }
     
-    internal void NextTarget()
-    {
-        _index += 1;
-            
-        if (_index > targets.Count -1)
-            _index = 0;
-    }
 }

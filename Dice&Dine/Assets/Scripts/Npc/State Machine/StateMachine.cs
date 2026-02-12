@@ -1,5 +1,5 @@
 public class StateMachine
-{
+{   
     public State currentState { get; set; }
 
     public void Initialize(State startingState)
