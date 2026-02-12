@@ -6,6 +6,8 @@ public class Customer : MonoBehaviour
     private GameObject _customer;
     private float _moveSpeed = 4f;
     private int _index = 0;
+    [SerializeField] private int money;
+    [SerializeField] private int patience;
     [SerializeField] private List<Transform> targets;
     
 
@@ -21,12 +23,12 @@ public class Customer : MonoBehaviour
         NextTarget();
     }
 
-    private void ToTarget()
+    internal void ToTarget()
     {
         _customer.transform.position = Vector2.MoveTowards(transform.position, targets[_index].position, _moveSpeed * Time.deltaTime);
     }
     
-    private void NextTarget()
+    internal void NextTarget()
     {
         _index += 1;
             
