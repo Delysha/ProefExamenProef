@@ -10,10 +10,13 @@ public class DayTimerScript : MonoBehaviour
         ResetTimer();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (_currentTime >0)
+        UpdateTimer();
+    }
+    private void UpdateTimer()
+    {
+        if (_currentTime > 0)
         {
             _currentTime -= Time.deltaTime;
 
