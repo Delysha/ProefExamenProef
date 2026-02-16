@@ -12,9 +12,4 @@ public class IdleState : State
         base.EnterState();
         Debug.Log("IdleState");
     }
-
-    private void Deactivate()
-    {
-        
-    }
 }

@@ -3,7 +3,7 @@ using UnityEngine;
 public class Table : Props
 {
     [SerializeField] private List<Transform> _seats;
-    public bool _isOccupied { get; private set; }
+    public bool IsOccupied { get; private set; }
     public override void Initialize()
     {
         base.Initialize();
@@ -17,7 +17,7 @@ public class Table : Props
 
     public override void Interact(Customer customer)
     {
-        _isOccupied = true;
+        IsOccupied = true;
         customer.transform.position = _seats[0].transform.position;
     }
 }
