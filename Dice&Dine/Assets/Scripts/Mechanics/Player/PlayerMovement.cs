@@ -12,6 +12,9 @@ public class PlayerMovement : MonoBehaviour
     [Header("NavMesh Settings")]
     [SerializeField] private float sampleRadius = 2f;
 
+    [Header("Interaction Settings")]
+    [SerializeField] private float interactDistance = 1.5f;
+
     [Header("Debug")]
     [SerializeField] private bool enableDebugLogs = false;
 
@@ -40,7 +43,24 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        HandleDropInput();
         HandleMouseUpdate();
+    }
+
+    private void HandleDropInput()
+    {
+        if (!Input.GetKeyDown(KeyCode.E))
+        {
+            return;
+        }
+
+        PlayerPickup pickupSystem = GetComponent<PlayerPickup>();
+        if (pickupSystem == null || !pickupSystem.HasItem())
+        {
+            return;
+        }
+
+        pickupSystem.Drop();
     }
 
     private void HandleMouseUpdate()
@@ -58,6 +78,11 @@ public class PlayerMovement : MonoBehaviour
             Vector3 mouseWorldPosition = camera.ScreenToWorldPoint(mousePosition);
             Vector3 target = new Vector3(mouseWorldPosition.x, mouseWorldPosition.y, transform.position.z);
 
+            if (TryInteractAt(mouseWorldPosition))
+            {
+                return;
+            }
+
             if (NavMesh.SamplePosition(target, out NavMeshHit hit, sampleRadius, NavMesh.AllAreas))
             {
                 agent.SetDestination(hit.position);
@@ -73,4 +98,45 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
+
+    private bool TryInteractAt(Vector3 worldPosition)
+    {
+        RaycastHit2D hit = Physics2D.Raycast(worldPosition, Vector2.zero);
+        if (hit.collider == null)
+        {
+            return false;
+        }
+
+        GameObject clickedObject = hit.collider.gameObject;
+        if (clickedObject.GetComponent<IPickupable>() == null)
+        {
+            return false;
+        }
+
+        float distance = Vector2.Distance(transform.position, clickedObject.transform.position);
+        if (distance > interactDistance)
+        {
+            if (enableDebugLogs)
+            {
+                Debug.Log($"Interact ignored: too far ({distance:0.00} > {interactDistance:0.00}).", this);
+            }
+
+            return false;
+        }
+
+        TryInteract(clickedObject);
+        return true;
+    }
+
+    private void TryInteract(GameObject clickedObject)
+    {
+        IPickupable pickupable = clickedObject.GetComponent<IPickupable>();
+
+        if (pickupable != null)
+        {
+            PlayerPickup pickupSystem = GetComponent<PlayerPickup>();
+            pickupSystem.TryPickup(pickupable);
+        }
+    }
+
 }
