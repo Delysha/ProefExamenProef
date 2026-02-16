@@ -3,7 +3,7 @@ public class State
     protected Customer customer;
     protected StateMachine stateMachine;
 
-    public State(Customer customer, StateMachine stateMachine)
+    protected State(Customer customer, StateMachine stateMachine)
     {
         this.customer = customer;
         this.stateMachine = stateMachine;
