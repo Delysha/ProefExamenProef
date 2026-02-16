@@ -4,7 +4,7 @@ public class DayTimerScript : MonoBehaviour
 {
     [SerializeField] private float dayLengtheInSeconds = 120f;
 
-    public Action OndayFinished;
+    public Action OnDayFinished;
 
     private float _currentTime;
     void Start()
@@ -44,7 +44,7 @@ public class DayTimerScript : MonoBehaviour
     {
         Debug.Log("Dag is voorbij!");
 
-        OndayFinished?.Invoke();
+        OnDayFinished?.Invoke();
     }
     
 }

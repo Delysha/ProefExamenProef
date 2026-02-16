@@ -13,7 +13,7 @@ public class WinFailCondition : MonoBehaviour
 
     private void Update()
     {
-        _dayTimerScript.OndayFinished += handleDayFinished;
+        _dayTimerScript.OnDayFinished += handleDayFinished;
     }
     private void handleDayFinished()
     {
@@ -40,6 +40,6 @@ public class WinFailCondition : MonoBehaviour
     private void OnDestroy()
     {
         if (_dayTimerScript != null)
-            _dayTimerScript.OndayFinished -= handleDayFinished;
+            _dayTimerScript.OnDayFinished -= handleDayFinished;
     }
 }
