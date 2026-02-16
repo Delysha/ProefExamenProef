@@ -21,16 +21,6 @@ public class WalkState : State
         customer.transform.position = customer.targets[_index].position;
         ToTarget();
     }
-
-    private void ReachedTarget()
-    {
-        var dir = (customer.transform.position - customer.targets[_index].position).magnitude;
-        if (dir < 0.1f)
-        {
-            customer.StateMachine.ChangeState(customer.WaitState);
-        }
-    }
-    
     
     private void ToTarget()
     {
