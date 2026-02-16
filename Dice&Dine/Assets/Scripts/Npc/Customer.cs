@@ -1,19 +1,17 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Customer : MonoBehaviour, IWalkable, IWaitable
 {
-    public StateMachine StateMachine { get; set; }
-    public EatingState EatingState { get; set; }
-    public WaitState WaitState { get; set; }
-    public WalkState WalkState { get; set; }
+    public StateMachine StateMachine { get; private set; }
+    public EatingState EatingState { get; private set; }
+    public WaitState WaitState { get; private set; }
+    public WalkState WalkState { get; private set; }
+    public IdleState IdleState { get; private set; }
     
     public int money;
     public int patience;
     public List<Transform> targets;
-    
-    public float MoveSpeed = 4f;
     
     private void Awake()
     {
@@ -22,12 +20,28 @@ public class Customer : MonoBehaviour, IWalkable, IWaitable
         EatingState = new EatingState(this, StateMachine);
         WaitState = new WaitState(this, StateMachine);
         WalkState = new WalkState(this, StateMachine);
-
+        IdleState = new IdleState(this, StateMachine);
     }
 
     private void Start()
     {
         StateMachine.Initialize(WalkState);
+    }
+    
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        var table = other.GetComponent<Table>();
+        if (table)
+        {
+            table.Interact(this);
+            StateMachine.ChangeState(EatingState);
+        }
+            
+    }
+
+    public void OnTriggerExit2D(Collider2D other)
+    {
+        
     }
 
     private void Update()
