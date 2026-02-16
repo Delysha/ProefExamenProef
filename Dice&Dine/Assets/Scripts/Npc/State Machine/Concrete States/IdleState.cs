@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class IdleState : State
 {
+    private MonoBehaviour _monoBehaviour;
     public IdleState(Customer customer, StateMachine stateMachine) : base(customer, stateMachine)
     {
     }
