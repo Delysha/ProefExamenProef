@@ -17,7 +17,7 @@ public class Customer : MonoBehaviour, IWalkable, IWaitable
     {
         StateMachine = new StateMachine();
 
-        EatingState = new EatingState(this, StateMachine);
+        EatingState = new EatingState(this, StateMachine,this);
         WaitState = new WaitState(this, StateMachine);
         WalkState = new WalkState(this, StateMachine);
         IdleState = new IdleState(this, StateMachine);
@@ -31,17 +31,11 @@ public class Customer : MonoBehaviour, IWalkable, IWaitable
     public void OnTriggerEnter2D(Collider2D other)
     {
         var table = other.GetComponent<Table>();
-        if (table)
-        {
-            table.Interact(this);
-            StateMachine.ChangeState(EatingState);
-        }
-            
-    }
-
-    public void OnTriggerExit2D(Collider2D other)
-    {
         
+        if (!table) return;
+        table.Interact(this);
+        StateMachine.ChangeState(EatingState);
+
     }
 
     private void Update()
