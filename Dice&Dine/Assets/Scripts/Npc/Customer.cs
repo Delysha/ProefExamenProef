@@ -40,7 +40,7 @@ public class Customer : MonoBehaviour, IWalkable, IWaitable
 
     private void Update()
     {
-        StateMachine.currentState.FrameUpdate();
+        StateMachine.CurrentState.FrameUpdate();
     }
     
 }

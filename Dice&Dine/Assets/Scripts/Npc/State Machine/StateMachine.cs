@@ -1,17 +1,17 @@
 public class StateMachine
 {   
-    public State currentState { get; set; }
+    public State CurrentState { get; set; }
 
     public void Initialize(State startingState)
     {
-        currentState = startingState;
-        currentState.EnterState();
+        CurrentState = startingState;
+        CurrentState.EnterState();
     }
 
     public void ChangeState(State newState)
     {
-        currentState.EnterState();
-        currentState = newState;
-        currentState.EnterState();
+        CurrentState.EnterState();
+        CurrentState = newState;
+        CurrentState.EnterState();
     }
 }
