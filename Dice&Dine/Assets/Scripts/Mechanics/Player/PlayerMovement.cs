@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Interaction Settings")]
     [SerializeField] private float interactDistance = 1.5f;
+    private Iinteractable currentInteractable;
 
     [Header("Debug")]
     [SerializeField] private bool enableDebugLogs = false;
@@ -43,8 +44,50 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        if (Input.GetMouseButtonDown(0))
+        {
+            HandleClick();    
+        }
+
+        if (currentInteractable != null)
+        {
+            float distance = Vector3.Distance(transform.position, currentInteractable.GetTransform().position);
+
+            if (distance <= interactDistance)
+            {
+                currentInteractable.Interact(GetComponent<PlayerPickup>());
+                currentInteractable = null;
+            }
+        }
+
         HandleDropInput();
-        HandleMouseUpdate();
+    }
+
+    void HandleClick()
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit2D hit = Physics2D.GetRayIntersection(ray);
+
+        if (hit.collider != null)
+        {
+            Iinteractable interactable = hit.collider.GetComponent<Iinteractable>();
+
+            if (interactable != null)
+            {
+                currentInteractable = interactable;
+                MoveTo(interactable.GetTransform().position);
+                return;
+            }
+
+            IPickupable pickupable = hit.collider.GetComponent<IPickupable>();
+            if (pickupable != null && TryInteractAt(hit.point))
+            {
+                return;
+            }
+        }
+
+        // Anders: normale movement
+        MoveTo(GetMouseWorldPosition());
     }
 
     private void HandleDropInput()
@@ -61,42 +104,6 @@ public class PlayerMovement : MonoBehaviour
         }
 
         pickupSystem.Drop();
-    }
-
-    private void HandleMouseUpdate()
-    {
-         if (Input.GetMouseButtonDown(0))
-        {
-            Camera camera = Camera.main;
-            if (camera == null)
-            {
-                return;
-            }
-
-            Vector3 mousePosition = Input.mousePosition;
-            mousePosition.z = Mathf.Abs(camera.transform.position.z - transform.position.z);
-            Vector3 mouseWorldPosition = camera.ScreenToWorldPoint(mousePosition);
-            Vector3 target = new Vector3(mouseWorldPosition.x, mouseWorldPosition.y, transform.position.z);
-
-            if (TryInteractAt(mouseWorldPosition))
-            {
-                return;
-            }
-
-            if (NavMesh.SamplePosition(target, out NavMeshHit hit, sampleRadius, NavMesh.AllAreas))
-            {
-                agent.SetDestination(hit.position);
-
-                if (enableDebugLogs)
-                {
-                    Debug.Log($"Click: destination={hit.position}", this);
-                }
-            }
-            else if (enableDebugLogs)
-            {
-                Debug.Log($"Click ignored: no NavMesh near {target}.", this);
-            }
-        }
     }
 
     private bool TryInteractAt(Vector3 worldPosition)
@@ -139,4 +146,35 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void MoveTo(Vector3 targetPosition)
+    {
+        Vector3 target = new Vector3(targetPosition.x, targetPosition.y, transform.position.z);
+
+        if (NavMesh.SamplePosition(target, out NavMeshHit hit, sampleRadius, NavMesh.AllAreas))
+        {
+            agent.SetDestination(hit.position);
+
+            if (enableDebugLogs)
+            {
+                Debug.Log($"MoveTo: destination={hit.position}", this);
+            }
+        }
+        else if (enableDebugLogs)
+        {
+            Debug.Log($"MoveTo ignored: no NavMesh near {target}.", this);
+        }
+    }
+
+    private Vector3 GetMouseWorldPosition()
+    {
+        Camera camera = Camera.main;
+        if (camera == null)
+        {
+            return transform.position;
+        }
+
+        Vector3 mousePosition = Input.mousePosition;
+        mousePosition.z = Mathf.Abs(camera.transform.position.z - transform.position.z);
+        return camera.ScreenToWorldPoint(mousePosition);
+    }
 }
