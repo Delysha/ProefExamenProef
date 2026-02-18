@@ -56,14 +56,14 @@ Material:
     m_Floats:
     - _EnableExternalAlpha: 0
     - _Outline_Scale: 1
-    - _Outline_thickness: 13.7
+    - _Outline_thickness: 0.7
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ZWrite: 0
     m_Colors:
     - White: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Outline_Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Outline_Color: {r: 0.9861269, g: 1, b: 0, a: 1}
     - _Outline_color: {r: 0.9685534, g: 0.93850356, b: 0, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
