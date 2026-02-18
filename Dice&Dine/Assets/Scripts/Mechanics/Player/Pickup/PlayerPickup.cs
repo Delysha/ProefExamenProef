@@ -4,6 +4,7 @@ public class PlayerPickup : MonoBehaviour
 {
     [SerializeField] private Transform holdPoint;
     private IPickupable currentPickup;
+  
 
     public bool HasItem()
     {
@@ -17,6 +18,11 @@ public class PlayerPickup : MonoBehaviour
 
         currentPickup = item;
         currentPickup.OnPickup(holdPoint);
+    }
+
+    public IPickupable GetHeldItem()
+    {
+        return currentPickup;
     }
 
     public void Drop()

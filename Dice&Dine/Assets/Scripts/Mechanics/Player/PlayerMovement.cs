@@ -56,6 +56,7 @@ public class PlayerMovement : MonoBehaviour
             if (distance <= interactDistance)
             {
                 currentInteractable.Interact(GetComponent<PlayerPickup>());
+                currentInteractable.OnHoverExit();
                 currentInteractable = null;
             }
         }
@@ -68,6 +69,12 @@ public class PlayerMovement : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit2D hit = Physics2D.GetRayIntersection(ray);
 
+        if (currentInteractable != null)
+        {
+            currentInteractable.OnHoverExit();
+            currentInteractable = null;
+        }
+
         if (hit.collider != null)
         {
             Iinteractable interactable = hit.collider.GetComponent<Iinteractable>();
@@ -75,6 +82,7 @@ public class PlayerMovement : MonoBehaviour
             if (interactable != null)
             {
                 currentInteractable = interactable;
+                currentInteractable.OnHoverEnter();
                 MoveTo(interactable.GetTransform().position);
                 return;
             }
