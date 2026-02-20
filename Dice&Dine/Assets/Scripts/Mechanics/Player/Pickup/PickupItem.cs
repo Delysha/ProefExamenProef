@@ -30,13 +30,19 @@ public class PickupItem : MonoBehaviour , IPickupable , Iinteractable
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
     }
+
+    private bool IsInitialized()
+    {
+        return rb != null && col != null;
+    }
+
     public void OnPickup(Transform holdPoint)
     {
-        if (rb != null)
+        if (IsInitialized())
+        {
             rb.simulated = false;
-
-        if (col != null)
             col.enabled = false;
+        }
 
         transform.SetParent(holdPoint);
         transform.localPosition = Vector3.zero;
@@ -44,11 +50,11 @@ public class PickupItem : MonoBehaviour , IPickupable , Iinteractable
 
     public void OnDrop()
     {
-        if (rb != null)
+        if (IsInitialized())
+        {
             rb.simulated = true;
-
-        if (col != null)
             col.enabled = true;
+        }
 
         transform.SetParent(null);
     }
