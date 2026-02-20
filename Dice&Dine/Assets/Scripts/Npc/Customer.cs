@@ -30,7 +30,7 @@ public class Customer : MonoBehaviour, IWalkable, IWaitable
     
     public void OnTriggerEnter2D(Collider2D other)
     {
-        var table = other.GetComponent<Table>();
+        var table = other.GetComponent<Tabless>();
         
         if (!table) return;
         table.Interact(this);
