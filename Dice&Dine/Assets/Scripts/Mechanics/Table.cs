@@ -6,6 +6,7 @@ public class Table : MonoBehaviour, Iinteractable
     [SerializeField] private List<Transform> itemSlots = new List<Transform>();
     [SerializeField] private Transform interactionPoint;
     private Dictionary<Transform, IPickupable> slotItems = new Dictionary<Transform, IPickupable>();
+    
     private Material material;
     private static readonly int OutlineProperty = Shader.PropertyToID("_Outline");
 
