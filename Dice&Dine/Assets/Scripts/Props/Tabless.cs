@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
-public class Table : Props
+public class Tabless : Props
 {
     [SerializeField] private List<Transform> _seats;
     public bool IsOccupied { get; private set; }
