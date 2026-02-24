@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -18,6 +19,18 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void LoadStartScreen()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("StartScreen");
+    }
+
+    public void LoadMainGame()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("PlayerMovement");
+    }
+
     public void PauseGame()
     {
         Time.timeScale = 0f;
@@ -28,6 +41,12 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         isGamePaused = false;
+    }
+
+    public void QuitGame()
+    {
+        Debug.Log("The game is shutting down!");
+        Application.Quit();
     }
 
     public bool IsGamePaused()
