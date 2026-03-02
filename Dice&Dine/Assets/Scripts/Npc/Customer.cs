@@ -11,7 +11,7 @@ public class Customer : MonoBehaviour, IWalkable, IWaitable
     
     public int money;
     public int patience;
-    public List<Transform> targets;
+    public List<Transform> targets { get; set; }
     
     private void Awake()
     {
