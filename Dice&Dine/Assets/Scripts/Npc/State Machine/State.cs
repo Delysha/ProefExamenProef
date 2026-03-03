@@ -14,4 +14,3 @@ public class State
     public virtual void FrameUpdate() {}
     
 }
-
