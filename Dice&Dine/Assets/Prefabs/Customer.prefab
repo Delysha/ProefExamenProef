@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5664425050751896123}
   - component: {fileID: -4577377736621860940}
   - component: {fileID: 683363577200759858}
-  - component: {fileID: 2320731274991619228}
+  - component: {fileID: 2543139983521117813}
   m_Layer: 0
   m_Name: Customer
   m_TagString: Untagged
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 7704800530470631205}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.65, y: -4.18, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -108,11 +108,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Customer
   money: 0
   patience: 0
-  targets:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!61 &683363577200759858
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -159,7 +154,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!50 &2320731274991619228
+--- !u!50 &2543139983521117813
 Rigidbody2D:
   serializedVersion: 5
   m_ObjectHideFlags: 0

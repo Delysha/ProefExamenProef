@@ -1,8 +1,10 @@
 using UnityEngine;
-
+using System;
 public class DayTimerScript : MonoBehaviour
 {
     [SerializeField] private float dayLengtheInSeconds = 120f;
+
+    public Action OnDayFinished;
 
     private float _currentTime;
     void Start()
@@ -41,6 +43,8 @@ public class DayTimerScript : MonoBehaviour
     private void OnDayEnded()
     {
         Debug.Log("Dag is voorbij!");
+
+        OnDayFinished?.Invoke();
     }
     
 }
