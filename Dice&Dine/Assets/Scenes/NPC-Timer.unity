@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d18896fe7398e4244af2444ef374adeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::npcTimer
-  npcType: 4
+  npcType: 1
   maxPatience: 60
   currentPatience: 0
 --- !u!4 &818584778
