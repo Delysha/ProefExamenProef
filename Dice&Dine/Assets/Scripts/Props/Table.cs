@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Table : MonoBehaviour, Iinteractable
+public class Table : Props, Iinteractable
 {
     [SerializeField] private List<Transform> itemSlots = new List<Transform>();
     [SerializeField] private Transform interactionPoint;
@@ -10,6 +10,10 @@ public class Table : MonoBehaviour, Iinteractable
     private Material material;
     private static readonly int OutlineProperty = Shader.PropertyToID("_Outline");
 
+    [SerializeField] private GameObject seatPlace;
+    [SerializeField] private List<Transform> _seats;
+    public bool IsOccupied { get; private set; }
+
     private void Awake()
     {
         material = GetComponent<SpriteRenderer>().material;
@@ -17,6 +21,19 @@ public class Table : MonoBehaviour, Iinteractable
         foreach (Transform slot in itemSlots)
         {
             slotItems[slot] = null;
+        }
+
+        Initialize();
+    }
+    
+    private void Initialize()
+    {
+        _seats = new List<Transform>();
+        var seats = seatPlace.GetComponentsInChildren<Transform>();
+        foreach (var seat in seats)
+        {
+            if (seat.name.Contains($"Seat({seat.GetSiblingIndex()})"))
+                _seats.Add(seat.transform);
         }
     }
 
@@ -36,6 +53,7 @@ public class Table : MonoBehaviour, Iinteractable
 
         PlaceItem(player, availableSlot);
     }
+    
 
     private Transform GetAvailableSlot()
     {
