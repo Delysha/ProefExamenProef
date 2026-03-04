@@ -1133,7 +1133,7 @@ MonoBehaviour:
   drinks:
   - {fileID: 4687392627353412673, guid: c93c0fbf930aec847be6e675eeb025a0, type: 3}
   - {fileID: 5282228561375350863, guid: 70e56920eb9c2fb42bb20d155d5b5487, type: 3}
-  orderdDrink: 
+  orderdDrink: {fileID: 0}
 --- !u!4 &2066028902
 Transform:
   m_ObjectHideFlags: 0

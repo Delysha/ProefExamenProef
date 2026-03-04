@@ -4,7 +4,7 @@ public class SaveOrder : MonoBehaviour
 {
     [SerializeField] private GameObject[] drinks;
 
-    public string orderdDrink;
+    public GameObject orderdDrink;
 
     private void Start()
     {
@@ -15,6 +15,12 @@ public class SaveOrder : MonoBehaviour
     {
         var orderdDrinkNumber = Random.Range(0, drinks.Length);
 
-        GameObject orderdDrink = drinks[orderdDrinkNumber];
+        orderdDrink = drinks[orderdDrinkNumber];
+    }
+
+    public void StoreList()
+    {
+        if (orderdDrink == null) return;
+        Debug.Log(orderdDrink);
     }
 }

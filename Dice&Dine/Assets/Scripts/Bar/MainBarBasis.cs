@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class MainBarBasis : MonoBehaviour
 {
-    [SerializeField] private SaveOrder _saveOrder;
+    [SerializeField] private SaveOrder saveOrder;
 
     [SerializeField] private int prepareDrinkTime;
-    [SerializeField] private GameObject[] drinks;
     [SerializeField] GameObject[] orderSpot;
 
     private void Start()
@@ -27,14 +26,18 @@ public class MainBarBasis : MonoBehaviour
         {
             var spot = orderSpot[i].GetComponent<OrderSpotFilled>();
 
-            var storeNumber = _saveOrder.GetComponent<SaveOrder>();
+            var storeNumber = saveOrder.GetComponent<SaveOrder>();
             var order = storeNumber.orderdDrink;
+
+            storeNumber.StoreList();
 
             if (!spot.SpotFilled)
             {
-                Instantiate(drinks[i], orderSpot[i].transform);
+                Instantiate(order, orderSpot[i].transform);
                 spot.SpotFilled = true;
-                //Testing: StartCoroutine(PrepareDrinkRoutine());
+                //Testing:
+                //StartCoroutine(PrepareDrinkRoutine());
+                storeNumber.StoreOrder();
                 break;
             }
         }
