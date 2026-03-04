@@ -17,15 +17,9 @@ public class WalkState : State
     {
         base.FrameUpdate();
         
-        if(!Input.GetKeyDown(KeyCode.Space)) return;
-        customer.transform.position = customer.targets.position;
+        // if(!Input.GetKeyDown(KeyCode.Space)) return;
+        // customer.transform.position = customer.targets.position;
         //ToTarget();
     }
     
-    // private void ToTarget()
-    // {
-    //     _index += 1;
-    //     if (_index > customer.targets.Count -1)
-    //         customer.StateMachine.ChangeState(customer.IdleState);
-    // }
 }

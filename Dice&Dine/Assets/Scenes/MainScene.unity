@@ -712,6 +712,10 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4067147556149448011, guid: c9da171267ed52f4eb36059914db02f4, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5752428217456496624, guid: c9da171267ed52f4eb36059914db02f4, type: 3}
       propertyPath: m_Name
       value: Table
@@ -2836,7 +2840,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 00000000b55f81cc01234f807b62114f050a830f
+  m_ApplyToSortingLayers: 00000000b55f81cc01234f807b62114f050a830ff70722526938d4db0d74b4402d8cf238bdb34744
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -5349,6 +5353,14 @@ PrefabInstance:
     - target: {fileID: 1643288718262489966, guid: c9da171267ed52f4eb36059914db02f4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4067147556149448011, guid: c9da171267ed52f4eb36059914db02f4, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5652248863032895158, guid: c9da171267ed52f4eb36059914db02f4, type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5752428217456496624, guid: c9da171267ed52f4eb36059914db02f4, type: 3}
       propertyPath: m_Name
@@ -8751,7 +8763,7 @@ PrefabInstance:
       objectReference: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 792662322182651248, guid: 12fd3958634e564409af0824651ba6e0, type: 3}
       propertyPath: m_SortingLayer
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 792662322182651248, guid: 12fd3958634e564409af0824651ba6e0, type: 3}
       propertyPath: m_SortingOrder

@@ -41,7 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4106828977217151041}
   m_Layer: 6
-  m_Name: Plaats(1)
+  m_Name: Seat(1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,7 +72,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7254245897642963065}
   m_Layer: 6
-  m_Name: Plaats(0)
+  m_Name: Seat(0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -473,8 +473,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: -863936587
-  m_SortingLayer: 3
+  m_SortingLayerID: 1145549757
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 3303742031664371819, guid: 5cbe691177b61cd4e99d717bcb1b0398, type: 3}

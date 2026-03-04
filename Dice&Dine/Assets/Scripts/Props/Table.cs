@@ -11,7 +11,7 @@ public class Table : Props, Iinteractable
     private static readonly int OutlineProperty = Shader.PropertyToID("_Outline");
 
     [SerializeField] private GameObject seatPlace;
-    [SerializeField] private List<Transform> _seats;
+    private List<Transform> _seats;
     public bool IsOccupied { get; private set; }
 
     private void Awake()

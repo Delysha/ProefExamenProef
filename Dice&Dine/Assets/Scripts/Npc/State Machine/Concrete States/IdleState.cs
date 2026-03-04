@@ -11,6 +11,5 @@ public class IdleState : State
     {
         base.EnterState();
         Debug.Log("IdleState");
-        customer.gameObject.SetActive(false);
     }
 }
