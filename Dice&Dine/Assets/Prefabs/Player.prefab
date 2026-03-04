@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8492367287790051517}
   - component: {fileID: 6379603456678379206}
   - component: {fileID: 3552184747154108905}
+  - component: {fileID: 3410897796014458091}
   - component: {fileID: 1226521749354621664}
   - component: {fileID: 3863682667224666249}
   - component: {fileID: 8225120631380647596}
@@ -111,7 +112,21 @@ MonoBehaviour:
   moveSpeed: 5
   stoppingDistance: 0.1
   sampleRadius: 2
+  interactDistance: 1.5
   enableDebugLogs: 0
+--- !u!114 &3410897796014458091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5303669157109893734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3f1cd9c5321a4744a96d956bfc71366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerPickup
+  holdPoint: {fileID: 8691133653839427267}
 --- !u!50 &1226521749354621664
 Rigidbody2D:
   serializedVersion: 5
