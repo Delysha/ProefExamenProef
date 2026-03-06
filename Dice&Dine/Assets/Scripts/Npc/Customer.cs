@@ -29,16 +29,6 @@ public class Customer : MonoBehaviour, IWalkable, IWaitable
     {
         StateMachine.Initialize(WalkState);
     }
-    
-    public void OnTriggerEnter2D(Collider2D other)
-    {
-        var table = other.GetComponent<Tabless>();
-        
-        if (!table) return;
-        table.Interact(this);
-        StateMachine.ChangeState(EatingState);
-
-    }
 
     private void Update()
     {
