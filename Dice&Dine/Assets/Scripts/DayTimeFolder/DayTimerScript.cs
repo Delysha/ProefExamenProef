@@ -6,15 +6,29 @@ public class DayTimerScript : MonoBehaviour
 
     public Action OnDayFinished;
 
+    private Transform clockHand;
+
     private float _currentTime;
     void Start()
     {
+        GameObject wijzerObj = GameObject.Find("Wijzer");
+
+        if (wijzerObj != null)
+        {
+            clockHand = wijzerObj.transform;
+        }
+        else
+        {
+            Debug.LogWarning("Kan wijzer niet vinden in scene");
+        }
+
         ResetTimer();
     }
 
     void Update()
     {
         UpdateTimer();
+        updateClockHand();
     }
     private void UpdateTimer()
     {
@@ -29,6 +43,18 @@ public class DayTimerScript : MonoBehaviour
             }
         }
     }
+
+    private void updateClockHand()
+    {
+        if (clockHand == null) return;
+
+        float normalizedTime = GetNormalizedTime();
+        float angle = 180f - normalizedTime * 360f;
+
+        clockHand.rotation = Quaternion.Euler(0f, 0f, angle);
+
+    }
+
 
     public void ResetTimer()
     {
@@ -46,5 +72,5 @@ public class DayTimerScript : MonoBehaviour
 
         OnDayFinished?.Invoke();
     }
-    
+
 }
