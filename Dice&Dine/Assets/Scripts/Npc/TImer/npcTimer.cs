@@ -50,7 +50,6 @@ public class npcTimer : MonoBehaviour
 
         currentPatience -= Time.deltaTime * timerSpeed;
 
-        Debug.Log("Current Patience:" + currentPatience.ToString("F1"));
         if (currentPatience <= 0f )
         {
             Leave();
@@ -71,18 +70,15 @@ public class npcTimer : MonoBehaviour
         currentPatience = maxPatience;
         isWaiting = true;
 
-        Debug.Log(npcType + "Started waiting. Patience:" + maxPatience);
     }
 
     public void StopWaiting()
     {
         isWaiting = false;
-        Debug.Log(npcType + "LEFT because patience hit 0."); 
     }
 
     void Leave ()
     {
-        Debug.Log(npcType + "left due to impatience");
         isWaiting = false;
         Destroy(gameObject);
     }
@@ -114,7 +110,6 @@ public class npcTimer : MonoBehaviour
             case NPCType.Drunk:
                 maxPatience = 80f;
                 timerSpeed = Random.Range(0.5f, 1.5f);
-                Debug.Log("Drunk timer speed:" + timerSpeed);
                 break;
         }
     }
@@ -125,7 +120,6 @@ public class npcTimer : MonoBehaviour
         {
             currentPatience += amount;
             currentPatience = Mathf.Clamp(currentPatience, 0, maxPatience);
-            Debug.Log("Drunk patience modified:" + currentPatience);
         }
     }
 }
