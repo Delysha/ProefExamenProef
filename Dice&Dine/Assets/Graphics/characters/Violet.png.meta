@@ -1,19 +1,13 @@
 fileFormatVersion: 2
-guid: 6f9c0b86eed8d73459c3b94ba8fc698c
+guid: 95af036e902d7544aaa4d3c775f5bab6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3241647558786430515
-    second: rand_dagklok_0
+      213: -1629362560720184693
+    second: Violet_0
   - first:
-      213: -5576958032613879623
-    second: rand_dagklok_1
-  - first:
-      213: -3691804840571615297
-    second: rand_dagklok_2
-  - first:
-      213: 6581916071227795180
-    second: rand_dagklok_3
+      213: 4314095436275899324
+    second: Violet_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -60,7 +54,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -135,13 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: rand_dagklok_0
+      name: Violet_0
       rect:
         serializedVersion: 2
-        x: 2233
-        y: 918
-        width: 15
-        height: 8
+        x: 52
+        y: 43
+        width: 240
+        height: 639
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +144,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dc9c58368ba5303d0800000000000000
-      internalID: -3241647558786430515
+      spriteID: b8ad3fd32675369e0800000000000000
+      internalID: -1629362560720184693
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rand_dagklok_1
+      name: Violet_1
       rect:
         serializedVersion: 2
-        x: 2242
-        y: 686
-        width: 269
-        height: 394
+        x: 391
+        y: 43
+        width: 240
+        height: 631
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,52 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9b0d9c2a73aaa92b0800000000000000
-      internalID: -5576958032613879623
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: rand_dagklok_2
-      rect:
-        serializedVersion: 2
-        x: 2325
-        y: 671
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fb749a9be0314ccc0800000000000000
-      internalID: -3691804840571615297
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: rand_dagklok_3
-      rect:
-        serializedVersion: 2
-        x: 2285
-        y: 622
-        width: 63
-        height: 46
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ce6a7f65bc9a75b50800000000000000
-      internalID: 6581916071227795180
+      spriteID: cbbdb5631febedb30800000000000000
+      internalID: 4314095436275899324
       vertices: []
       indices: 
       edges: []
@@ -226,7 +176,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -236,10 +186,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      rand_dagklok_0: -3241647558786430515
-      rand_dagklok_1: -5576958032613879623
-      rand_dagklok_2: -3691804840571615297
-      rand_dagklok_3: 6581916071227795180
+      Violet_0: -1629362560720184693
+      Violet_1: 4314095436275899324
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

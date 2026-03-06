@@ -4,7 +4,6 @@ using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshAgent))]
 public class PlayerMovement : MonoBehaviour
 {
-
     [Header("Movement Settings")]
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float stoppingDistance = 0.1f;
@@ -63,6 +62,8 @@ public class PlayerMovement : MonoBehaviour
 
         HandleDropInput();
     }
+    
+    
 
     void HandleClick()
     {
@@ -81,37 +82,32 @@ public class PlayerMovement : MonoBehaviour
 
             if (interactable != null)
             {
-                Debug.Log($"Hovering over interactable: {interactable.GetTransform().name}", this);
                 currentInteractable = interactable;
                 currentInteractable.OnHoverEnter();
                 MoveTo(interactable.GetTransform().position);
                 return;
             }
 
-            IPickupable pickupable = hit.collider.GetComponent<IPickupable>();
+            var pickupable = hit.collider.GetComponent<IPickupable>();
             if (pickupable != null && TryInteractAt(hit.point))
             {
                 return;
             }
         }
 
+        // Anders: normale movement
         MoveTo(GetMouseWorldPosition());
     }
 
     private void HandleDropInput()
     {
-        if (!Input.GetKeyDown(KeyCode.E))
-        {
-            return;
-        }
+        if (!Input.GetKeyDown(KeyCode.E)) return;
 
         PlayerPickup pickupSystem = GetComponent<PlayerPickup>();
-        if (pickupSystem == null || !pickupSystem.HasItem())
-        {
-            return;
-        }
 
-        pickupSystem.Drop();
+        if (pickupSystem.HasItem()) pickupSystem.Drop();
+
+        if (pickupSystem.HasCustomer()) pickupSystem.PutToTable();
     }
 
     private bool TryInteractAt(Vector3 worldPosition)
@@ -138,19 +134,25 @@ public class PlayerMovement : MonoBehaviour
 
             return false;
         }
-
         TryInteract(clickedObject);
         return true;
     }
 
     private void TryInteract(GameObject clickedObject)
     {
-        IPickupable pickupable = clickedObject.GetComponent<IPickupable>();
-
+        var pickupable = clickedObject.GetComponent<IPickupable>();
+        var customer = clickedObject.GetComponent<Customer>();
+        
+        PlayerPickup pickupSystem = GetComponent<PlayerPickup>();
+        
         if (pickupable != null)
         {
-            PlayerPickup pickupSystem = GetComponent<PlayerPickup>();
             pickupSystem.TryPickup(pickupable);
+        }
+
+        if (customer != null)
+        {
+            pickupSystem.TryLead(customer);
         }
     }
 

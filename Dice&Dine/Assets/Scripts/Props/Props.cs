@@ -8,8 +8,7 @@ public class Props : MonoBehaviour
         Initialize();
     }
 
-    public virtual void Initialize() {}
-
-    public virtual void Interact(Customer customer) {}
+    public virtual void Initialize() {  }
+    
 }
 
