@@ -20,7 +20,6 @@ public class SaveOrder : MonoBehaviour
 
     public void StoreList()
     {
-        if (orderdDrink == null) return;
         Debug.Log(orderdDrink);
     }
 }

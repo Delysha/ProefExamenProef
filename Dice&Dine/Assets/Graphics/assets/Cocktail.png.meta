@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: 007135637f759f24d86682036fa6d6ae
+guid: 4eecbe0539324f74fa30d6bebcd3efee
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4325516658447673972
-    second: Drankje1_0
-  - first:
-      213: -8996746803842030766
-    second: Drankje1_1
-  - first:
-      213: 1649613469264679247
-    second: Drankje1_2
+      213: 6873080446834901343
+    second: Cocktail_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -52,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 1500
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -132,33 +126,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Drankje1_0
+      name: Cocktail_0
       rect:
         serializedVersion: 2
-        x: 227
-        y: 582
-        width: 10
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 47aeec8bb72570c30800000000000000
-      internalID: 4325516658447673972
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Drankje1_1
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 161
+        x: 78
+        y: 66
         width: 435
         height: 527
       alignment: 0
@@ -169,30 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2536dded272252380800000000000000
-      internalID: -8996746803842030766
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Drankje1_2
-      rect:
-        serializedVersion: 2
-        x: 140
-        y: 175
-        width: 6
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f419834d5ba94e610800000000000000
-      internalID: 1649613469264679247
+      spriteID: f5107425046126f50800000000000000
+      internalID: 6873080446834901343
       vertices: []
       indices: 
       edges: []
@@ -201,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -211,9 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Drankje1_0: 4325516658447673972
-      Drankje1_1: -8996746803842030766
-      Drankje1_2: 1649613469264679247
+      Cocktail_0: 6873080446834901343
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

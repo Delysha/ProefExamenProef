@@ -11,13 +11,6 @@ public class OrderSpotFilled : MonoBehaviour
 
     private void CheckIfSpotIsFilled()
     {
-        if (transform.childCount > 0)
-        {
-            SpotFilled = true;
-        }
-        else
-        {
-            SpotFilled = false;
-        }
+        SpotFilled = transform.childCount > 0;
     }
 }

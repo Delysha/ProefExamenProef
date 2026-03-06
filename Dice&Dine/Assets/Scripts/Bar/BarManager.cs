@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MainBarBasis : MonoBehaviour
+public class BarManager: MonoBehaviour
 {
+    private Animator myAmimator;
+
     [SerializeField] private SaveOrder saveOrder;
 
     [SerializeField] private int prepareDrinkTime;
@@ -11,12 +13,15 @@ public class MainBarBasis : MonoBehaviour
 
     private void Start()
     {
+        myAmimator = GetComponent<Animator>();
         StartCoroutine(PrepareDrinkRoutine());
     }
 
     IEnumerator PrepareDrinkRoutine()
     {
+        myAmimator.SetBool("IsPreparing", true);
         yield return new WaitForSeconds(prepareDrinkTime);
+        myAmimator.SetBool("IsPreparing", false);
         SetDrinkInSpot();
     }
 
@@ -36,7 +41,7 @@ public class MainBarBasis : MonoBehaviour
                 Instantiate(order, orderSpot[i].transform);
                 spot.SpotFilled = true;
                 //Testing:
-                //StartCoroutine(PrepareDrinkRoutine());
+                StartCoroutine(PrepareDrinkRoutine());
                 storeNumber.StoreOrder();
                 break;
             }
