@@ -257,10 +257,10 @@ MonoBehaviour:
   - {fileID: 7057578867506594653}
   - {fileID: 0}
   - {fileID: 0}
+  slotSeats:
+  - {fileID: 7254245897642963065}
+  - {fileID: 4106828977217151041}
   interactionPoint: {fileID: 8560326954865918386}
-  spriteRenderer: {fileID: 502366651098835864}
-  normalMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  outlineMaterial: {fileID: 2100000, guid: 603244dc1ee302248ba1cf1dec97308b, type: 2}
 --- !u!61 &519006592061639821
 BoxCollider2D:
   m_ObjectHideFlags: 0

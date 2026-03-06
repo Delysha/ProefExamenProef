@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Customer : MonoBehaviour, IWalkable, IWaitable
+public class Customer : MonoBehaviour, IWalkable, IWaitable, Iinteractable
 {
     public npcTimer _timer;
     public StateMachine StateMachine { get; private set; }
@@ -13,6 +13,7 @@ public class Customer : MonoBehaviour, IWalkable, IWaitable
     public int money;
     public int patience;
     public List<Transform> targets { get; set; }
+    [SerializeField] private Transform interactionPoint;
     
     private void Awake()
     {
@@ -34,5 +35,24 @@ public class Customer : MonoBehaviour, IWalkable, IWaitable
     {
         StateMachine.CurrentState.FrameUpdate();
     }
-    
+
+    public Transform GetTransform()
+    {
+        return interactionPoint;
+    }
+
+    public void Interact(PlayerPickup player)
+    {
+        player.TryLead(this);
+    }
+
+    public void OnHoverEnter()
+    {
+        //Voor shader later
+    }
+
+    public void OnHoverExit()
+    {
+        //Voor shader later
+    }
 }

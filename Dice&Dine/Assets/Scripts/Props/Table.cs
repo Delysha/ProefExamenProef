@@ -53,6 +53,7 @@ public class Table : Props, Iinteractable
         if (player.HasCustomer())
         {
             var availableSeat = GetAvailableSeat();
+            Debug.Log(availableSeat);
             PlaceCustomer(player, availableSeat);
         }
     }
@@ -100,12 +101,10 @@ public class Table : Props, Iinteractable
         
         var customerMono = customer as MonoBehaviour;
         customerMono.transform.position = slot.position + new Vector3(0, 1f, 0);
-       
-        Debug.Log(slot.rotation.y);
+        
         var yAxis = slot.rotation.y;
         var isRotated = Mathf.Approximately(yAxis, SlotRotation);
         sprite.flipX = isRotated;
-        Debug.Log(isRotated);
         customerMono.transform.SetParent(slot);
     }
 
