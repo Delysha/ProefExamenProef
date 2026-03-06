@@ -3,12 +3,12 @@ using UnityEngine;
 public class PlayerPickup : MonoBehaviour
 {
     [SerializeField] private Transform holdPoint;
-    private IPickupable currentPickup;
+    private IPickupable _currentPickup;
     private Customer _customerTarget;
 
     public bool HasItem()
     {
-        return currentPickup != null;
+        return _currentPickup != null;
     }
 
     public bool HasCustomer()
@@ -21,8 +21,8 @@ public class PlayerPickup : MonoBehaviour
         if(HasItem())
             return;
 
-        currentPickup = item;
-        currentPickup.OnPickup(holdPoint);
+        _currentPickup = item;
+        _currentPickup.OnPickup(holdPoint);
     }
 
     public void TryLead(Customer customer)
@@ -30,12 +30,10 @@ public class PlayerPickup : MonoBehaviour
         if (HasCustomer()) return;
 
         _customerTarget = customer;
-        Debug.Log("JAAAA");
     }
 
     public void PutToTable()
     {
-        Debug.Log("hey");
         if (!HasCustomer()) return;
         
         _customerTarget = null;
@@ -47,8 +45,8 @@ public class PlayerPickup : MonoBehaviour
         if (!HasItem())
             return;
 
-        currentPickup.OnDrop();
-        currentPickup = null;
+        _currentPickup.OnDrop();
+        _currentPickup = null;
     }
     
     public Customer GetLeadingCustomer()
@@ -58,6 +56,6 @@ public class PlayerPickup : MonoBehaviour
 
     public IPickupable GetHeldItem()
     {
-        return currentPickup;
+        return _currentPickup;
     }
 }

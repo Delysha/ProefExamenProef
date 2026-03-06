@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class Table : Props, Iinteractable
@@ -13,7 +14,7 @@ public class Table : Props, Iinteractable
     private Material material;
     private static readonly int OutlineProperty = Shader.PropertyToID("_Outline");
 
-    
+    private const float SlotRotation = 1f;
 
     private void Awake()
     {
@@ -54,8 +55,6 @@ public class Table : Props, Iinteractable
             var availableSeat = GetAvailableSeat();
             PlaceCustomer(player, availableSeat);
         }
-
-        
     }
 
     private Transform GetAvailableItem()
@@ -94,14 +93,20 @@ public class Table : Props, Iinteractable
     private void PlaceCustomer(PlayerPickup player, Transform slot)
     {
         var customer = player.GetLeadingCustomer();
-
+        var sprite = customer.GetComponent<SpriteRenderer>();
         _slotSeats[slot] = customer;
         
         player.PutToTable();
         
-        var itemAsMono = customer as MonoBehaviour;
-        itemAsMono.transform.position = slot.position;
-        itemAsMono.transform.SetParent(slot);
+        var customerMono = customer as MonoBehaviour;
+        customerMono.transform.position = slot.position + new Vector3(0, 1f, 0);
+       
+        Debug.Log(slot.rotation.y);
+        var yAxis = slot.rotation.y;
+        var isRotated = Mathf.Approximately(yAxis, SlotRotation);
+        sprite.flipX = isRotated;
+        Debug.Log(isRotated);
+        customerMono.transform.SetParent(slot);
     }
 
     public bool HasAvailableSlot()
