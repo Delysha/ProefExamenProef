@@ -41,5 +41,8 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Wijzer
+    uniqueID: 67592131
+    locked: 0
   m_RenderingLayers:
   - Default
