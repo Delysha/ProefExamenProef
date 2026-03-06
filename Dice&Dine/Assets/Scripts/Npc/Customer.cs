@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Customer : MonoBehaviour, IWalkable, IWaitable
 {
+    public npcTimer _timer;
     public StateMachine StateMachine { get; private set; }
     public EatingState EatingState { get; private set; }
     public WaitState WaitState { get; private set; }
@@ -16,11 +17,12 @@ public class Customer : MonoBehaviour, IWalkable, IWaitable
     private void Awake()
     {
         StateMachine = new StateMachine();
-
         EatingState = new EatingState(this, StateMachine,this);
         WaitState = new WaitState(this, StateMachine);
         WalkState = new WalkState(this, StateMachine);
         IdleState = new IdleState(this, StateMachine);
+
+        _timer = GetComponent<npcTimer>();
     }
 
     private void Start()
