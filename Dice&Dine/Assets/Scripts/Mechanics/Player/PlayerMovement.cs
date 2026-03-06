@@ -81,7 +81,6 @@ public class PlayerMovement : MonoBehaviour
 
             if (interactable != null)
             {
-                Debug.Log($"Hovering over interactable: {interactable.GetTransform().name}", this);
                 currentInteractable = interactable;
                 currentInteractable.OnHoverEnter();
                 MoveTo(interactable.GetTransform().position);
@@ -95,6 +94,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
+        // Anders: normale movement
         MoveTo(GetMouseWorldPosition());
     }
 
