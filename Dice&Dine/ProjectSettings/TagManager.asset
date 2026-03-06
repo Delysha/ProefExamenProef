@@ -41,11 +41,8 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Characters
-    uniqueID: 2325708647
-    locked: 0
-  - name: Drinks
-    uniqueID: 1335186263
+  - name: Overlay
+    uniqueID: 751959765
     locked: 0
   m_RenderingLayers:
   - Default

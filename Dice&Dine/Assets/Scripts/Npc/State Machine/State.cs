@@ -1,8 +1,9 @@
+using System;
+
 public class State
 {
     protected Customer customer;
     protected StateMachine stateMachine;
-
     protected State(Customer customer, StateMachine stateMachine)
     {
         this.customer = customer;
@@ -14,4 +15,3 @@ public class State
     public virtual void FrameUpdate() {}
     
 }
-
