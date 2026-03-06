@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: bd32ce2464b9e83489cd0fa893f16ca8
+guid: c1d0d993ffc4fae42a44ef57e6ecdb99
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2845864054144878402
-    second: Slechte_AI_Art_0
+      213: 4158148809378226505
+    second: SettingsButton StartScreen_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Slechte_AI_Art_0
+      name: SettingsButton StartScreen_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1536
-        height: 1024
+        x: 218
+        y: 476
+        width: 479
+        height: 126
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 247cb5a774a8e7720800000000000000
-      internalID: 2845864054144878402
+      spriteID: 941e332bf46b4b930800000000000000
+      internalID: 4158148809378226505
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Slechte_AI_Art_0: 2845864054144878402
+      SettingsButton StartScreen_0: 4158148809378226505
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
