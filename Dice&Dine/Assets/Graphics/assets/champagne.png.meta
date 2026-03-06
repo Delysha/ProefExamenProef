@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 4eecbe0539324f74fa30d6bebcd3efee
+guid: f16fe08fdb96e964aa3dbc2e6e0b18d2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6873080446834901343
-    second: Cocktail_0
+      213: -4115121420300158249
+    second: champagne_0
+  - first:
+      213: -6546741340634674084
+    second: champagne_1
+  - first:
+      213: -6897334465016504449
+    second: champagne_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +132,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cocktail_0
+      name: champagne_0
       rect:
         serializedVersion: 2
-        x: 78
-        y: 66
-        width: 435
-        height: 527
+        x: 140
+        y: 33
+        width: 129
+        height: 678
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +147,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f5107425046126f50800000000000000
-      internalID: 6873080446834901343
+      spriteID: 7da786ffed624e6c0800000000000000
+      internalID: -4115121420300158249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: champagne_1
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 206
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5c0b13df6d4525a0800000000000000
+      internalID: -6546741340634674084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: champagne_2
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 60
+        width: 6
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7fd1a309deb740a0800000000000000
+      internalID: -6897334465016504449
       vertices: []
       indices: 
       edges: []
@@ -161,7 +211,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Cocktail_0: 6873080446834901343
+      champagne_0: -4115121420300158249
+      champagne_1: -6546741340634674084
+      champagne_2: -6897334465016504449
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

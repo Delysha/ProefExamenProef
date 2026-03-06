@@ -321,6 +321,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 105275375355187590, guid: 3c045c0647572ca4b96b66249b84e6e2, type: 3}
   m_PrefabInstance: {fileID: 4591492852967257873}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1092115518 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4564922425148740302, guid: 3c045c0647572ca4b96b66249b84e6e2, type: 3}
+  m_PrefabInstance: {fileID: 4591492852967257873}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092115517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c1c444403e7094b8931b8a7dd93130, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OrderSpotFilled
 --- !u!1 &1160091797
 GameObject:
   m_ObjectHideFlags: 0
@@ -1033,6 +1044,10 @@ PrefabInstance:
       propertyPath: saveOrder
       value: 
       objectReference: {fileID: 2066028901}
+    - target: {fileID: 7486636346225049131, guid: cf979bc34bceafb448f8c6c19ad30b3b, type: 3}
+      propertyPath: orderSpotFilled
+      value: 
+      objectReference: {fileID: 1092115518}
     - target: {fileID: 7486636346225049131, guid: cf979bc34bceafb448f8c6c19ad30b3b, type: 3}
       propertyPath: 'orderSpot.Array.data[0]'
       value: 

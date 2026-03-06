@@ -7,6 +7,7 @@ public class BarManager: MonoBehaviour
     private Animator myAmimator;
 
     [SerializeField] private SaveOrder saveOrder;
+    [SerializeField] private OrderSpotFilled orderSpotFilled;
 
     [SerializeField] private int prepareDrinkTime;
     [SerializeField] GameObject[] orderSpot;
@@ -33,6 +34,9 @@ public class BarManager: MonoBehaviour
 
             var storeNumber = saveOrder.GetComponent<SaveOrder>();
             var order = storeNumber.orderdDrink;
+
+            var spotFilled = orderSpotFilled.GetComponent<OrderSpotFilled>();
+            spotFilled.CheckIfSpotIsFilled();
 
             storeNumber.StoreList();
 
