@@ -10,10 +10,16 @@ public class WaitState : State
     {
         base.EnterState();
         Debug.Log("WaitState Mph....");
+        customer._timer.StartWaiting();
     }
 
     public override void ExitState()
     {
         base.ExitState();
+        customer._timer.StopWaiting();
+    }
+
+    public override void FrameUpdate()
+    {
     }
 }
