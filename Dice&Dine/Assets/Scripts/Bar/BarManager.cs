@@ -36,7 +36,7 @@ public class BarManager: MonoBehaviour
             var order = storeNumber.orderdDrink;
 
             var spotFilled = orderSpotFilled.GetComponent<OrderSpotFilled>();
-            spotFilled.CheckIfSpotIsFilled();
+            spotFilled.IsSpotFilled();
 
             storeNumber.StoreList();
 

@@ -4,7 +4,7 @@ public class OrderSpotFilled : MonoBehaviour
 {
     public bool SpotFilled;
 
-    public void CheckIfSpotIsFilled()
+    public void IsSpotFilled()
     {
         SpotFilled = transform.childCount > 0;
     }
