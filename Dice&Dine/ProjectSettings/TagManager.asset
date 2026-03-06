@@ -42,19 +42,19 @@ TagManager:
     uniqueID: 0
     locked: 0
   - name: Bar
-    uniqueID: 1377961975
-    locked: 0
-  - name: Items
-    uniqueID: 3688118377
+    uniqueID: 1949122999
     locked: 0
   - name: Customer
-    uniqueID: 1085568013
+    uniqueID: 2997431469
     locked: 0
   - name: Table
-    uniqueID: 1145549757
+    uniqueID: 1775632861
+    locked: 0
+  - name: Items
+    uniqueID: 2903707261
     locked: 0
   - name: Player
-    uniqueID: 955419693
+    uniqueID: 3049800403
     locked: 0
   m_RenderingLayers:
   - Default
