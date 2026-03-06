@@ -77,8 +77,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 1145549757
-  m_SortingLayer: 4
+  m_SortingLayerID: 1775632861
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 8398127345444913291, guid: 32f9a19b927818d4797ea8ed8f2b10a9, type: 3}
@@ -477,9 +477,12 @@ MonoBehaviour:
   - {fileID: 3121196820716416799}
   - {fileID: 547894884832677125}
   - {fileID: 7909372825986390197}
+  slotSeats:
+  - {fileID: 8631979457503165187}
+  - {fileID: 6703606454981642184}
+  - {fileID: 788134885052680780}
+  - {fileID: 3993527444090356101}
   interactionPoint: {fileID: 4401866778957052052}
-  seatPlace: {fileID: 244599162351755154}
-  _seats: []
 --- !u!61 &2896418630937741660
 BoxCollider2D:
   m_ObjectHideFlags: 0

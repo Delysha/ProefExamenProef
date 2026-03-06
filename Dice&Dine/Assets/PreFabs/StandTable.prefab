@@ -171,8 +171,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1775632861
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
@@ -257,9 +257,10 @@ MonoBehaviour:
   - {fileID: 7057578867506594653}
   - {fileID: 0}
   - {fileID: 0}
+  slotSeats:
+  - {fileID: 7254245897642963065}
+  - {fileID: 4106828977217151041}
   interactionPoint: {fileID: 8560326954865918386}
-  seatPlace: {fileID: 5613184230792040538}
-  _seats: []
 --- !u!61 &519006592061639821
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -351,8 +352,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1775632861
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 0}
@@ -375,7 +376,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8560326954865918386}
   m_Layer: 6
-  m_Name: staanplaats
+  m_Name: Interact Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -473,8 +474,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 1145549757
-  m_SortingLayer: 4
+  m_SortingLayerID: 1775632861
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 3303742031664371819, guid: 5cbe691177b61cd4e99d717bcb1b0398, type: 3}
