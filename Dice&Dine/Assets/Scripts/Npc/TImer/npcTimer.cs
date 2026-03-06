@@ -13,6 +13,9 @@ public class npcTimer : MonoBehaviour
 {
     public NPCType npcType;
 
+    private SpriteRenderer sprite;
+    public SpriteRenderer angerOverlay;
+
     public float maxPatience = 60f;
     public float currentPatience;
 
@@ -21,6 +24,9 @@ public class npcTimer : MonoBehaviour
 
     private void Start()
     {
+        sprite = GetComponent<SpriteRenderer>(); 
+
+        //test inputs
         Debug.Log("Press 1 = Start Waiting");
         Debug.Log("Press 2 = Stop Waiting");
         Debug.Log("Press 3 = Add Patience (Drunk)");
@@ -49,7 +55,14 @@ public class npcTimer : MonoBehaviour
         {
             Leave();
         }
-    
+
+        float normalized = currentPatience / maxPatience; 
+
+        float anger = 1f - normalized;
+
+        Color c = angerOverlay.color;
+        c.a = anger;
+        angerOverlay.color = c;
     }
 
     public void StartWaiting()
@@ -64,7 +77,7 @@ public class npcTimer : MonoBehaviour
     public void StopWaiting()
     {
         isWaiting = false;
-        Debug.Log(npcType + "LEFT because patience hit 0.");
+        Debug.Log(npcType + "LEFT because patience hit 0."); 
     }
 
     void Leave ()
