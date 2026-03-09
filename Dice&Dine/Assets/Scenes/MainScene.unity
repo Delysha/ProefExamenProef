@@ -3772,7 +3772,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectPooling
   PooledObjects: []
-  ObjectToPool: {fileID: 73446652492280835, guid: 650d7171d5fc34c41b75f08969916982, type: 3}
+  ObjectToPool:
+  - {fileID: 8567623163354113906, guid: d983555006f657143a76c27627c5d55c, type: 3}
+  - {fileID: 73446652492280835, guid: 650d7171d5fc34c41b75f08969916982, type: 3}
+  - {fileID: 8200771020381563184, guid: 829c5f443f36bc74daee77c91a3cb16f, type: 3}
+  - {fileID: 7870255045465184602, guid: 208e8a8aed89b62469d0db1b6300a0b8, type: 3}
+  - {fileID: 7469813852834840569, guid: c7ce268914c17ed48a30b4f994ead3a2, type: 3}
+  - {fileID: 4222262715266332221, guid: df9d566d22930b545b4fd1d6d76f3760, type: 3}
+  - {fileID: 7554020497008596692, guid: 81ce5851d8e34a94bae6ba8e42f3edde, type: 3}
+  - {fileID: 6532392293222782302, guid: dbec2f37c7caf7f4abf9a7550b88268d, type: 3}
+  - {fileID: 4984206664160295546, guid: cc17ee80c461aa84b99f57f2eafe959b, type: 3}
   amountToPool: 10
   customerSpawner: {fileID: 928444493}
 --- !u!1 &862631180
