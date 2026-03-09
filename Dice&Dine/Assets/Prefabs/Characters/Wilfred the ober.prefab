@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8103655911472540532}
   - component: {fileID: 771825224385331097}
   m_Layer: 0
-  m_Name: MainCharacter
+  m_Name: Wilfred the ober
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
