@@ -15,7 +15,6 @@ public class ObjectPooling : MonoBehaviour
     }
     private void Start()
     {
-        PooledObjects = new List<GameObject>();
         GameObject tmp;
         for(var i = 0; i < amountToPool; i++)
         {
@@ -30,16 +29,11 @@ public class ObjectPooling : MonoBehaviour
     {
         for(var i = 0; i < amountToPool; i++)
         {
-            InitializeObject(PooledObjects[i].transform );
             if(!PooledObjects[i].activeInHierarchy) return PooledObjects[i];
         }
         return null;
     }
-
-    private void InitializeObject(Transform pooledObject)
-    {
-        pooledObject.GetComponent<Customer>().targets = customerSpawner.Targets;
-    }
+    
     
     
     

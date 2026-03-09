@@ -12,7 +12,7 @@ public class Customer : MonoBehaviour, IWalkable, IWaitable, Iinteractable
     
     public int money;
     public int patience;
-    public List<Transform> targets { get; set; }
+    
     [SerializeField] private Transform interactionPoint;
     
     private void Awake()
