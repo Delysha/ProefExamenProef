@@ -1,22 +1,13 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Dice&Dine/Assets/Graphics/assets/Cocktail.png.meta
-guid: 4eecbe0539324f74fa30d6bebcd3efee
+guid: f98cb510e1e4a1741a5e27675695f907
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6873080446834901343
-    second: Cocktail_0
-========
-guid: 23d56d5e9266f9a4291464902c455bfb
-TextureImporter:
-  internalIDToNameTable:
+      213: -5786002942160612381
+    second: Barvrouw 1_0
   - first:
-      213: 2253639577306037883
-    second: Antonio_0
-  - first:
-      213: -5338153101640517777
-    second: Antonio_1
->>>>>>>> develop:Dice&Dine/Assets/Graphics/characters/Antonio.png.meta
+      213: -1970487791519496149
+    second: Barvrouw 1_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -63,7 +54,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1500
+  spritePixelsToUnits: 300
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -138,23 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-<<<<<<<< HEAD:Dice&Dine/Assets/Graphics/assets/Cocktail.png.meta
-      name: Cocktail_0
+      name: Barvrouw 1_0
       rect:
         serializedVersion: 2
-        x: 78
-        y: 66
-        width: 435
-        height: 527
-========
-      name: Antonio_0
-      rect:
-        serializedVersion: 2
-        x: 56
-        y: 63
-        width: 293
-        height: 792
->>>>>>>> develop:Dice&Dine/Assets/Graphics/characters/Antonio.png.meta
+        x: 24
+        y: 11
+        width: 207
+        height: 253
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,24 +144,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-<<<<<<<< HEAD:Dice&Dine/Assets/Graphics/assets/Cocktail.png.meta
-      spriteID: f5107425046126f50800000000000000
-      internalID: 6873080446834901343
-========
-      spriteID: b7e76195149864f10800000000000000
-      internalID: 2253639577306037883
+      spriteID: 3e3d62bcafcf3bfa0800000000000000
+      internalID: -5786002942160612381
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Antonio_1
+      name: Barvrouw 1_1
       rect:
         serializedVersion: 2
-        x: 494
-        y: 63
-        width: 293
-        height: 782
+        x: 254
+        y: 10
+        width: 208
+        height: 254
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,9 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f67311c69021be5b0800000000000000
-      internalID: -5338153101640517777
->>>>>>>> develop:Dice&Dine/Assets/Graphics/characters/Antonio.png.meta
+      spriteID: b288c303bcb67a4e0800000000000000
+      internalID: -1970487791519496149
       vertices: []
       indices: 
       edges: []
@@ -210,12 +186,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-<<<<<<<< HEAD:Dice&Dine/Assets/Graphics/assets/Cocktail.png.meta
-      Cocktail_0: 6873080446834901343
-========
-      Antonio_0: 2253639577306037883
-      Antonio_1: -5338153101640517777
->>>>>>>> develop:Dice&Dine/Assets/Graphics/characters/Antonio.png.meta
+      Barvrouw 1_0: -5786002942160612381
+      Barvrouw 1_1: -1970487791519496149
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
