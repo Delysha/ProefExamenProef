@@ -111,8 +111,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 260246021
-  m_SortingLayer: 0
+  m_SortingLayerID: 1949122999
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -1181791886509611333, guid: e58dd02cb188f0f49a0221412ccf4c43, type: 3}
@@ -135,7 +135,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6573691092319805131}
   - component: {fileID: 6147752205085404925}
-  - component: {fileID: 7423745914824758014}
   m_Layer: 0
   m_Name: Bar-Under
   m_TagString: Untagged
@@ -203,8 +202,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 260246021
-  m_SortingLayer: 0
+  m_SortingLayerID: 1949122999
+  m_SortingLayer: 1
   m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -5281223034718687786, guid: c68fedfb039465044a6c4c46104585a0, type: 3}
@@ -217,22 +216,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &7423745914824758014
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6644967916672675407}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: NavMeshPlus::NavMeshPlus.Components.NavMeshModifier
-  m_OverrideArea: 1
-  m_Area: 1
-  m_IgnoreFromBuild: 0
-  m_AffectedAgents: ffffffff
 --- !u!1 &7742133768192061815
 GameObject:
   m_ObjectHideFlags: 0
@@ -260,8 +243,8 @@ Transform:
   m_GameObject: {fileID: 7742133768192061815}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
-  m_LocalScale: {x: 24, y: 2, z: 0}
+  m_LocalPosition: {x: 0.0056, y: 0.4604, z: 0}
+  m_LocalScale: {x: 14, y: 2, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1039825343585481823}

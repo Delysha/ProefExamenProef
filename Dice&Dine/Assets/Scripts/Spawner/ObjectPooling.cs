@@ -5,7 +5,7 @@ public class ObjectPooling : MonoBehaviour
 {
     public static ObjectPooling Instance;
     public List<GameObject> PooledObjects;
-    public GameObject ObjectToPool;
+    public List<GameObject> ObjectToPool;
     [SerializeField] private int amountToPool;
     [SerializeField] private CustomerSpawner customerSpawner;
     
@@ -19,7 +19,8 @@ public class ObjectPooling : MonoBehaviour
         GameObject tmp;
         for(var i = 0; i < amountToPool; i++)
         {
-            tmp = Instantiate(ObjectToPool);
+            var randomIndex = Random.Range(0, ObjectToPool.Count - 1);
+            tmp = Instantiate(ObjectToPool[randomIndex]);
             tmp.SetActive(false);
             PooledObjects.Add(tmp);
         }
