@@ -1036,6 +1036,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1094204094600093693, guid: cf979bc34bceafb448f8c6c19ad30b3b, type: 3}
+      propertyPath: m_Size.x
+      value: 0.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094204094600093693, guid: cf979bc34bceafb448f8c6c19ad30b3b, type: 3}
+      propertyPath: m_Size.y
+      value: 0.8433333
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094204094600093693, guid: cf979bc34bceafb448f8c6c19ad30b3b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -5786002942160612381, guid: f98cb510e1e4a1741a5e27675695f907, type: 3}
+    - target: {fileID: 1094204094600093693, guid: cf979bc34bceafb448f8c6c19ad30b3b, type: 3}
+      propertyPath: m_SortingLayer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094204094600093693, guid: cf979bc34bceafb448f8c6c19ad30b3b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094204094600093693, guid: cf979bc34bceafb448f8c6c19ad30b3b, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -794002923
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094204094600093693, guid: cf979bc34bceafb448f8c6c19ad30b3b, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6954757052463499849, guid: cf979bc34bceafb448f8c6c19ad30b3b, type: 3}
       propertyPath: m_Name
       value: barVrouw
