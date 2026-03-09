@@ -1,25 +1,7 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Dice&Dine/Assets/Graphics/characters/Barvrouw.png.meta
 guid: dc525170fc64a4742b87f40c44adeac3
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 6870158075170578819
-    second: Barvrouw_0
-  - first:
-      213: 5757250322248136994
-    second: Barvrouw_1
-========
-guid: 7e7d4439f4f5eac4db4763cc9e716eee
-TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 4304983225676973797
-    second: Ian_0
-  - first:
-      213: 1549288825534512837
-    second: Ian_1
->>>>>>>> develop:Dice&Dine/Assets/Graphics/characters/Ian.png.meta
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -57,7 +39,7 @@ TextureImporter:
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 1
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -66,11 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-<<<<<<<< HEAD:Dice&Dine/Assets/Graphics/characters/Barvrouw.png.meta
-  spritePixelsToUnits: 300
-========
   spritePixelsToUnits: 200
->>>>>>>> develop:Dice&Dine/Assets/Graphics/characters/Ian.png.meta
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -85,16 +63,16 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 0
+  applyGammaDecoding: 1
   swizzle: 50462976
-  cookieLightType: 0
+  cookieLightType: 2
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -107,7 +85,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -120,7 +98,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -133,7 +111,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -145,75 +123,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-<<<<<<<< HEAD:Dice&Dine/Assets/Graphics/characters/Barvrouw.png.meta
-      name: Barvrouw_0
-      rect:
-        serializedVersion: 2
-        x: 25
-        y: 12
-        width: 205
-        height: 251
-========
       name: Ian_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 35
-        width: 437
-        height: 548
->>>>>>>> develop:Dice&Dine/Assets/Graphics/characters/Ian.png.meta
+        y: 36
+        width: 436
+        height: 546
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-<<<<<<<< HEAD:Dice&Dine/Assets/Graphics/characters/Barvrouw.png.meta
-      spriteID: 381e255ae54b75f50800000000000000
-      internalID: 6870158075170578819
-========
-      spriteID: 5e6cd7a5f6f5ebb30800000000000000
-      internalID: 4304983225676973797
->>>>>>>> develop:Dice&Dine/Assets/Graphics/characters/Ian.png.meta
+      spriteID: 6c2e779671635134ea93eecb7bc02c59
+      internalID: 84884824
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-<<<<<<<< HEAD:Dice&Dine/Assets/Graphics/characters/Barvrouw.png.meta
-      name: Barvrouw_1
-      rect:
-        serializedVersion: 2
-        x: 255
-        y: 11
-        width: 206
-        height: 252
-========
       name: Ian_1
       rect:
         serializedVersion: 2
-        x: 546
-        y: 35
-        width: 438
-        height: 542
->>>>>>>> develop:Dice&Dine/Assets/Graphics/characters/Ian.png.meta
+        x: 547
+        y: 36
+        width: 436
+        height: 540
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-<<<<<<<< HEAD:Dice&Dine/Assets/Graphics/characters/Barvrouw.png.meta
-      spriteID: 2297a943aacd5ef40800000000000000
-      internalID: 5757250322248136994
-========
-      spriteID: 5ce77747afd208510800000000000000
-      internalID: 1549288825534512837
->>>>>>>> develop:Dice&Dine/Assets/Graphics/characters/Ian.png.meta
+      spriteID: 57655586d21910142be150bfbefe0707
+      internalID: 2053899117
       vertices: []
       indices: 
       edges: []
@@ -222,11 +170,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-<<<<<<<< HEAD:Dice&Dine/Assets/Graphics/characters/Barvrouw.png.meta
-    spriteID: 5d601dd5d4863714488153e474ffbca7
-========
-    spriteID: 
->>>>>>>> develop:Dice&Dine/Assets/Graphics/characters/Ian.png.meta
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -235,16 +179,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries:
+      - key: SpriteEditor.SliceOnImport
+        value: False
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-<<<<<<<< HEAD:Dice&Dine/Assets/Graphics/characters/Barvrouw.png.meta
-      Barvrouw_0: 6870158075170578819
-      Barvrouw_1: 5757250322248136994
-========
-      Ian_0: 4304983225676973797
-      Ian_1: 1549288825534512837
->>>>>>>> develop:Dice&Dine/Assets/Graphics/characters/Ian.png.meta
+      Ian_0: 84884824
+      Ian_1: 2053899117
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
