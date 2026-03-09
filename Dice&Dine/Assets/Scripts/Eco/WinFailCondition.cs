@@ -3,19 +3,13 @@ using UnityEngine;
 public class WinFailCondition : MonoBehaviour
 {
     private MainEconomy _mainEconoyScript;
-    private DayTimerScript _dayTimerScript;
 
     private void Awake()
     {
         _mainEconoyScript = FindAnyObjectByType<MainEconomy>();
-        _dayTimerScript = FindAnyObjectByType<DayTimerScript>();
     }
 
     private void Update()
-    {
-        _dayTimerScript.OnDayFinished += handleDayFinished;
-    }
-    private void handleDayFinished()
     {
         DayCompleted();
         GameOver();
@@ -35,11 +29,5 @@ public class WinFailCondition : MonoBehaviour
         {
             Debug.Log("You did not hit the daily quota");
         }
-    }
-
-    private void OnDestroy()
-    {
-        if (_dayTimerScript != null)
-            _dayTimerScript.OnDayFinished -= handleDayFinished;
     }
 }
