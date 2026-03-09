@@ -1,7 +1,22 @@
 fileFormatVersion: 2
-guid: 9509f093924012745a4640500d367ac0
+<<<<<<<< HEAD:Dice&Dine/Assets/Graphics/assets/Cocktail.png.meta
+guid: f6d65b365f0070242ba1f619e4bd39ed
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 6873080446834901343
+    second: Cocktail_0
+========
+guid: 23d56d5e9266f9a4291464902c455bfb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2253639577306037883
+    second: Antonio_0
+  - first:
+      213: -5338153101640517777
+    second: Antonio_1
+>>>>>>>> develop:Dice&Dine/Assets/Graphics/characters/Antonio.png.meta
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -39,7 +54,7 @@ TextureImporter:
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 0
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -48,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 200
+  spritePixelsToUnits: 1500
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -63,16 +78,16 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 1
+  applyGammaDecoding: 0
   swizzle: 50462976
-  cookieLightType: 2
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -85,7 +100,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -98,7 +113,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -111,7 +126,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -123,23 +138,37 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
+<<<<<<<< HEAD:Dice&Dine/Assets/Graphics/assets/Cocktail.png.meta
+      name: Cocktail_0
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 66
+        width: 435
+        height: 527
+========
       name: Antonio_0
       rect:
         serializedVersion: 2
-        x: 57
-        y: 64
-        width: 291
-        height: 790
+        x: 56
+        y: 63
+        width: 293
+        height: 792
+>>>>>>>> develop:Dice&Dine/Assets/Graphics/characters/Antonio.png.meta
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 4fdacce25e3c45547b077fc408a37b3f
-      internalID: -1476181262
+<<<<<<<< HEAD:Dice&Dine/Assets/Graphics/assets/Cocktail.png.meta
+      spriteID: f5107425046126f50800000000000000
+      internalID: 6873080446834901343
+========
+      spriteID: b7e76195149864f10800000000000000
+      internalID: 2253639577306037883
       vertices: []
       indices: 
       edges: []
@@ -148,20 +177,21 @@ TextureImporter:
       name: Antonio_1
       rect:
         serializedVersion: 2
-        x: 495
-        y: 64
-        width: 291
-        height: 780
+        x: 494
+        y: 63
+        width: 293
+        height: 782
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 80773dd56e710a8458a98e666112971d
-      internalID: -1407778175
+      spriteID: f67311c69021be5b0800000000000000
+      internalID: -5338153101640517777
+>>>>>>>> develop:Dice&Dine/Assets/Graphics/characters/Antonio.png.meta
       vertices: []
       indices: 
       edges: []
@@ -170,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -178,12 +208,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      Antonio_0: -1476181262
-      Antonio_1: -1407778175
+<<<<<<<< HEAD:Dice&Dine/Assets/Graphics/assets/Cocktail.png.meta
+      Cocktail_0: 6873080446834901343
+========
+      Antonio_0: 2253639577306037883
+      Antonio_1: -5338153101640517777
+>>>>>>>> develop:Dice&Dine/Assets/Graphics/characters/Antonio.png.meta
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
