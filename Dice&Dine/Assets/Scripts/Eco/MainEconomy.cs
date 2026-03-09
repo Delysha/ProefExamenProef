@@ -18,8 +18,6 @@ public class MainEconomy : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("Your current money is " + Money);
-
         CheatMoney();
 
         CustomerLeavesMoney();
