@@ -55,8 +55,12 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 3049800403
+    locked: 0
   - name: Overlay
     uniqueID: 751959765
+    locked: 0
+  - name: Characters
+    uniqueID: 1512810669
     locked: 0
   m_RenderingLayers:
   - Default
