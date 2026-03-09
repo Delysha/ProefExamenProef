@@ -19,10 +19,18 @@ public class BarManager: MonoBehaviour
 
     public IEnumerator PrepareDrinkRoutine()
     {
-        myAmimator.SetBool("IsPreparing", true);
-        yield return new WaitForSeconds(prepareDrinkTime);
-        myAmimator.SetBool("IsPreparing", false);
-        SetDrinkInSpot();
+        for (int i = 0; i < orderSpot.Length; i++)
+        {
+            var spot = orderSpot[i].GetComponent<OrderSpotFilled>();
+
+            if (!spot.SpotFilled) 
+            {
+                myAmimator.SetBool("IsPreparing", true);
+                yield return new WaitForSeconds(prepareDrinkTime);
+                myAmimator.SetBool("IsPreparing", false);
+                SetDrinkInSpot();
+            }
+        }
     }
 
     private void SetDrinkInSpot()
