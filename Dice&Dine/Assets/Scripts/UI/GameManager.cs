@@ -25,6 +25,12 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("StartScreen");
     }
 
+    public void LoadMoveGame()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("PlayerMovement");
+    }
+
     public void LoadMainGame()
     {
         Time.timeScale = 1f;

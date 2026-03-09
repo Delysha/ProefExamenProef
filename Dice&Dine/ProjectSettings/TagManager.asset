@@ -41,5 +41,22 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Bar
+    uniqueID: 1949122999
+    locked: 0
+  - name: Customer
+    uniqueID: 2997431469
+    locked: 0
+  - name: Table
+    uniqueID: 1775632861
+    locked: 0
+  - name: Items
+    uniqueID: 2903707261
+    locked: 0
+  - name: Player
+    uniqueID: 3049800403
+  - name: Overlay
+    uniqueID: 751959765
+    locked: 0
   m_RenderingLayers:
   - Default
