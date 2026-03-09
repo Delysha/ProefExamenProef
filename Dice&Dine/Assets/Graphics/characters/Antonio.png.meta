@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: f81df93b4be2156409362f058e0ca0a5
+<<<<<<<< HEAD:Dice&Dine/Assets/Graphics/assets/Cocktail.png.meta
+guid: 4eecbe0539324f74fa30d6bebcd3efee
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8733296644827829071
-    second: character Diva_0
+      213: 6873080446834901343
+    second: Cocktail_0
+========
+guid: 23d56d5e9266f9a4291464902c455bfb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2253639577306037883
+    second: Antonio_0
+  - first:
+      213: -5338153101640517777
+    second: Antonio_1
+>>>>>>>> develop:Dice&Dine/Assets/Graphics/characters/Antonio.png.meta
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,13 +58,13 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
-  spriteExtrude: 7
+  spriteMode: 2
+  spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.3953891, y: 0.5028785}
-  spritePixelsToUnits: 300
-  spriteBorder: {x: 0, y: 0, z: 47, w: 0}
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1500
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -126,23 +138,60 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: character Diva_0
+<<<<<<<< HEAD:Dice&Dine/Assets/Graphics/assets/Cocktail.png.meta
+      name: Cocktail_0
       rect:
         serializedVersion: 2
-        x: 52
-        y: 94
-        width: 240
-        height: 639
+        x: 78
+        y: 66
+        width: 435
+        height: 527
+========
+      name: Antonio_0
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 63
+        width: 293
+        height: 792
+>>>>>>>> develop:Dice&Dine/Assets/Graphics/characters/Antonio.png.meta
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f43d2190707e23970800000000000000
-      internalID: 8733296644827829071
+<<<<<<<< HEAD:Dice&Dine/Assets/Graphics/assets/Cocktail.png.meta
+      spriteID: f5107425046126f50800000000000000
+      internalID: 6873080446834901343
+========
+      spriteID: b7e76195149864f10800000000000000
+      internalID: 2253639577306037883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Antonio_1
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 63
+        width: 293
+        height: 782
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f67311c69021be5b0800000000000000
+      internalID: -5338153101640517777
+>>>>>>>> develop:Dice&Dine/Assets/Graphics/characters/Antonio.png.meta
       vertices: []
       indices: 
       edges: []
@@ -151,8 +200,8 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    spriteID: 
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -161,7 +210,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      character Diva_0: 8733296644827829071
+<<<<<<<< HEAD:Dice&Dine/Assets/Graphics/assets/Cocktail.png.meta
+      Cocktail_0: 6873080446834901343
+========
+      Antonio_0: 2253639577306037883
+      Antonio_1: -5338153101640517777
+>>>>>>>> develop:Dice&Dine/Assets/Graphics/characters/Antonio.png.meta
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
