@@ -1,7 +1,14 @@
 using UnityEngine;
 
-public class ThereIsOder : MonoBehaviour
+public class ThereIsOder : MonoBehaviour, Iinteractable
 {
+    [Header("Highlight Settings")]
+    [SerializeField] private SpriteRenderer _mySpriteRenderer;
+    [SerializeField] private Material _normalMaterial;
+    [SerializeField] private Material _outlineMaterial;
+
+    [SerializeField] private Transform _interractionPoint;
+
     private SpriteRenderer _spriteRenderer;
 
     [SerializeField] private BarManager barManagerScript;
@@ -11,6 +18,11 @@ public class ThereIsOder : MonoBehaviour
     //SerializeField is voor testing
     [SerializeField] private bool _oderHasBeenMade;
 
+    private void Awake()
+    {
+        _mySpriteRenderer.material = _normalMaterial;
+    }
+
     void Start()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
@@ -19,6 +31,16 @@ public class ThereIsOder : MonoBehaviour
     void Update()
     {
         oderHasBeenMade();
+    }
+
+    public Transform GetTransform() 
+    {
+        return _interractionPoint;
+    }
+
+    public void Interact(PlayerPickup player)
+    {
+
     }
 
     private void oderHasBeenMade()
@@ -32,5 +54,15 @@ public class ThereIsOder : MonoBehaviour
         {
             _spriteRenderer.sprite = oderPanel1;
         }
+    }
+
+    public void OnHoverEnter()
+    {
+        _mySpriteRenderer.material = _outlineMaterial;
+    }
+
+    public void OnHoverExit()
+    {
+        _mySpriteRenderer.material = _normalMaterial;
     }
 }

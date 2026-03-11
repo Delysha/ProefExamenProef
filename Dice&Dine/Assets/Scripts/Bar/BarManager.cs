@@ -23,12 +23,16 @@ public class BarManager: MonoBehaviour
         {
             var spot = orderSpot[i].GetComponent<OrderSpotFilled>();
 
-            if (!spot.SpotFilled) 
+            if (!spot.SpotFilled)
             {
                 myAmimator.SetBool("IsPreparing", true);
                 yield return new WaitForSeconds(prepareDrinkTime);
                 myAmimator.SetBool("IsPreparing", false);
                 SetDrinkInSpot();
+            }
+            else
+            {
+                myAmimator.SetBool("IsPreparing", false);
             }
         }
     }
