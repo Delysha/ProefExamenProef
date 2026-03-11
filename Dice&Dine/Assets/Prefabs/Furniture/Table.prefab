@@ -576,7 +576,7 @@ MonoBehaviour:
   - {fileID: 3993527444090356101}
   interactionPoint: {fileID: 4401866778957052052}
   spriteRenderer: {fileID: 5652248863032895158}
-  normalMaterial: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+  normalMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   outlineMaterial: {fileID: 2100000, guid: 603244dc1ee302248ba1cf1dec97308b, type: 2}
 --- !u!61 &2896418630937741660
 BoxCollider2D:
@@ -616,7 +616,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 7.33, y: 4.75}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 7.33, y: 4.75}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

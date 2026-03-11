@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 981521559873804077}
   - component: {fileID: 199686296717178050}
   - component: {fileID: 786688304257000858}
+  - component: {fileID: 8723511246628685271}
   - component: {fileID: -5558482940699014795}
   - component: {fileID: -6271532070249185193}
   m_Layer: 6
@@ -106,6 +107,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96b0627eb414d0840927f4cf86b307bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickupItem
+--- !u!114 &8723511246628685271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5282228561375350863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0c5173f34d6e7a45885f6b4419313d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OutlineCreate
+  spriteRenderer: {fileID: 199686296717178050}
+  normalMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  outlineMaterial: {fileID: 2100000, guid: 603244dc1ee302248ba1cf1dec97308b, type: 2}
 --- !u!50 &-5558482940699014795
 Rigidbody2D:
   serializedVersion: 5

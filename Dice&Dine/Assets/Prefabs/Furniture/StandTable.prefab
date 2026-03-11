@@ -263,7 +263,7 @@ MonoBehaviour:
   - {fileID: 4106828977217151041}
   interactionPoint: {fileID: 8560326954865918386}
   spriteRenderer: {fileID: 502366651098835864}
-  normalMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  normalMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   outlineMaterial: {fileID: 2100000, guid: 603244dc1ee302248ba1cf1dec97308b, type: 2}
 --- !u!61 &519006592061639821
 BoxCollider2D:

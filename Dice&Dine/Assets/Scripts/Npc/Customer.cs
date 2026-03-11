@@ -23,6 +23,11 @@ public class Customer : MonoBehaviour, IWalkable, IWaitable, Iinteractable
 
     private bool _wantsToOrder = false;
 
+    [Header("Highlight Settings")]
+    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private Material normalMaterial;
+    [SerializeField] private Material outlineMaterial;
+
     private void Awake()
     {
         StateMachine = new StateMachine();
@@ -33,6 +38,8 @@ public class Customer : MonoBehaviour, IWalkable, IWaitable, Iinteractable
         IdleState = new IdleState(this, StateMachine);
 
         _timer = GetComponent<npcTimer>();
+
+        spriteRenderer.material = normalMaterial;
     }
 
     private void Start()
@@ -77,11 +84,11 @@ public class Customer : MonoBehaviour, IWalkable, IWaitable, Iinteractable
 
     public void OnHoverEnter()
     {
-        // outline shader later
+        spriteRenderer.material = outlineMaterial;
     }
 
     public void OnHoverExit()
     {
-        // outline shader later
+        spriteRenderer.material = normalMaterial;
     }
 }

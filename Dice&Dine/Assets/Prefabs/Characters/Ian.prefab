@@ -112,6 +112,11 @@ MonoBehaviour:
   money: 0
   patience: 0
   interactionPoint: {fileID: 2745257067337293372}
+  orderTicketPrefab: {fileID: 0}
+  ticketSpawnPoint: {fileID: 0}
+  spriteRenderer: {fileID: 4151564203119813881}
+  normalMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  outlineMaterial: {fileID: 2100000, guid: 603244dc1ee302248ba1cf1dec97308b, type: 2}
 --- !u!50 &1965069673764598537
 Rigidbody2D:
   serializedVersion: 5
