@@ -1,7 +1,13 @@
 fileFormatVersion: 2
-guid: dc525170fc64a4742b87f40c44adeac3
+guid: ea826410c689750459cba5607c130fad
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 734335870793897157
+    second: MainCharacterIdle_0
+  - first:
+      213: 3116093955330833755
+    second: MainCharacterIdle_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -39,7 +45,7 @@ TextureImporter:
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 0
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -48,7 +54,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 200
+  spritePixelsToUnits: 300
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -63,16 +69,16 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 1
+  applyGammaDecoding: 0
   swizzle: 50462976
-  cookieLightType: 2
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -85,7 +91,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -98,7 +104,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -111,7 +117,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -123,45 +129,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ian_0
+      name: MainCharacterIdle_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 36
-        width: 436
-        height: 546
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 41
+        y: 133
+        width: 444
+        height: 706
+      alignment: 9
+      pivot: {x: 0.6, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 6c2e779671635134ea93eecb7bc02c59
-      internalID: 84884824
+      spriteID: 5c45f747592e03a00800000000000000
+      internalID: 734335870793897157
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ian_1
+      name: MainCharacterIdle_1
       rect:
         serializedVersion: 2
-        x: 547
-        y: 36
-        width: 436
-        height: 540
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 533
+        y: 131
+        width: 444
+        height: 707
+      alignment: 9
+      pivot: {x: 0.6, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 57655586d21910142be150bfbefe0707
-      internalID: 2053899117
+      spriteID: b5d7c3e41f69e3b20800000000000000
+      internalID: 3116093955330833755
       vertices: []
       indices: 
       edges: []
@@ -170,7 +176,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: d48b9408d537134468670e780ce502de
     internalID: 0
     vertices: []
     indices: 
@@ -179,13 +185,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries:
-      - key: SpriteEditor.SliceOnImport
-        value: False
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Ian_0: 84884824
-      Ian_1: 2053899117
+      MainCharacterIdle_0: 734335870793897157
+      MainCharacterIdle_1: 3116093955330833755
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
