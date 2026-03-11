@@ -3896,6 +3896,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObjectPooling
   PooledObjects: []
   ObjectToPool:
+  - {fileID: 7554020497008596692, guid: 81ce5851d8e34a94bae6ba8e42f3edde, type: 3}
   - {fileID: 8567623163354113906, guid: d983555006f657143a76c27627c5d55c, type: 3}
   - {fileID: 73446652492280835, guid: 650d7171d5fc34c41b75f08969916982, type: 3}
   - {fileID: 8200771020381563184, guid: 829c5f443f36bc74daee77c91a3cb16f, type: 3}
@@ -5305,7 +5306,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1643288718262489966, guid: c9da171267ed52f4eb36059914db02f4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.297245
+      value: -4.01
       objectReference: {fileID: 0}
     - target: {fileID: 1643288718262489966, guid: c9da171267ed52f4eb36059914db02f4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8117,7 +8118,7 @@ GameObject:
   - component: {fileID: 1865785644}
   - component: {fileID: 1865785643}
   m_Layer: 7
-  m_Name: Illustration336_0
+  m_Name: Map
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
