@@ -80,15 +80,15 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1969258649
-  m_SortingLayer: 0
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -5786002942160612381, guid: f98cb510e1e4a1741a5e27675695f907, type: 3}
+  m_Sprite: {fileID: 6870158075170578819, guid: dc525170fc64a4742b87f40c44adeac3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.69, y: 0.8433333}
+  m_Size: {x: 1, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -106,7 +106,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainBarBasis
   saveOrder: {fileID: 0}
-  orderSpotFilled: {fileID: 0}
   prepareDrinkTime: 4
   orderSpot:
   - {fileID: 0}
