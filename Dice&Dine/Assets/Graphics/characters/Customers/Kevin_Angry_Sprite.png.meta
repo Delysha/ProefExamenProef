@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: a7b9c035d2fabd94d83d8f5b67c93775
+guid: 656130d85061d274f9758def94537500
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3315250245533797908
-    second: Wilfred_Walk-Side_Frame2_0
+      213: 6173008769542169003
+    second: Kevin_Angry_Sprite_0
+  - first:
+      213: 9104303722023677024
+    second: Kevin_Angry_Sprite_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Wilfred_Walk-Side_Frame2_0
+      name: Kevin_Angry_Sprite_0
       rect:
         serializedVersion: 2
-        x: 70
-        y: 82
-        width: 697
-        height: 842
+        x: 50
+        y: 38
+        width: 247
+        height: 798
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +144,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ce17e65777dddf1d0800000000000000
-      internalID: -3315250245533797908
+      spriteID: ba1aee715ceeaa550800000000000000
+      internalID: 6173008769542169003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kevin_Angry_Sprite_1
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 38
+        width: 253
+        height: 806
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06cec7e9ffbf85e70800000000000000
+      internalID: 9104303722023677024
       vertices: []
       indices: 
       edges: []
@@ -161,7 +186,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Wilfred_Walk-Side_Frame2_0: -3315250245533797908
+      Kevin_Angry_Sprite_0: 6173008769542169003
+      Kevin_Angry_Sprite_1: 9104303722023677024
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

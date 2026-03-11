@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: c871e3dab84a95d47adb15aa2ca28d51
+guid: 09bef9c02038d3f4493011cfb4cbe090
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5617688906981597808
-    second: Wilfred_Walk-Side_Frame6_0
+      213: -3766358915352989384
+    second: Antonio_Drink1_Sprite_0
+  - first:
+      213: -6922000558435238423
+    second: Antonio_Drink1_Sprite_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Wilfred_Walk-Side_Frame6_0
+      name: Antonio_Drink1_Sprite_0
       rect:
         serializedVersion: 2
-        x: 70
-        y: 82
-        width: 697
-        height: 842
+        x: 20
+        y: 13
+        width: 322
+        height: 790
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +144,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0726a4f0c4a06fd40800000000000000
-      internalID: 5617688906981597808
+      spriteID: 83172c185843bbbc0800000000000000
+      internalID: -3766358915352989384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Antonio_Drink1_Sprite_1
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 13
+        width: 322
+        height: 780
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ed796b9a2d10ff90800000000000000
+      internalID: -6922000558435238423
       vertices: []
       indices: 
       edges: []
@@ -161,7 +186,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Wilfred_Walk-Side_Frame6_0: 5617688906981597808
+      Antonio_Drink1_Sprite_0: -3766358915352989384
+      Antonio_Drink1_Sprite_1: -6922000558435238423
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

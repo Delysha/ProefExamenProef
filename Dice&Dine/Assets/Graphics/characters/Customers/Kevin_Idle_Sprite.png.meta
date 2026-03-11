@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 5db19665988c9b740a1522a62c288b72
+guid: 7d3dd7a2c404ca644b1c6e882741782d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7617098292509024680
-    second: Wilfred_Walk-Side_Frame1_0
+      213: 8377141945438389959
+    second: Kevin_Idle_Sprite_0
+  - first:
+      213: 6727494616946629231
+    second: Kevin_Idle_Sprite_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Wilfred_Walk-Side_Frame1_0
+      name: Kevin_Idle_Sprite_0
       rect:
         serializedVersion: 2
-        x: 87
-        y: 89
-        width: 631
-        height: 854
+        x: 28
+        y: 34
+        width: 218
+        height: 816
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +144,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8a12c383a8e55b960800000000000000
-      internalID: 7617098292509024680
+      spriteID: 7c641e22736914470800000000000000
+      internalID: 8377141945438389959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kevin_Idle_Sprite_1
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 34
+        width: 218
+        height: 806
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6ad477d5bcdc5d50800000000000000
+      internalID: 6727494616946629231
       vertices: []
       indices: 
       edges: []
@@ -161,7 +186,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Wilfred_Walk-Side_Frame1_0: 7617098292509024680
+      Kevin_Idle_Sprite_0: 8377141945438389959
+      Kevin_Idle_Sprite_1: 6727494616946629231
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
