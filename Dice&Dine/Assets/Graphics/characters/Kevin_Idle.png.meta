@@ -1,7 +1,13 @@
 fileFormatVersion: 2
-guid: 2ceb599b425c2d44b9f1e62e9f6eef0f
+guid: 0d9009c4ebf00ef4b9cde767fee15f4e
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 1176604153929355041
+    second: Kevin_Idle_0
+  - first:
+      213: -2708999307606502161
+    second: Kevin_Idle_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -39,7 +45,7 @@ TextureImporter:
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 0
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -48,7 +54,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 200
+  spritePixelsToUnits: 300
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -63,16 +69,16 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 1
+  applyGammaDecoding: 0
   swizzle: 50462976
-  cookieLightType: 2
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -85,7 +91,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -98,7 +104,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -111,7 +117,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -123,45 +129,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Barvrouw_0
+      name: Kevin_Idle_0
       rect:
         serializedVersion: 2
-        x: 25
-        y: 12
-        width: 205
-        height: 251
+        x: 28
+        y: 34
+        width: 218
+        height: 816
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 50870bee7bb7bfa46a6c7343966685dc
-      internalID: 1661878801
+      spriteID: 12f453c7e33245010800000000000000
+      internalID: 1176604153929355041
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barvrouw_1
+      name: Kevin_Idle_1
       rect:
         serializedVersion: 2
-        x: 255
-        y: 11
-        width: 206
-        height: 252
+        x: 393
+        y: 34
+        width: 218
+        height: 815
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 03f590647694c9e42a08eac9eaed6edb
-      internalID: 16717403
+      spriteID: fe4d55d8b73b76ad0800000000000000
+      internalID: -2708999307606502161
       vertices: []
       indices: 
       edges: []
@@ -170,7 +176,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 10dd86640befb6248959d3c3100becfe
     internalID: 0
     vertices: []
     indices: 
@@ -178,12 +184,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      Barvrouw_0: 1661878801
-      Barvrouw_1: 16717403
+      Kevin_Idle_0: 1176604153929355041
+      Kevin_Idle_1: -2708999307606502161
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

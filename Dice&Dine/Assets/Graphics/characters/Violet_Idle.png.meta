@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: f98cb510e1e4a1741a5e27675695f907
+guid: ed714e0a10e3b9c41b8eae52cdc671fa
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5786002942160612381
-    second: Barvrouw 1_0
+      213: 1011635677561604431
+    second: Violet_Idle_0
   - first:
-      213: -1970487791519496149
-    second: Barvrouw 1_1
+      213: -6374737989603355770
+    second: Violet_Idle_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -54,7 +54,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 200
+  spritePixelsToUnits: 300
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -129,45 +129,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Barvrouw 1_0
+      name: Violet_Idle_0
       rect:
         serializedVersion: 2
-        x: 24
-        y: 11
-        width: 207
-        height: 253
+        x: 53
+        y: 44
+        width: 238
+        height: 637
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3e3d62bcafcf3bfa0800000000000000
-      internalID: -5786002942160612381
+      spriteID: f49cb23f94d0a0e00800000000000000
+      internalID: 1011635677561604431
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barvrouw 1_1
+      name: Violet_Idle_1
       rect:
         serializedVersion: 2
-        x: 254
-        y: 10
-        width: 208
-        height: 254
+        x: 392
+        y: 44
+        width: 238
+        height: 638
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b288c303bcb67a4e0800000000000000
-      internalID: -1970487791519496149
+      spriteID: 6831181c2916887a0800000000000000
+      internalID: -6374737989603355770
       vertices: []
       indices: 
       edges: []
@@ -176,7 +176,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: dda588fe10ce2c64f855a8cfe0e331aa
     internalID: 0
     vertices: []
     indices: 
@@ -184,10 +184,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Barvrouw 1_0: -5786002942160612381
-      Barvrouw 1_1: -1970487791519496149
+      Violet_Idle_0: 1011635677561604431
+      Violet_Idle_1: -6374737989603355770
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
