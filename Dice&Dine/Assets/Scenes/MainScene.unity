@@ -1335,9 +1335,29 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 222006492}
     - target: {fileID: 7486636346225049131, guid: cf979bc34bceafb448f8c6c19ad30b3b, type: 3}
+      propertyPath: saveOrderScript
+      value: 
+      objectReference: {fileID: 1786475986}
+    - target: {fileID: 7486636346225049131, guid: cf979bc34bceafb448f8c6c19ad30b3b, type: 3}
+      propertyPath: _prepareDrinkTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7486636346225049131, guid: cf979bc34bceafb448f8c6c19ad30b3b, type: 3}
+      propertyPath: thereIsOderScript
+      value: 
+      objectReference: {fileID: 1786475989}
+    - target: {fileID: 7486636346225049131, guid: cf979bc34bceafb448f8c6c19ad30b3b, type: 3}
       propertyPath: orderSpot.Array.size
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 7486636346225049131, guid: cf979bc34bceafb448f8c6c19ad30b3b, type: 3}
+      propertyPath: _orderSpot.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7486636346225049131, guid: cf979bc34bceafb448f8c6c19ad30b3b, type: 3}
+      propertyPath: orderSpotFilledScript
+      value: 
+      objectReference: {fileID: 222006492}
     - target: {fileID: 7486636346225049131, guid: cf979bc34bceafb448f8c6c19ad30b3b, type: 3}
       propertyPath: 'orderSpot.Array.data[0]'
       value: 
@@ -1352,6 +1372,22 @@ PrefabInstance:
       objectReference: {fileID: 337918798}
     - target: {fileID: 7486636346225049131, guid: cf979bc34bceafb448f8c6c19ad30b3b, type: 3}
       propertyPath: 'orderSpot.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1860667329}
+    - target: {fileID: 7486636346225049131, guid: cf979bc34bceafb448f8c6c19ad30b3b, type: 3}
+      propertyPath: '_orderSpot.Array.data[0]'
+      value: 
+      objectReference: {fileID: 222006491}
+    - target: {fileID: 7486636346225049131, guid: cf979bc34bceafb448f8c6c19ad30b3b, type: 3}
+      propertyPath: '_orderSpot.Array.data[1]'
+      value: 
+      objectReference: {fileID: 53539620}
+    - target: {fileID: 7486636346225049131, guid: cf979bc34bceafb448f8c6c19ad30b3b, type: 3}
+      propertyPath: '_orderSpot.Array.data[2]'
+      value: 
+      objectReference: {fileID: 337918798}
+    - target: {fileID: 7486636346225049131, guid: cf979bc34bceafb448f8c6c19ad30b3b, type: 3}
+      propertyPath: '_orderSpot.Array.data[3]'
       value: 
       objectReference: {fileID: 1860667329}
     - target: {fileID: 8486489818505424414, guid: cf979bc34bceafb448f8c6c19ad30b3b, type: 3}
@@ -4397,11 +4433,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3fef11b78c682c449ae2dfdc434801d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SaveOrder
-  drinks:
+  _drinks:
   - {fileID: 5282228561375350863, guid: 70e56920eb9c2fb42bb20d155d5b5487, type: 3}
   - {fileID: 4687392627353412673, guid: c93c0fbf930aec847be6e675eeb025a0, type: 3}
   - {fileID: 5282228561375350863, guid: 20b24e901b9f5654f8b3a6244ae2c10a, type: 3}
-  orderdDrink: {fileID: 0}
+  OrderdDrink: {fileID: 0}
 --- !u!212 &1786475987
 SpriteRenderer:
   serializedVersion: 2
@@ -4489,14 +4525,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f2a98ad5a9b894fb0805d07f32ab12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThereIsOder
-  _mySpriteRenderer: {fileID: 1786475987}
-  _normalMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  _outlineMaterial: {fileID: 2100000, guid: 603244dc1ee302248ba1cf1dec97308b, type: 2}
-  _interractionPoint: {fileID: 1859519342}
+  _interactionPoint: {fileID: 1859519342}
   barManagerScript: {fileID: 1597037364}
   oderPanel1: {fileID: 21300000, guid: 2689b4c9d2336ed4190abedb2230b478, type: 3}
   oderPanel2: {fileID: 21300000, guid: 07cf3f3533dce4b41a46e3f693d1ddea, type: 3}
-  _oderHasBeenMade: 0
+  _mySpriteRenderer: {fileID: 1786475987}
+  _normalMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  _outlineMaterial: {fileID: 2100000, guid: 603244dc1ee302248ba1cf1dec97308b, type: 2}
+  _oderOnPanel: 0
 --- !u!61 &1786475990
 BoxCollider2D:
   m_ObjectHideFlags: 0

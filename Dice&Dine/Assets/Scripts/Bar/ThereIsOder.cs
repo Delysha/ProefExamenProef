@@ -2,21 +2,22 @@ using UnityEngine;
 
 public class ThereIsOder : MonoBehaviour, Iinteractable
 {
+    [Header("interactionPoint")]
+    [SerializeField] private Transform _interactionPoint;
+    [Header("Other Scripts")]
+    [SerializeField] private BarManager barManagerScript;
+    [Header("Sprite Renderer")]
+    [SerializeField] private Sprite oderPanel1;
+    [SerializeField] private Sprite oderPanel2;
     [Header("Highlight Settings")]
     [SerializeField] private SpriteRenderer _mySpriteRenderer;
     [SerializeField] private Material _normalMaterial;
     [SerializeField] private Material _outlineMaterial;
 
-    [SerializeField] private Transform _interractionPoint;
+    [Header("Check if there is an oder")]
+    public bool _oderOnPanel;
 
     private SpriteRenderer _spriteRenderer;
-
-    [SerializeField] private BarManager barManagerScript;
-    [SerializeField] private Sprite oderPanel1;
-    [SerializeField] private Sprite oderPanel2;
-
-    //SerializeField is voor testing
-    [SerializeField] private bool _oderHasBeenMade;
 
     private void Awake()
     {
@@ -28,24 +29,22 @@ public class ThereIsOder : MonoBehaviour, Iinteractable
         _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    void Update()
+    private void Update()
     {
-        oderHasBeenMade();
+        if (!_oderOnPanel)
+        {
+            _spriteRenderer.sprite = oderPanel1;
+        }
     }
 
     public Transform GetTransform() 
     {
-        return _interractionPoint;
+        return _interactionPoint;
     }
 
     public void Interact(PlayerPickup player)
     {
-
-    }
-
-    private void oderHasBeenMade()
-    {
-        if (_oderHasBeenMade)
+        if (_oderOnPanel)
         {
             _spriteRenderer.sprite = oderPanel2;
             StartCoroutine(barManagerScript.PrepareDrinkRoutine());

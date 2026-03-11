@@ -6,11 +6,12 @@ public class BarManager: MonoBehaviour
 {
     private Animator myAmimator;
 
-    [SerializeField] private SaveOrder saveOrder;
-    [SerializeField] private OrderSpotFilled orderSpotFilled;
+    [SerializeField] private SaveOrder saveOrderScript;
+    [SerializeField] private OrderSpotFilled orderSpotFilledScript;
+    [SerializeField] private ThereIsOder thereIsOderScript;
 
-    [SerializeField] private int prepareDrinkTime;
-    [SerializeField] GameObject[] orderSpot;
+    [SerializeField] private int _prepareDrinkTime;
+    [SerializeField] GameObject[] _orderSpot;
 
     private void Start()
     {
@@ -19,14 +20,16 @@ public class BarManager: MonoBehaviour
 
     public IEnumerator PrepareDrinkRoutine()
     {
-        for (int i = 0; i < orderSpot.Length; i++)
-        {
-            var spot = orderSpot[i].GetComponent<OrderSpotFilled>();
+        var oder = thereIsOderScript.GetComponent<ThereIsOder>();
 
-            if (!spot.SpotFilled)
+        for (int i = 0; i < _orderSpot.Length; i++)
+        {
+            var spot = _orderSpot[i].GetComponent<OrderSpotFilled>();
+
+            if (!spot.SpotFilled && oder._oderOnPanel)
             {
                 myAmimator.SetBool("IsPreparing", true);
-                yield return new WaitForSeconds(prepareDrinkTime);
+                yield return new WaitForSeconds(_prepareDrinkTime);
                 myAmimator.SetBool("IsPreparing", false);
                 SetDrinkInSpot();
             }
@@ -39,21 +42,21 @@ public class BarManager: MonoBehaviour
 
     private void SetDrinkInSpot()
     {
-        for (int i = 0; i < orderSpot.Length; i++)
+        for (int i = 0; i < _orderSpot.Length; i++)
         {
-            var spot = orderSpot[i].GetComponent<OrderSpotFilled>();
+            var spot = _orderSpot[i].GetComponent<OrderSpotFilled>();
 
-            var storeNumber = saveOrder.GetComponent<SaveOrder>();
-            var order = storeNumber.orderdDrink;
+            var storeNumber = saveOrderScript.GetComponent<SaveOrder>();
+            var order = storeNumber.OrderdDrink;
 
-            var spotFilled = orderSpotFilled.GetComponent<OrderSpotFilled>();
+            var spotFilled = orderSpotFilledScript.GetComponent<OrderSpotFilled>();
             spotFilled.IsSpotFilled();
 
             storeNumber.StoreList();
 
             if (!spot.SpotFilled)
             {
-                Instantiate(order, orderSpot[i].transform);
+                Instantiate(order, _orderSpot[i].transform);
                 spot.SpotFilled = true;
                 //Testing:
                 //StartCoroutine(PrepareDrinkRoutine());
