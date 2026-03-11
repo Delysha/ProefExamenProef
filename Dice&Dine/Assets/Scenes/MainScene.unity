@@ -2341,7 +2341,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectPooling
   PooledObjects: []
-  ObjectToPool: {fileID: 73446652492280835, guid: 650d7171d5fc34c41b75f08969916982, type: 3}
+  ObjectToPool:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   amountToPool: 10
   customerSpawner: {fileID: 928444493}
 --- !u!1 &877064991
@@ -2423,12 +2426,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4558ce061d2521d468d3315f099f37d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CustomerSpawner
-  Targets:
-  - {fileID: 1143419523}
+  Target: {fileID: 1143419523}
   Entrance: {fileID: 599458425}
   objectPooling: {fileID: 845890853}
   amountCustomers: 8
-  outsidePos: {fileID: 1143419523}
   outsideCustomers: []
 --- !u!1 &976837889
 GameObject:
@@ -4015,17 +4016,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e4b180ee264df642b3622e23b7ea2d0, type: 3}
---- !u!114 &1597037364 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7486636346225049131, guid: cf979bc34bceafb448f8c6c19ad30b3b, type: 3}
-  m_PrefabInstance: {fileID: 487744227}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fbb1d7db5d3cdb47bb4825f9c0d4ee9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MainBarBasis
 --- !u!1001 &1619976631
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4458,7 +4448,7 @@ SpriteRenderer:
   m_Size: {x: 0.5966667, y: 0.49}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1786475988
 Transform:
@@ -4487,10 +4477,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f2a98ad5a9b894fb0805d07f32ab12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThereIsOder
-  barManagerScript: {fileID: 1597037364}
-  oderPanel1: {fileID: 21300000, guid: 2689b4c9d2336ed4190abedb2230b478, type: 3}
-  oderPanel2: {fileID: 21300000, guid: 07cf3f3533dce4b41a46e3f693d1ddea, type: 3}
-  _oderHasBeenMade: 0
 --- !u!1 &1803674271
 GameObject:
   m_ObjectHideFlags: 0
