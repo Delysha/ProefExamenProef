@@ -62,8 +62,6 @@ public class PlayerMovement : MonoBehaviour
 
         HandleDropInput();
     }
-    
-    
 
     void HandleClick()
     {
