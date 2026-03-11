@@ -15,9 +15,10 @@ public class BarManager: MonoBehaviour
     private void Start()
     {
         myAmimator = GetComponent<Animator>();
+        StartCoroutine(PrepareDrinkRoutine());
     }
 
-    public IEnumerator PrepareDrinkRoutine()
+    IEnumerator PrepareDrinkRoutine()
     {
         myAmimator.SetBool("IsPreparing", true);
         yield return new WaitForSeconds(prepareDrinkTime);
@@ -44,7 +45,7 @@ public class BarManager: MonoBehaviour
                 Instantiate(order, orderSpot[i].transform);
                 spot.SpotFilled = true;
                 //Testing:
-                //StartCoroutine(PrepareDrinkRoutine());
+                StartCoroutine(PrepareDrinkRoutine());
                 storeNumber.StoreOrder();
                 break;
             }

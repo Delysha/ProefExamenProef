@@ -1,13 +1,7 @@
 fileFormatVersion: 2
-guid: 8f846706cb1f9d748b36c59f0b505334
+guid: dc525170fc64a4742b87f40c44adeac3
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -6849636542758579790
-    second: Veego_Idle_0
-  - first:
-      213: 7431406044076135097
-    second: Veego_Idle_1
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -45,7 +39,7 @@ TextureImporter:
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 1
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -54,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 300
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -69,16 +63,16 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 0
+  applyGammaDecoding: 1
   swizzle: 50462976
-  cookieLightType: 0
+  cookieLightType: 2
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -91,7 +85,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -104,7 +98,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -117,7 +111,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -129,45 +123,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Veego_Idle_0
+      name: Ian_0
       rect:
         serializedVersion: 2
-        x: 69
-        y: 63
-        width: 482
-        height: 748
+        x: 0
+        y: 36
+        width: 436
+        height: 546
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2b11754fad331f0a0800000000000000
-      internalID: -6849636542758579790
+      spriteID: 6c2e779671635134ea93eecb7bc02c59
+      internalID: 84884824
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Veego_Idle_1
+      name: Ian_1
       rect:
         serializedVersion: 2
-        x: 656
-        y: 63
-        width: 482
-        height: 745
+        x: 547
+        y: 36
+        width: 436
+        height: 540
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9b259de7c68a12760800000000000000
-      internalID: 7431406044076135097
+      spriteID: 57655586d21910142be150bfbefe0707
+      internalID: 2053899117
       vertices: []
       indices: 
       edges: []
@@ -176,7 +170,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: c47166d0b16fa534fbb2cd067e2f74b0
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -184,10 +178,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceOnImport
+        value: False
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Veego_Idle_0: -6849636542758579790
-      Veego_Idle_1: 7431406044076135097
+      Ian_0: 84884824
+      Ian_1: 2053899117
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
