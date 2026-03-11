@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class BarManager: MonoBehaviour
 {
-    private Animator myAmimator;
-
+    [Header("Other Scripts")]
     [SerializeField] private SaveOrder saveOrderScript;
-    [SerializeField] private OrderSpotFilled orderSpotFilledScript;
     [SerializeField] private ThereIsOder thereIsOderScript;
-
+    [Header("Prepare Drink time")]
     [SerializeField] private int _prepareDrinkTime;
+    [Header("Order spots")]
     [SerializeField] GameObject[] _orderSpot;
+
+    private Animator myAmimator;
 
     private void Start()
     {
@@ -49,17 +50,12 @@ public class BarManager: MonoBehaviour
             var storeNumber = saveOrderScript.GetComponent<SaveOrder>();
             var order = storeNumber.OrderdDrink;
 
-            var spotFilled = orderSpotFilledScript.GetComponent<OrderSpotFilled>();
-            spotFilled.IsSpotFilled();
-
             storeNumber.StoreList();
 
             if (!spot.SpotFilled)
             {
                 Instantiate(order, _orderSpot[i].transform);
                 spot.SpotFilled = true;
-                //Testing:
-                //StartCoroutine(PrepareDrinkRoutine());
                 storeNumber.StoreOrder();
                 break;
             }
