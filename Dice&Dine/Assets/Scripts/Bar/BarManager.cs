@@ -15,15 +15,22 @@ public class BarManager: MonoBehaviour
     private void Start()
     {
         myAmimator = GetComponent<Animator>();
-        StartCoroutine(PrepareDrinkRoutine());
     }
 
-    IEnumerator PrepareDrinkRoutine()
+    public IEnumerator PrepareDrinkRoutine()
     {
-        myAmimator.SetBool("IsPreparing", true);
-        yield return new WaitForSeconds(prepareDrinkTime);
-        myAmimator.SetBool("IsPreparing", false);
-        SetDrinkInSpot();
+        for (int i = 0; i < orderSpot.Length; i++)
+        {
+            var spot = orderSpot[i].GetComponent<OrderSpotFilled>();
+
+            if (!spot.SpotFilled) 
+            {
+                myAmimator.SetBool("IsPreparing", true);
+                yield return new WaitForSeconds(prepareDrinkTime);
+                myAmimator.SetBool("IsPreparing", false);
+                SetDrinkInSpot();
+            }
+        }
     }
 
     private void SetDrinkInSpot()
@@ -45,7 +52,7 @@ public class BarManager: MonoBehaviour
                 Instantiate(order, orderSpot[i].transform);
                 spot.SpotFilled = true;
                 //Testing:
-                StartCoroutine(PrepareDrinkRoutine());
+                //StartCoroutine(PrepareDrinkRoutine());
                 storeNumber.StoreOrder();
                 break;
             }
