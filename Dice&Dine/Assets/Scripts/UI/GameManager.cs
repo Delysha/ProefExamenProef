@@ -28,13 +28,13 @@ public class GameManager : MonoBehaviour
     public void LoadMoveGame()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("PlayerMovement");
     }
 
     public void LoadMainGame()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("PlayerMovement");
     }
 
     public void PauseGame()

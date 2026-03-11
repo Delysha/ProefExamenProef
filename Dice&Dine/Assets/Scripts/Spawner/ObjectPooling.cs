@@ -5,7 +5,7 @@ public class ObjectPooling : MonoBehaviour
 {
     public static ObjectPooling Instance;
     public List<GameObject> PooledObjects;
-    public GameObject ObjectToPool;
+    public List<GameObject> ObjectToPool;
     [SerializeField] private int amountToPool;
     [SerializeField] private CustomerSpawner customerSpawner;
     
@@ -15,11 +15,11 @@ public class ObjectPooling : MonoBehaviour
     }
     private void Start()
     {
-        PooledObjects = new List<GameObject>();
         GameObject tmp;
         for(var i = 0; i < amountToPool; i++)
         {
-            tmp = Instantiate(ObjectToPool);
+            var randomIndex = Random.Range(0, ObjectToPool.Count - 1);
+            tmp = Instantiate(ObjectToPool[randomIndex]);
             tmp.SetActive(false);
             PooledObjects.Add(tmp);
         }
@@ -29,16 +29,11 @@ public class ObjectPooling : MonoBehaviour
     {
         for(var i = 0; i < amountToPool; i++)
         {
-            InitializeObject(PooledObjects[i].transform );
             if(!PooledObjects[i].activeInHierarchy) return PooledObjects[i];
         }
         return null;
     }
-
-    private void InitializeObject(Transform pooledObject)
-    {
-        pooledObject.GetComponent<Customer>().targets = customerSpawner.Targets;
-    }
+    
     
     
     
