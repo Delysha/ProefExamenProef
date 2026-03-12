@@ -98,7 +98,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: IsDrinkingWhiskey
+    m_ConditionEvent: IsDrinkingWhishkey
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 4850924705110637840}
@@ -229,7 +229,7 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: IsDrinkingChampange
+  - m_Name: IsDrinkingChampagne
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -241,7 +241,7 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: IsDrinkingWhiskey
+  - m_Name: IsDrinkingWhishkey
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -345,7 +345,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: IsDrinkingChampange
+    m_ConditionEvent: IsDrinkingChampagne
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 124109317064426296}
@@ -370,7 +370,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: IsDrinkingWhiskey
+    m_ConditionEvent: IsDrinkingWhishkey
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 124109317064426296}
@@ -525,7 +525,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: IsDrinkingChampange
+    m_ConditionEvent: IsDrinkingChampagne
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1729700455331789010}
