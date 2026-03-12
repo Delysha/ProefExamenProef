@@ -19,7 +19,7 @@ public class Customer : MonoBehaviour, IWalkable, IWaitable, Iinteractable
 
     [SerializeField] private Transform interactionPoint;
     [SerializeField] private TableOrder table;
-    [SerializeField] private Animator animator;
+    private Animator animator;
 
     private bool _wantsToOrder = false;
 
@@ -38,6 +38,7 @@ public class Customer : MonoBehaviour, IWalkable, IWaitable, Iinteractable
         IdleState = new IdleState(this, StateMachine);
 
         _timer = GetComponent<npcTimer>();
+        animator = GetComponent<Animator>();
 
         if (spriteRenderer != null)
         {
@@ -69,6 +70,7 @@ public class Customer : MonoBehaviour, IWalkable, IWaitable, Iinteractable
     {
         _wantsToOrder = true;
         animator.SetBool("RaiseHand", true);
+        //Debug.Log("Customer raised hand to order!");
     }
 
     IEnumerator WaitBeforOrder()
@@ -84,12 +86,16 @@ public class Customer : MonoBehaviour, IWalkable, IWaitable, Iinteractable
     {
         player.TryLead(this);
 
+        StateMachine.ChangeState(WaitState);
+
         if (!_wantsToOrder)
             return;
 
+        //Debug.Log("Customer wants to order!");
+        
         table.AddOrder();
 
-        animator.SetBool("RaiseHand", false);
+        //animator.SetBool("RaiseHand", false);
 
         _wantsToOrder = false;
     }
