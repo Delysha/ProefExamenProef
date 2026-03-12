@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -19,11 +20,20 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private bool enableDebugLogs = false;
 
     private NavMeshAgent agent;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+   
+    private Animator _playerAnimator;
+    private SpriteRenderer _spriteRenderer;
+    private Vector3 _targetPos;
+    private Vector2 _movement;
+    private bool isMoving = false;
+    
+    Vector2 lastDirection;
+    
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
+        _playerAnimator = GetComponent<Animator>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
         agent.speed = moveSpeed;
@@ -39,19 +49,20 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("NavMesh: player is not on a NavMesh at start.", this);
         }
     }
-
-    // Update is called once per frame
+    
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            HandleClick();    
+            HandleClick();
         }
+        
+        AnimationController();
 
         if (currentInteractable != null)
         {
             float distance = Vector3.Distance(transform.position, currentInteractable.GetTransform().position);
-
+           
             if (distance <= interactDistance)
             {
                 currentInteractable.Interact(GetComponent<PlayerPickup>());
@@ -59,13 +70,31 @@ public class PlayerMovement : MonoBehaviour
                 currentInteractable = null;
             }
         }
-
+        
         HandleDropInput();
     }
     
-    
+    private void AnimationController()
+    {
+        var velocity = agent.velocity;
 
-    void HandleClick()
+        var direction = new Vector2(agent.velocity.x, agent.velocity.y);
+        
+        if (velocity.magnitude > 0.01f)
+        {
+            lastDirection = new Vector2(velocity.x, velocity.y).normalized;
+        }
+
+        var isRightSided = agent.velocity.x > 0.05f;
+        
+        _spriteRenderer.flipX = isRightSided;
+        
+        _playerAnimator.SetFloat("Horizontal", direction.x);
+        _playerAnimator.SetFloat("Vertical", direction.y);
+        _playerAnimator.SetFloat("Speed", velocity.magnitude);
+    }
+
+    private void HandleClick()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit2D hit = Physics2D.GetRayIntersection(ray);
@@ -159,7 +188,6 @@ public class PlayerMovement : MonoBehaviour
     private void MoveTo(Vector3 targetPosition)
     {
         Vector3 target = new Vector3(targetPosition.x, targetPosition.y, transform.position.z);
-
         if (NavMesh.SamplePosition(target, out NavMeshHit hit, sampleRadius, NavMesh.AllAreas))
         {
             agent.SetDestination(hit.position);
@@ -174,6 +202,8 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log($"MoveTo ignored: no NavMesh near {target}.", this);
         }
     }
+    
+   
 
     private Vector3 GetMouseWorldPosition()
     {
