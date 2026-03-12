@@ -14,6 +14,7 @@ public class EatingState : State
     {
         base.EnterState();
         Debug.Log("EatingState");
+        customer._timer.StartWaiting();
         
     }
 

@@ -13,15 +13,16 @@ public class Customer : MonoBehaviour, IWalkable, IWaitable, Iinteractable
     public IdleState IdleState { get; private set; }
 
     public int money;
-    public int patience;
 
     public List<Transform> targets { get; set; }
 
     [SerializeField] private Transform interactionPoint;
-    [SerializeField] private TableOrder table;
+    //[SerializeField] private TableOrder table;
     private Animator animator;
 
     private bool _wantsToOrder = false;
+
+    private ThereIsOder orderMenu;
 
     [Header("Highlight Settings")]
     [SerializeField] private SpriteRenderer spriteRenderer;
@@ -39,6 +40,7 @@ public class Customer : MonoBehaviour, IWalkable, IWaitable, Iinteractable
 
         _timer = GetComponent<npcTimer>();
         animator = GetComponent<Animator>();
+        orderMenu = FindObjectOfType<ThereIsOder>();
 
         if (spriteRenderer != null)
         {
@@ -70,7 +72,6 @@ public class Customer : MonoBehaviour, IWalkable, IWaitable, Iinteractable
     {
         _wantsToOrder = true;
         animator.SetBool("RaiseHand", true);
-        //Debug.Log("Customer raised hand to order!");
     }
 
     IEnumerator WaitBeforOrder()
@@ -82,20 +83,24 @@ public class Customer : MonoBehaviour, IWalkable, IWaitable, Iinteractable
         RaiseHand();
     }
 
+    private void Order()
+    {
+        orderMenu._oderOnPanel = true;
+    }
+
     public void Interact(PlayerPickup player)
     {
         player.TryLead(this);
 
-        StateMachine.ChangeState(WaitState);
-
         if (!_wantsToOrder)
             return;
 
-        //Debug.Log("Customer wants to order!");
-        
-        table.AddOrder();
+        Debug.Log("Customer wants to order!");
 
-        //animator.SetBool("RaiseHand", false);
+        Order();
+        //table.AddOrder();
+
+        animator.SetBool("RaiseHand", false);
 
         _wantsToOrder = false;
     }

@@ -297,14 +297,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1377343867354800958, guid: c9da171267ed52f4eb36059914db02f4, type: 3}
-      propertyPath: normalMaterial
-      value: 
-      objectReference: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
-    - target: {fileID: 1377343867354800958, guid: c9da171267ed52f4eb36059914db02f4, type: 3}
-      propertyPath: spriteRenderer
-      value: 
-      objectReference: {fileID: 1490956987}
     - target: {fileID: 1643288718262489966, guid: c9da171267ed52f4eb36059914db02f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.42
@@ -343,22 +335,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1643288718262489966, guid: c9da171267ed52f4eb36059914db02f4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2896418630937741660, guid: c9da171267ed52f4eb36059914db02f4, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2896418630937741660, guid: c9da171267ed52f4eb36059914db02f4, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2896418630937741660, guid: c9da171267ed52f4eb36059914db02f4, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4067147556149448011, guid: c9da171267ed52f4eb36059914db02f4, type: 3}
-      propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5752428217456496624, guid: c9da171267ed52f4eb36059914db02f4, type: 3}
@@ -3602,11 +3578,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1477643946}
   m_CullTransparentMesh: 1
---- !u!212 &1490956987 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 5652248863032895158, guid: c9da171267ed52f4eb36059914db02f4, type: 3}
-  m_PrefabInstance: {fileID: 117065424}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1541200295
 GameObject:
   m_ObjectHideFlags: 0
@@ -4810,7 +4781,7 @@ GameObject:
   - component: {fileID: 1865785644}
   - component: {fileID: 1865785643}
   m_Layer: 7
-  m_Name: Illustration336_0
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

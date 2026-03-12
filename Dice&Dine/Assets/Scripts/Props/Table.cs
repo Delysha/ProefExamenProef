@@ -108,6 +108,8 @@ public class Table : Props, Iinteractable
         var isRotated = Mathf.Approximately(yAxis, SlotRotation);
         sprite.flipX = isRotated;
         customerMono.transform.SetParent(slot);
+
+        customer.StateMachine.ChangeState(customer.WaitState);
     }
 
     public bool HasAvailableSlot()
