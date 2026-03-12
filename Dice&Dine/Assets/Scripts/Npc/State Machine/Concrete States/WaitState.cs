@@ -11,6 +11,7 @@ public class WaitState : State
         base.EnterState();
         Debug.Log("WaitState Mph....");
         customer._timer.StartWaiting();
+        customer.StartWaitingToOrder();
     }
 
     public override void ExitState()

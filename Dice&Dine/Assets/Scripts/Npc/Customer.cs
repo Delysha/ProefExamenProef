@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,9 +18,8 @@ public class Customer : MonoBehaviour, IWalkable, IWaitable, Iinteractable
     public List<Transform> targets { get; set; }
 
     [SerializeField] private Transform interactionPoint;
-
-    [SerializeField] private GameObject orderTicketPrefab;
-    [SerializeField] private Transform ticketSpawnPoint;
+    [SerializeField] private TableOrder table;
+    [SerializeField] private Animator animator;
 
     private bool _wantsToOrder = false;
 
@@ -39,7 +39,10 @@ public class Customer : MonoBehaviour, IWalkable, IWaitable, Iinteractable
 
         _timer = GetComponent<npcTimer>();
 
-        spriteRenderer.material = normalMaterial;
+        if (spriteRenderer != null)
+        {
+            spriteRenderer.material = normalMaterial;
+        }
     }
 
     private void Start()
@@ -57,38 +60,53 @@ public class Customer : MonoBehaviour, IWalkable, IWaitable, Iinteractable
         return interactionPoint;
     }
 
+    public void StartWaitingToOrder()
+    {
+        StartCoroutine(WaitBeforOrder());
+    }
+
     public void RaiseHand()
     {
         _wantsToOrder = true;
+        animator.SetBool("RaiseHand", true);
+    }
+
+    IEnumerator WaitBeforOrder()
+    {
+        float waitTime = Random.Range(2f, 6f);
+
+        yield return new WaitForSeconds(waitTime);
+        
+        RaiseHand();
     }
 
     public void Interact(PlayerPickup player)
     {
-        // eerst proberen de customer te leiden naar een tafel
         player.TryLead(this);
 
         if (!_wantsToOrder)
             return;
 
-        if (player.HasItem())
-            return;
+        table.AddOrder();
 
-        GameObject ticket = Instantiate(orderTicketPrefab, ticketSpawnPoint.position, Quaternion.identity);
-
-        IPickupable pickup = ticket.GetComponent<IPickupable>();
-
-        player.TryPickup(pickup);
+        animator.SetBool("RaiseHand", false);
 
         _wantsToOrder = false;
     }
 
     public void OnHoverEnter()
     {
-        spriteRenderer.material = outlineMaterial;
+        if (spriteRenderer != null)
+        {
+            spriteRenderer.material = outlineMaterial;
+        }
     }
 
     public void OnHoverExit()
     {
-        spriteRenderer.material = normalMaterial;
+        if (spriteRenderer != null)
+        {
+            spriteRenderer.material = normalMaterial;
+        }
     }
 }
