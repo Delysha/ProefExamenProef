@@ -91,7 +91,6 @@ public class PlayerMovement : MonoBehaviour
         
         _playerAnimator.SetFloat("Horizontal", direction.x);
         _playerAnimator.SetFloat("Vertical", direction.y);
-        _playerAnimator.SetFloat("Speed", velocity.magnitude);
     }
 
     private void HandleClick()
