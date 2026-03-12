@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 95af036e902d7544aaa4d3c775f5bab6
+guid: 807b63e428954f948b929018d488bbe0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1629362560720184693
-    second: Violet_0
+      213: -6846750098794174077
+    second: Antonio_Drinking_Chamagne_0
   - first:
-      213: 4314095436275899324
-    second: Violet_1
+      213: 1824420305759528099
+    second: Antonio_Drinking_Chamagne_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -54,7 +54,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 200
+  spritePixelsToUnits: 300
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -129,45 +129,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Violet_0
+      name: Antonio_Drinking_Chamagne_0
       rect:
         serializedVersion: 2
-        x: 52
-        y: 43
-        width: 240
-        height: 639
+        x: 20
+        y: 13
+        width: 322
+        height: 790
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b8ad3fd32675369e0800000000000000
-      internalID: -1629362560720184693
+      spriteID: 389a08f8f057bf0a0800000000000000
+      internalID: -6846750098794174077
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Violet_1
+      name: Antonio_Drinking_Chamagne_1
       rect:
         serializedVersion: 2
-        x: 391
-        y: 43
-        width: 240
-        height: 631
+        x: 458
+        y: 13
+        width: 322
+        height: 789
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cbbdb5631febedb30800000000000000
-      internalID: 4314095436275899324
+      spriteID: 3a46ec51a94a15910800000000000000
+      internalID: 1824420305759528099
       vertices: []
       indices: 
       edges: []
@@ -176,7 +176,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b2430ab61eca6c14ba8c7836de5bdff3
     internalID: 0
     vertices: []
     indices: 
@@ -186,8 +186,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Violet_0: -1629362560720184693
-      Violet_1: 4314095436275899324
+      Antonio_Drinking_Chamagne_0: -6846750098794174077
+      Antonio_Drinking_Chamagne_1: 1824420305759528099
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
