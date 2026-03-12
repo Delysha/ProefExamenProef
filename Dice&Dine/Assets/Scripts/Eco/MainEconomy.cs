@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MainEconomy : MonoBehaviour
 {
@@ -11,6 +11,8 @@ public class MainEconomy : MonoBehaviour
     public float Money;
     public int DailyQuota;
 
+    [Header("Sound")]
+    public AudioSource coinSound;
     private void Start()
     {
         Debug.Log("The DailyQuota today is " + DailyQuota);
@@ -28,6 +30,7 @@ public class MainEconomy : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.L))
         {
             Money += amount;
+            coinSound.Play();
         }
         if (Input.GetKeyDown(KeyCode.K))
         {
@@ -42,6 +45,7 @@ public class MainEconomy : MonoBehaviour
         {
             float randomAmount = Random.Range(minAmount, maxAmount);
             Money += randomAmount;
+            coinSound.Play();
         }
     }
 }

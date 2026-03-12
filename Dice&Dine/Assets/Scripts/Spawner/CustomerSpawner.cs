@@ -11,7 +11,7 @@ public class CustomerSpawner : MonoBehaviour
     [SerializeField] private List<GameObject> outsideCustomers = new List<GameObject>();
     private void Start()
     {
-        SpawnCustomers();
+        //SpawnCustomers();
     }
 
     private void SpawnCustomers()

@@ -11,6 +11,9 @@ public enum NPCType
 
 public class npcTimer : MonoBehaviour
 {
+    [SerializeField] private npcSounds NPCSounds;
+
+
     public NPCType npcType;
 
     private SpriteRenderer sprite;
@@ -62,6 +65,8 @@ public class npcTimer : MonoBehaviour
         Color c = angerOverlay.color;
         c.a = anger;
         angerOverlay.color = c;
+
+        NPCSounds.CheckFrustrated(currentPatience);
     }
 
     public void StartWaiting()
@@ -69,12 +74,13 @@ public class npcTimer : MonoBehaviour
         SetBasePatience();
         currentPatience = maxPatience;
         isWaiting = true;
-
+        NPCSounds.PlayHandsUpSound();
     }
 
     public void StopWaiting()
     {
         isWaiting = false;
+        NPCSounds.PlaySatisfied();
     }
 
     void Leave ()

@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/StartScreen.unity
     guid: 2183bc95e4fa4f84e9973214fec7182c
   - enabled: 1
+    path: Assets/Scenes/SoundsScene.unity
+    guid: 35e1b96cbfcdab34a85fa0ad0c3c8597
+  - enabled: 0
     path: Assets/Scenes/PlayerMovement.unity
     guid: 724d3d68d04cfeb459c3b7a7a8210fef
   - enabled: 0

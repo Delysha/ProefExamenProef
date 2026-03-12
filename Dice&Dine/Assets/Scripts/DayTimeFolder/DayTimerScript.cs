@@ -8,6 +8,15 @@ public class DayTimerScript : MonoBehaviour
 
     private Transform clockHand;
 
+
+    [Header("Countdown Sound")]
+    [SerializeField] private AudioSource countdownSound;
+    [SerializeField] private AudioSource final3SecSound;
+    private bool countdownStarted = false;
+    private bool final3Played = false;
+
+    private int lastSecond = -1;
+
     private float _currentTime;
     void Start()
     {
@@ -35,15 +44,30 @@ public class DayTimerScript : MonoBehaviour
         if (_currentTime > 0)
         {
             _currentTime -= Time.deltaTime;
+          
+            if (_currentTime <= 10f && !countdownStarted)
+            {
+                countdownStarted = true;
+                countdownSound.Play(); 
+            }
 
-            if (_currentTime <= 0)
+            // Speel korte sound in de laatste 3 seconden
+            if (_currentTime <= 3f && !final3Played)
+            {
+                final3Played = true;
+                final3SecSound.PlayOneShot(final3SecSound.clip);
+            }
+
+            if (_currentTime <= 0f)
             {
                 _currentTime = 0;
-                OnDayEnded();
+
+                // Stop eventueel nog lopende sounds
+                if (countdownSound.isPlaying) countdownSound.Stop();
+                    OnDayEnded();
             }
         }
     }
-
     private void updateClockHand()
     {
         if (clockHand == null) return;
