@@ -52,11 +52,19 @@ public class Customer : MonoBehaviour, IWalkable, IWaitable, Iinteractable
     private void Start()
     {
         StateMachine.Initialize(WalkState);
+
+        InitializeMoney();
     }
 
     private void Update()
     {
         StateMachine.CurrentState.FrameUpdate();
+    }
+
+    private void InitializeMoney()
+    {
+        var amount = Random.Range(20, 33);
+        money += amount;
     }
 
     public Transform GetTransform()

@@ -61,7 +61,6 @@ public class Table : Props, Iinteractable
         {
             var placeObj = place.GetComponent<Place>();
             var itemTransform = placeObj.plateSlot.transform;
-            return itemTransform;
             if (_slotItems[itemTransform] == null)
             {
                 return itemTransform;
@@ -89,14 +88,18 @@ public class Table : Props, Iinteractable
 
     private void PlaceItem(PlayerPickup player, Transform slot)
     {
-        IPickupable item = player.GetHeldItem();
-
+        var item = player.GetHeldItem();
+        
         _slotItems[slot] = item;
-        _slotSeats[slot].StateMachine.ChangeState(_slotSeats[slot].EatingState);
-
+        
         player.Drop();
-
+        var parent = slot.transform.parent;
+        var seat = parent.GetChild(0);
+        var customer = seat.GetComponentInChildren<Customer>();
+        
+        customer.StateMachine.ChangeState(customer.EatingState);
         MonoBehaviour itemAsMono = item as MonoBehaviour;
+        
         itemAsMono.transform.position = slot.position;
         itemAsMono.transform.SetParent(slot);
     }
