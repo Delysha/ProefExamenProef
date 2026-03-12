@@ -13,7 +13,6 @@ public class Customer : MonoBehaviour, IWalkable, IWaitable, Iinteractable
     public IdleState IdleState { get; private set; }
 
     public int money;
-    public int patience;
 
     public List<Transform> targets { get; set; }
 
