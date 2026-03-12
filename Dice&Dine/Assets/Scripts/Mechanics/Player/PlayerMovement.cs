@@ -88,9 +88,9 @@ public class PlayerMovement : MonoBehaviour
         var isRightSided = agent.velocity.x > 0.05f;
         
         _spriteRenderer.flipX = isRightSided;
-        
         _playerAnimator.SetFloat("Horizontal", direction.x);
         _playerAnimator.SetFloat("Vertical", direction.y);
+        
     }
 
     private void HandleClick()

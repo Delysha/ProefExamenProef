@@ -10,15 +10,17 @@ public class Table : Props, Iinteractable
     [SerializeField] private Transform interactionPoint;
     private Dictionary<Transform, IPickupable> slotItems = new Dictionary<Transform, IPickupable>();
     private Dictionary<Transform, Customer> _slotSeats = new Dictionary<Transform, Customer>();
-    
-    private Material material;
-    private static readonly int OutlineProperty = Shader.PropertyToID("_Outline");
+
+    [Header("Highlight Settings")]
+    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private Material normalMaterial;
+    [SerializeField] private Material outlineMaterial;
 
     private const float SlotRotation = 1f;
 
     private void Awake()
     {
-        material = GetComponent<SpriteRenderer>().material;
+        spriteRenderer.material = normalMaterial;
     }
 
     // Initialiseer dictionary met alle slots
@@ -120,11 +122,11 @@ public class Table : Props, Iinteractable
 
     public void OnHoverEnter()
     {
-        material.SetFloat(OutlineProperty, 1f);
+        spriteRenderer.material = outlineMaterial;
     }
 
     public void OnHoverExit()
     {
-        material.SetFloat(OutlineProperty, 0f);
+        spriteRenderer.material = normalMaterial;
     }
 }
