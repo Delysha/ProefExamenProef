@@ -2,6 +2,14 @@ using UnityEngine;
 
 public class DrinkAnim : MonoBehaviour
 {
+    [Header("Drinking drinks")]
+    public bool DrinkChampagne;
+    public bool DrinkCocktail;
+    public bool DrinkWhiskey;
+
+    [Header("Not Drinking")]
+    public bool NotDrinking;
+
     private Animator _animator;
 
     private void Start()
