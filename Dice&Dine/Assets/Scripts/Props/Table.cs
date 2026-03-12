@@ -1,14 +1,12 @@
 using System.Collections.Generic;
-using Unity.Mathematics;
 using UnityEngine;
 
 public class Table : Props, Iinteractable
 {
-    [SerializeField] private List<Transform> itemSlots = new List<Transform>();
-    [SerializeField] private List<Transform> slotSeats;
+    [SerializeField] private List<GameObject> places;
     
     [SerializeField] private Transform interactionPoint;
-    private Dictionary<Transform, IPickupable> slotItems = new Dictionary<Transform, IPickupable>();
+    private Dictionary<Transform, IPickupable> _slotItems = new Dictionary<Transform, IPickupable>();
     private Dictionary<Transform, Customer> _slotSeats = new Dictionary<Transform, Customer>();
 
     [Header("Highlight Settings")]
@@ -28,15 +26,13 @@ public class Table : Props, Iinteractable
     {
         base.Initialize();
         
-        foreach (var slot in itemSlots)
+        foreach (var place in places)
         {
-            slotItems[slot] = null;
+            var placeScript = place.GetComponent<Place>();
+            _slotItems[placeScript.plateSlot.transform] = null;
+            _slotSeats[placeScript.seatSlot.transform] = null;
         }
-
-        foreach (var seat in slotSeats)
-        {
-            _slotSeats[seat] = null;
-        }
+        
     }
     
     public Transform GetTransform()
@@ -55,28 +51,38 @@ public class Table : Props, Iinteractable
         if (player.HasCustomer())
         {
             var availableSeat = GetAvailableSeat();
-            Debug.Log(availableSeat);
             PlaceCustomer(player, availableSeat);
         }
     }
 
     private Transform GetAvailableItem()
     {
-        foreach (Transform slot in itemSlots)
+        foreach (var place in places)
         {
-            if (slotItems[slot] == null)
-                return slot;
+            var placeObj = place.GetComponent<Place>();
+            var itemTransform = placeObj.plateSlot.transform;
+            return itemTransform;
+            if (_slotItems[itemTransform] == null)
+            {
+            }
         }
+
         return null;
     }
     
     private Transform GetAvailableSeat()
     {
-        foreach (var slot in slotSeats)
+        foreach (var place in places)
         {
-            if (!_slotSeats[slot] )
-                return slot;
+            var placeObj = place.GetComponent<Place>();
+            var seatTransform = placeObj.seatSlot.transform;
+
+            if (_slotSeats[seatTransform] == null)
+            {
+                return seatTransform;
+            }
         }
+
         return null;
     }
 
@@ -84,7 +90,8 @@ public class Table : Props, Iinteractable
     {
         IPickupable item = player.GetHeldItem();
 
-        slotItems[slot] = item;
+        _slotItems[slot] = item;
+        _slotSeats[slot].StateMachine.ChangeState(_slotSeats[slot].EatingState);
 
         player.Drop();
 

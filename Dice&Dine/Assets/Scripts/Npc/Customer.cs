@@ -5,7 +5,6 @@ using UnityEngine;
 public class Customer : MonoBehaviour, IWalkable, IWaitable, Iinteractable
 {
     public npcTimer _timer;
-
     public StateMachine StateMachine { get; private set; }
     public EatingState EatingState { get; private set; }
     public WaitState WaitState { get; private set; }
@@ -17,6 +16,8 @@ public class Customer : MonoBehaviour, IWalkable, IWaitable, Iinteractable
     public List<Transform> targets { get; set; }
 
     [SerializeField] private Transform interactionPoint;
+
+    public bool hasSeat = false;
     //[SerializeField] private TableOrder table;
     private Animator animator;
 
@@ -90,7 +91,13 @@ public class Customer : MonoBehaviour, IWalkable, IWaitable, Iinteractable
 
     public void Interact(PlayerPickup player)
     {
-        player.TryLead(this);
+        Debug.Log(hasSeat);
+        if (!hasSeat)
+        {
+            player.TryLead(this);
+            hasSeat = true;
+        } 
+       
 
         if (!_wantsToOrder)
             return;
