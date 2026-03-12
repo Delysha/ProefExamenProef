@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4470659759702893929}
   - component: {fileID: -7036696257618297271}
   - component: {fileID: 3377889998623179379}
+  - component: {fileID: -6871992565925433818}
   m_Layer: 0
   m_Name: Viggo
   m_TagString: Untagged
@@ -82,9 +83,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: -1297535827
-  m_SortingLayer: 2
-  m_SortingOrder: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3994606316245907317, guid: 6a3b234977e0ced46adffb3ea3305820, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -112,6 +113,11 @@ MonoBehaviour:
   money: 0
   patience: 0
   interactionPoint: {fileID: 1221539980201077443}
+  orderTicketPrefab: {fileID: 0}
+  ticketSpawnPoint: {fileID: 0}
+  spriteRenderer: {fileID: 7433759553026864667}
+  normalMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  outlineMaterial: {fileID: 2100000, guid: 603244dc1ee302248ba1cf1dec97308b, type: 2}
 --- !u!50 &4470659759702893929
 Rigidbody2D:
   serializedVersion: 5
@@ -201,6 +207,28 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.41, y: 3.74}
   m_EdgeRadius: 0
+--- !u!95 &-6871992565925433818
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7870255045465184602}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 84a9c355396e0ae47a9c2c6c2622c264, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7904272779241860292
 GameObject:
   m_ObjectHideFlags: 0
