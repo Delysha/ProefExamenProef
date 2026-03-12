@@ -64,6 +64,7 @@ public class Table : Props, Iinteractable
             return itemTransform;
             if (_slotItems[itemTransform] == null)
             {
+                return itemTransform;
             }
         }
 
