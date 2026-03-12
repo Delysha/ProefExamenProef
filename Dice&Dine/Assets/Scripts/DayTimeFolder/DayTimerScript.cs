@@ -15,8 +15,6 @@ public class DayTimerScript : MonoBehaviour
     private bool countdownStarted = false;
     private bool final3Played = false;
 
-    private int lastSecond = -1;
-
     private float _currentTime;
     void Start()
     {
