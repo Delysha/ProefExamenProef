@@ -132,8 +132,8 @@ TextureImporter:
       name: Ian_Drinking_Champagne_0
       rect:
         serializedVersion: 2
-        x: 44
-        y: 69
+        x: 60
+        y: 31
         width: 437
         height: 548
       alignment: 0
@@ -154,8 +154,8 @@ TextureImporter:
       name: Ian_Drinking_Champagne_1
       rect:
         serializedVersion: 2
-        x: 546
-        y: 69
+        x: 576
+        y: 31
         width: 440
         height: 547
       alignment: 0
@@ -176,7 +176,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 469333acd1de84d40ad8254b9b335c9d
+    spriteID: fa0b39648ceebdd4db71061b639f41a8
     internalID: 0
     vertices: []
     indices: 

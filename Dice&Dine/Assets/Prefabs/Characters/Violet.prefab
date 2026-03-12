@@ -118,12 +118,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -1629362560720184693, guid: 95af036e902d7544aaa4d3c775f5bab6, type: 3}
+  m_Sprite: {fileID: 1011635677561604431, guid: ed714e0a10e3b9c41b8eae52cdc671fa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.79333335, y: 2.1233332}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -144,8 +144,8 @@ MonoBehaviour:
   money: 0
   patience: 0
   interactionPoint: {fileID: 5981537258817418213}
-  orderTicketPrefab: {fileID: 0}
-  ticketSpawnPoint: {fileID: 0}
+  table: {fileID: 0}
+  animator: {fileID: 0}
   spriteRenderer: {fileID: 3268649939859479912}
   normalMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   outlineMaterial: {fileID: 2100000, guid: 603244dc1ee302248ba1cf1dec97308b, type: 2}
@@ -230,8 +230,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.2, y: 3.195}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 0.79333335, y: 2.1233332}
+    newSize: {x: 0.79333335, y: 2.1233332}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
