@@ -5,23 +5,27 @@ using UnityEngine;
 public class Customer : MonoBehaviour, IWalkable, IWaitable, Iinteractable
 {
     public npcTimer _timer;
-
     public StateMachine StateMachine { get; private set; }
     public EatingState EatingState { get; private set; }
     public WaitState WaitState { get; private set; }
     public WalkState WalkState { get; private set; }
     public IdleState IdleState { get; private set; }
+    
+    public LeaveState LeaveState { get; private set; }
 
     public int money;
-    public int patience;
 
     public List<Transform> targets { get; set; }
 
     [SerializeField] private Transform interactionPoint;
-    [SerializeField] private TableOrder table;
+
+    public bool hasSeat = false;
+    //[SerializeField] private TableOrder table;
     private Animator animator;
 
     private bool _wantsToOrder = false;
+
+    private ThereIsOder orderMenu;
 
     [Header("Highlight Settings")]
     [SerializeField] private SpriteRenderer spriteRenderer;
@@ -39,6 +43,7 @@ public class Customer : MonoBehaviour, IWalkable, IWaitable, Iinteractable
 
         _timer = GetComponent<npcTimer>();
         animator = GetComponent<Animator>();
+        orderMenu = FindObjectOfType<ThereIsOder>();
 
         if (spriteRenderer != null)
         {
@@ -49,11 +54,19 @@ public class Customer : MonoBehaviour, IWalkable, IWaitable, Iinteractable
     private void Start()
     {
         StateMachine.Initialize(WalkState);
+
+        InitializeMoney();
     }
 
     private void Update()
     {
         StateMachine.CurrentState.FrameUpdate();
+    }
+
+    private void InitializeMoney()
+    {
+        var amount = Random.Range(20, 33);
+        money += amount;
     }
 
     public Transform GetTransform()
@@ -70,32 +83,41 @@ public class Customer : MonoBehaviour, IWalkable, IWaitable, Iinteractable
     {
         _wantsToOrder = true;
         animator.SetBool("RaiseHand", true);
-        //Debug.Log("Customer raised hand to order!");
     }
 
     IEnumerator WaitBeforOrder()
     {
-        float waitTime = Random.Range(2f, 6f);
+        var waitTime = Random.Range(2f, 6f);
 
         yield return new WaitForSeconds(waitTime);
         
         RaiseHand();
     }
 
+    private void Order()
+    {
+        orderMenu._oderOnPanel = true;
+    }
+
     public void Interact(PlayerPickup player)
     {
-        player.TryLead(this);
-
-        StateMachine.ChangeState(WaitState);
+        Debug.Log(hasSeat);
+        if (!hasSeat)
+        {
+            player.TryLead(this);
+            hasSeat = true;
+        } 
+       
 
         if (!_wantsToOrder)
             return;
 
-        //Debug.Log("Customer wants to order!");
-        
-        table.AddOrder();
+        Debug.Log("Customer wants to order!");
 
-        //animator.SetBool("RaiseHand", false);
+        Order();
+        //table.AddOrder();
+
+        animator.SetBool("RaiseHand", false);
 
         _wantsToOrder = false;
     }
