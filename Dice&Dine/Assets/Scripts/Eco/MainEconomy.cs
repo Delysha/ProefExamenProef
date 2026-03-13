@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MainEconomy : MonoBehaviour
 {
@@ -15,6 +15,8 @@ public class MainEconomy : MonoBehaviour
     public float Money;
     public int DailyQuota;
 
+    [Header("Sound")]
+    public AudioSource coinSound;
     private void Awake()
     {
         Instance = this;

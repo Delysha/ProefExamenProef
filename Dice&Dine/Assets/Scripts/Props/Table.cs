@@ -1,25 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class Table : Props, Iinteractable
 {
-    [SerializeField] private List<GameObject> places;
+    [SerializeField] private List<Transform> itemSlots = new List<Transform>();
+    [SerializeField] private List<Transform> slotSeats;
     
     [SerializeField] private Transform interactionPoint;
-    private Dictionary<Transform, IPickupable> _slotItems = new Dictionary<Transform, IPickupable>();
+    private Dictionary<Transform, IPickupable> slotItems = new Dictionary<Transform, IPickupable>();
     private Dictionary<Transform, Customer> _slotSeats = new Dictionary<Transform, Customer>();
-
-    [Header("Highlight Settings")]
-    [SerializeField] private SpriteRenderer spriteRenderer;
-    [SerializeField] private Material normalMaterial;
-    [SerializeField] private Material outlineMaterial;
+    
+    private Material material;
+    private static readonly int OutlineProperty = Shader.PropertyToID("_Outline");
 
     private const float SlotRotation = 1f;
 
     private void Awake()
     {
-        spriteRenderer.material = normalMaterial;
+        material = GetComponent<SpriteRenderer>().material;
     }
 
     // Initialiseer dictionary met alle slots
@@ -27,13 +27,15 @@ public class Table : Props, Iinteractable
     {
         base.Initialize();
         
-        foreach (var place in places)
+        foreach (var slot in itemSlots)
         {
-            var placeScript = place.GetComponent<Place>();
-            _slotItems[placeScript.plateSlot.transform] = null;
-            _slotSeats[placeScript.seatSlot.transform] = null;
+            slotItems[slot] = null;
         }
-        
+
+        foreach (var seat in slotSeats)
+        {
+            _slotSeats[seat] = null;
+        }
     }
     
     public Transform GetTransform()
@@ -52,55 +54,40 @@ public class Table : Props, Iinteractable
         if (player.HasCustomer())
         {
             var availableSeat = GetAvailableSeat();
+            Debug.Log(availableSeat);
             PlaceCustomer(player, availableSeat);
         }
     }
 
     private Transform GetAvailableItem()
     {
-        foreach (var place in places)
+        foreach (Transform slot in itemSlots)
         {
-            var placeObj = place.GetComponent<Place>();
-            var itemTransform = placeObj.plateSlot.transform;
-            if (_slotItems[itemTransform] == null)
-            {
-                return itemTransform;
-            }
+            if (slotItems[slot] == null)
+                return slot;
         }
-
         return null;
     }
     
     private Transform GetAvailableSeat()
     {
-        foreach (var place in places)
+        foreach (var slot in slotSeats)
         {
-            var placeObj = place.GetComponent<Place>();
-            var seatTransform = placeObj.seatSlot.transform;
-
-            if (_slotSeats[seatTransform] == null)
-            {
-                return seatTransform;
-            }
+            if (!_slotSeats[slot] )
+                return slot;
         }
-
         return null;
     }
 
     private void PlaceItem(PlayerPickup player, Transform slot)
     {
-        var item = player.GetHeldItem();
-        
-        _slotItems[slot] = item;
-        
+        IPickupable item = player.GetHeldItem();
+
+        slotItems[slot] = item;
+
         player.Drop();
-        var parent = slot.transform.parent;
-        var seat = parent.GetChild(0);
-        var customer = seat.GetComponentInChildren<Customer>();
-        
-        customer.StateMachine.ChangeState(customer.EatingState);
+
         MonoBehaviour itemAsMono = item as MonoBehaviour;
-        
         itemAsMono.transform.position = slot.position;
         itemAsMono.transform.SetParent(slot);
 
@@ -127,8 +114,6 @@ public class Table : Props, Iinteractable
         var isRotated = Mathf.Approximately(yAxis, SlotRotation);
         sprite.flipX = isRotated;
         customerMono.transform.SetParent(slot);
-
-        customer.StateMachine.ChangeState(customer.WaitState);
     }
 
     public bool HasAvailableSlot()
@@ -143,11 +128,11 @@ public class Table : Props, Iinteractable
 
     public void OnHoverEnter()
     {
-        spriteRenderer.material = outlineMaterial;
+        material.SetFloat(OutlineProperty, 1f);
     }
 
     public void OnHoverExit()
     {
-        spriteRenderer.material = normalMaterial;
+        material.SetFloat(OutlineProperty, 0f);
     }
 }
