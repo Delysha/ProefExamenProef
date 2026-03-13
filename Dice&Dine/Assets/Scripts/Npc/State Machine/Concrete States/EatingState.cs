@@ -14,8 +14,11 @@ public class EatingState : State
     {
         base.EnterState();
         Debug.Log("EatingState");
-        
-        
+
+        var moneyTake = Random.Range(8, 12);
+        customer.money -= moneyTake;
+        MainEconomy.Instance.CustomerLeavesMoney(customer.money);
+        _monoBehaviour.StartCoroutine(OrderReceived());
     }
 
     public override void FrameUpdate()
@@ -28,9 +31,7 @@ public class EatingState : State
     private IEnumerator OrderReceived()
     {
         yield return new WaitForSeconds(_delay);
-        var sprite = customer.GetComponent<SpriteRenderer>();
-        sprite.color = Color.green;
-        customer.StateMachine.ChangeState(customer.WalkState);
+        stateMachine.ChangeState(customer.LeaveState);
     }
 
     public override void ExitState()

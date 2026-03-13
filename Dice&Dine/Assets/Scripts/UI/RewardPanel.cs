@@ -43,7 +43,7 @@ public class RewardPanel : MonoBehaviour
         }
     }
 
-    private void SetText(int amount)
+    public void SetText(float amount)
     {
         rewardText.text = $"{amount}";
     }
