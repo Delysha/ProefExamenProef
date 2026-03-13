@@ -4,4 +4,6 @@ public interface IPickupable
 {
     void OnPickup(Transform holdPoint);
     void OnDrop();
+
+    void Disable();
 }

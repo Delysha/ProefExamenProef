@@ -11,7 +11,7 @@ public class LeaveState : State
     public override void EnterState()
     {
         Debug.Log("LeaveState");
-        customer.GetComponent<Component>().gameObject.SetActive(false);
+        // 
     }
     
 }

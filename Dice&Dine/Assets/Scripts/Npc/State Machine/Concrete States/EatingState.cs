@@ -21,17 +21,10 @@ public class EatingState : State
         _monoBehaviour.StartCoroutine(OrderReceived());
     }
 
-    public override void FrameUpdate()
-    {
-        base.FrameUpdate();
-        if(!Input.GetKeyDown(KeyCode.Space)) return;
-        _monoBehaviour.StartCoroutine(OrderReceived());
-    }
-
     private IEnumerator OrderReceived()
     {
         yield return new WaitForSeconds(_delay);
-        stateMachine.ChangeState(customer.LeaveState);
+        customer.GetComponent<Component>().gameObject.SetActive(false);
     }
 
     public override void ExitState()

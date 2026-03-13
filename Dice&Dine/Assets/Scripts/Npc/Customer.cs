@@ -87,7 +87,7 @@ public class Customer : MonoBehaviour, IWalkable, IWaitable, Iinteractable
 
     IEnumerator WaitBeforOrder()
     {
-        float waitTime = Random.Range(2f, 6f);
+        var waitTime = Random.Range(2f, 6f);
 
         yield return new WaitForSeconds(waitTime);
         

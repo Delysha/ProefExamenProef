@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -102,6 +103,13 @@ public class Table : Props, Iinteractable
         
         itemAsMono.transform.position = slot.position;
         itemAsMono.transform.SetParent(slot);
+
+        disableItem(item);
+    }
+
+    private void disableItem(IPickupable item)
+    {
+        item.Disable();
     }
 
     private void PlaceCustomer(PlayerPickup player, Transform slot)
