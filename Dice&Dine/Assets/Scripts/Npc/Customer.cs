@@ -11,6 +11,8 @@ public class Customer : MonoBehaviour, IWalkable, IWaitable, Iinteractable
     public WaitState WaitState { get; private set; }
     public WalkState WalkState { get; private set; }
     public IdleState IdleState { get; private set; }
+    
+    public LeaveState LeaveState { get; private set; }
 
     public int money;
     public int patience;
@@ -73,7 +75,7 @@ public class Customer : MonoBehaviour, IWalkable, IWaitable, Iinteractable
 
     IEnumerator WaitBeforOrder()
     {
-        float waitTime = Random.Range(2f, 6f);
+        var waitTime = Random.Range(2f, 6f);
 
         yield return new WaitForSeconds(waitTime);
         

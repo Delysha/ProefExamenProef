@@ -2,6 +2,10 @@
 
 public class MainEconomy : MonoBehaviour
 {
+    public static MainEconomy Instance;
+
+    [SerializeField] private RewardVisualizer rewardVisualizer;
+    
     [Header("Amount the Customers can leave& Amount(To Test)")]
     [SerializeField] private int maxAmount;
     [SerializeField] private int minAmount;
@@ -13,39 +17,20 @@ public class MainEconomy : MonoBehaviour
 
     [Header("Sound")]
     public AudioSource coinSound;
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     private void Start()
     {
         Debug.Log("The DailyQuota today is " + DailyQuota);
     }
 
-    private void Update()
+    public void CustomerLeavesMoney(int receivedMoney)
     {
-        CheatMoney();
-
-        CustomerLeavesMoney();
-    }
-
-    private void CheatMoney()
-    {
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            Money += amount;
-            coinSound.Play();
-        }
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            Money -= amount;
-        }
-    }
-
-    private void CustomerLeavesMoney()
-    {
-        //Remove Input, this is just for testing
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            float randomAmount = Random.Range(minAmount, maxAmount);
-            Money += randomAmount;
-            coinSound.Play();
-        }
+        Money += receivedMoney;
+        rewardVisualizer.GeneratePanel(transform,Money);
+        Debug.Log($"Money: {Money}" );
     }
 }

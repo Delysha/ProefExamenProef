@@ -15,6 +15,11 @@ public class PickupItem : MonoBehaviour , IPickupable , Iinteractable
         player.TryPickup(this);
     }
 
+    public void Disable()
+    {
+        gameObject.SetActive(false);
+    }
+
     public void OnHoverEnter()
     {
         // Later: outline shader aanzetten

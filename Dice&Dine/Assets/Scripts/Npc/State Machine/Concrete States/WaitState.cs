@@ -19,8 +19,4 @@ public class WaitState : State
         base.ExitState();
         customer._timer.StopWaiting();
     }
-
-    public override void FrameUpdate()
-    {
-    }
 }

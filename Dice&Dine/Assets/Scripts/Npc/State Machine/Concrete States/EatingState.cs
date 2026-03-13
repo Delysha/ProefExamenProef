@@ -14,22 +14,17 @@ public class EatingState : State
     {
         base.EnterState();
         Debug.Log("EatingState");
-        
-    }
 
-    public override void FrameUpdate()
-    {
-        base.FrameUpdate();
-        if(!Input.GetKeyDown(KeyCode.Space)) return;
+        var moneyTake = Random.Range(8, 12);
+        customer.money -= moneyTake;
+        MainEconomy.Instance.CustomerLeavesMoney(customer.money);
         _monoBehaviour.StartCoroutine(OrderReceived());
     }
 
     private IEnumerator OrderReceived()
     {
         yield return new WaitForSeconds(_delay);
-        var sprite = customer.GetComponent<SpriteRenderer>();
-        sprite.color = Color.green;
-        customer.StateMachine.ChangeState(customer.WalkState);
+        customer.GetComponent<Component>().gameObject.SetActive(false);
     }
 
     public override void ExitState()
