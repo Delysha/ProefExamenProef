@@ -79,6 +79,11 @@ public class Customer : MonoBehaviour, IWalkable, IWaitable, Iinteractable
         StartCoroutine(WaitBeforOrder());
     }
 
+    public void Satisfied()
+    {
+        animator.SetBool("isSatisfied", true);
+    }
+
     public void RaiseHand()
     {
         _wantsToOrder = true;
@@ -115,7 +120,6 @@ public class Customer : MonoBehaviour, IWalkable, IWaitable, Iinteractable
         Debug.Log("Customer wants to order!");
 
         Order();
-        //table.AddOrder();
 
         animator.SetBool("RaiseHand", false);
 

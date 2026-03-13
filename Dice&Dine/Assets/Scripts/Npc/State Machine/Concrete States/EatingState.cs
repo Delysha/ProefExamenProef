@@ -23,6 +23,7 @@ public class EatingState : State
 
     private IEnumerator OrderReceived()
     {
+        customer.Satisfied();
         yield return new WaitForSeconds(_delay);
         customer.GetComponent<Component>().gameObject.SetActive(false);
     }
