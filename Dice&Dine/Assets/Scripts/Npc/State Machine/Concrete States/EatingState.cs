@@ -15,7 +15,6 @@ public class EatingState : State
         base.EnterState();
         Debug.Log("EatingState");
         
-        
     }
 
     public override void FrameUpdate()
@@ -36,6 +35,7 @@ public class EatingState : State
     public override void ExitState()
     {
         base.ExitState();
+        Debug.Log(customer.money);
         customer._timer.StopWaiting();
     }
 }

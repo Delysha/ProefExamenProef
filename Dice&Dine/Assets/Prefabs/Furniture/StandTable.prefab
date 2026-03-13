@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7057578867506594653}
   m_Layer: 6
-  m_Name: 'Bordje '
+  m_Name: Bordje (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,11 +25,11 @@ Transform:
   m_GameObject: {fileID: 431655044532033575}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.077, y: 0.27200004, z: 0}
+  m_LocalPosition: {x: 0.077, y: 0.032, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7055424676324966210}
+  m_Father: {fileID: 1306409830599704246}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1235775426473488432
 GameObject:
@@ -40,9 +40,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4106828977217151041}
-  - component: {fileID: 2428012513307257060}
   m_Layer: 6
-  m_Name: Seat
+  m_Name: Seat(1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56,27 +55,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1235775426473488432}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 0.5, y: -0.25999996, z: 0}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0.5, y: -0.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7055424676324966210}
+  m_Father: {fileID: 8514930852495035138}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &2428012513307257060
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1235775426473488432}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3f9e0c7efe981247ba836ad7517c08f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Seat
-  seatSlot: {fileID: 0}
-  plateSlot: {fileID: 0}
 --- !u!1 &2248857886790946281
 GameObject:
   m_ObjectHideFlags: 0
@@ -87,7 +72,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7254245897642963065}
   m_Layer: 6
-  m_Name: Seat
+  m_Name: Seat(0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -101,12 +86,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2248857886790946281}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: -0.5, y: -0.25999996, z: 0}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -0.5, y: -0.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7177506288977848883}
+  m_Father: {fileID: 8514930852495035138}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &2552131837203721933
 GameObject:
@@ -250,9 +235,9 @@ Transform:
   m_Children:
   - {fileID: 5412270429801373337}
   - {fileID: 8560326954865918386}
-  - {fileID: 7177506288977848883}
-  - {fileID: 7055424676324966210}
+  - {fileID: 1306409830599704246}
   - {fileID: 3482664074798225402}
+  - {fileID: 8514930852495035138}
   - {fileID: 4367332550490503114}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -268,9 +253,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6be6f7d17f351dd408ddd315ea0de152, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Table
-  places:
-  - {fileID: 5770779945809358374}
-  - {fileID: 8532947624272535044}
+  itemSlots:
+  - {fileID: 4004124180746274160}
+  - {fileID: 7057578867506594653}
+  - {fileID: 0}
+  - {fileID: 0}
+  slotSeats:
+  - {fileID: 7254245897642963065}
+  - {fileID: 4106828977217151041}
   interactionPoint: {fileID: 8560326954865918386}
   spriteRenderer: {fileID: 502366651098835864}
   normalMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
@@ -502,6 +492,39 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &4268792930058683484
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1306409830599704246}
+  m_Layer: 6
+  m_Name: borden
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1306409830599704246
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4268792930058683484}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.24, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4004124180746274160}
+  - {fileID: 7057578867506594653}
+  m_Father: {fileID: 8786053255397143637}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4380930741032917873
 GameObject:
   m_ObjectHideFlags: 0
@@ -593,7 +616,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!1 &5770779945809358374
+--- !u!1 &5613184230792040538
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -601,22 +624,21 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7177506288977848883}
-  - component: {fileID: 2111892857148713670}
+  - component: {fileID: 8514930852495035138}
   m_Layer: 6
-  m_Name: Plaats 1
+  m_Name: Plaatsen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7177506288977848883
+--- !u!4 &8514930852495035138
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5770779945809358374}
+  m_GameObject: {fileID: 5613184230792040538}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -624,23 +646,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7254245897642963065}
-  - {fileID: 4004124180746274160}
+  - {fileID: 4106828977217151041}
   m_Father: {fileID: 8786053255397143637}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2111892857148713670
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5770779945809358374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3f9e0c7efe981247ba836ad7517c08f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Seat
-  seatSlot: {fileID: 2248857886790946281}
-  plateSlot: {fileID: 7995530774945077062}
 --- !u!1 &7995530774945077062
 GameObject:
   m_ObjectHideFlags: 0
@@ -666,57 +674,9 @@ Transform:
   m_GameObject: {fileID: 7995530774945077062}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.24000001, y: 0.27000007, z: 0}
+  m_LocalPosition: {x: -0.24, y: 0.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7177506288977848883}
+  m_Father: {fileID: 1306409830599704246}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &8532947624272535044
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7055424676324966210}
-  - component: {fileID: 2727802714627588700}
-  m_Layer: 6
-  m_Name: Plaats 2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7055424676324966210
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8532947624272535044}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 4106828977217151041}
-  - {fileID: 7057578867506594653}
-  m_Father: {fileID: 8786053255397143637}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2727802714627588700
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8532947624272535044}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3f9e0c7efe981247ba836ad7517c08f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Seat
-  seatSlot: {fileID: 1235775426473488432}
-  plateSlot: {fileID: 431655044532033575}

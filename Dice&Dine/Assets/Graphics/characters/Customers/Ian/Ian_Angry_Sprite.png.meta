@@ -1,16 +1,13 @@
 fileFormatVersion: 2
-guid: d7a6adc56e8c8eb458b13ce036eca929
+guid: 03ec016aefd44f04f896fdadf41c271d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7692838962206490588
-    second: Kevin_Drinking_Wishkey_0
+      213: 6816628263848472200
+    second: Ian_Angry_Sprite_0
   - first:
-      213: 5137014653360814877
-    second: Kevin_Drinking_Wishkey_1
-  - first:
-      213: -361733139126112566
-    second: Kevin_Drinking_Wishkey_2
+      213: 3001585231321291736
+    second: Ian_Angry_Sprite_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -57,7 +54,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 300
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -132,67 +129,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Kevin_Drinking_Wishkey_0
+      name: Ian_Angry_Sprite_0
       rect:
         serializedVersion: 2
-        x: 31
-        y: 15
-        width: 239
-        height: 815
+        x: 64
+        y: 116
+        width: 494
+        height: 549
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 420c567e8bb8d3590800000000000000
-      internalID: -7692838962206490588
+      spriteID: 88e63983a47899e50800000000000000
+      internalID: 6816628263848472200
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kevin_Drinking_Wishkey_1
+      name: Ian_Angry_Sprite_1
       rect:
         serializedVersion: 2
-        x: 274
-        y: 673
-        width: 12
-        height: 10
+        x: 642
+        y: 116
+        width: 488
+        height: 552
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d1b3c833c975a4740800000000000000
-      internalID: 5137014653360814877
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kevin_Drinking_Wishkey_2
-      rect:
-        serializedVersion: 2
-        x: 428
-        y: 15
-        width: 244
-        height: 811
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: acea6e260addafaf0800000000000000
-      internalID: -361733139126112566
+      spriteID: 8dbd6f36dd5c7a920800000000000000
+      internalID: 3001585231321291736
       vertices: []
       indices: 
       edges: []
@@ -201,7 +176,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: efa0381a73daeed47927a6d7c2da0de3
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -211,9 +186,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Kevin_Drinking_Wishkey_0: -7692838962206490588
-      Kevin_Drinking_Wishkey_1: 5137014653360814877
-      Kevin_Drinking_Wishkey_2: -361733139126112566
+      Ian_Angry_Sprite_0: 6816628263848472200
+      Ian_Angry_Sprite_1: 3001585231321291736
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

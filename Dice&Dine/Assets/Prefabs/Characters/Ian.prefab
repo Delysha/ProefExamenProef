@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 4042341430360209447}
   - component: {fileID: 451678393420808373}
   - component: {fileID: 8837237116498996338}
-  - component: {fileID: -7108183484907506142}
   m_Layer: 0
   m_Name: Ian
   m_TagString: Untagged
@@ -96,7 +95,7 @@ SpriteRenderer:
   m_Size: {x: 1.4566667, y: 1.8266667}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!114 &8947869005080044728
 MonoBehaviour:
@@ -112,7 +111,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Customer
   _timer: {fileID: 4042341430360209447}
   money: 0
+  patience: 0
   interactionPoint: {fileID: 2745257067337293372}
+  orderTicketPrefab: {fileID: 0}
+  ticketSpawnPoint: {fileID: 0}
   spriteRenderer: {fileID: 4151564203119813881}
   normalMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   outlineMaterial: {fileID: 2100000, guid: 603244dc1ee302248ba1cf1dec97308b, type: 2}
@@ -156,8 +158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::npcTimer
   npcType: 4
-  white: {r: 1, g: 1, b: 1, a: 1}
-  red: {r: 1, g: 0, b: 0, a: 1}
+  angerOverlay: {fileID: 4151564203119813881}
   maxPatience: 60
   currentPatience: 0
 --- !u!61 &451678393420808373
@@ -228,22 +229,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &-7108183484907506142
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 73446652492280835}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4760fece6d4a1994b9575b449f0fbe56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DrinkAnim
-  DrinkChampagne: 0
-  DrinkCocktail: 0
-  DrinkWhiskey: 0
-  NotDrinking: 0
 --- !u!1 &3075922084718451057
 GameObject:
   m_ObjectHideFlags: 0
