@@ -21,6 +21,7 @@ public class Customer : MonoBehaviour, IWalkable, IWaitable, Iinteractable
 
     public bool hasSeat = false;
     //[SerializeField] private TableOrder table;
+    public DrinkAnim DrinkAnim;
     private Animator animator;
 
     private bool _wantsToOrder = false;
@@ -44,6 +45,8 @@ public class Customer : MonoBehaviour, IWalkable, IWaitable, Iinteractable
         _timer = GetComponent<npcTimer>();
         animator = GetComponent<Animator>();
         orderMenu = FindObjectOfType<ThereIsOder>();
+
+        DrinkAnim = GetComponent<DrinkAnim>();
 
         if (spriteRenderer != null)
         {
@@ -77,6 +80,11 @@ public class Customer : MonoBehaviour, IWalkable, IWaitable, Iinteractable
     public void StartWaitingToOrder()
     {
         StartCoroutine(WaitBeforOrder());
+    }
+
+    public void Satisfied()
+    {
+        animator.SetBool("isSatisfied", true);
     }
 
     public void RaiseHand()
@@ -115,7 +123,6 @@ public class Customer : MonoBehaviour, IWalkable, IWaitable, Iinteractable
         Debug.Log("Customer wants to order!");
 
         Order();
-        //table.AddOrder();
 
         animator.SetBool("RaiseHand", false);
 
