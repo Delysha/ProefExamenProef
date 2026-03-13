@@ -961,7 +961,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MusicVolume
   _musicSource: {fileID: 495920481}
-  _volumeSlider: {fileID: 1705274192}
+  _musicSlider: {fileID: 1705274192}
+  _fxSources:
+  - {fileID: 474395569}
+  _fxSlider: {fileID: 414647701}
+  _masterSlider: {fileID: 460765377}
 --- !u!4 &510549195
 Transform:
   m_ObjectHideFlags: 0
