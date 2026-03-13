@@ -2910,7 +2910,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectPooling
   PooledObjects: []
-  ObjectToPool: {fileID: 73446652492280835, guid: 650d7171d5fc34c41b75f08969916982, type: 3}
+  ObjectToPool:
+  - {fileID: 8567623163354113906, guid: d983555006f657143a76c27627c5d55c, type: 3}
+  - {fileID: 73446652492280835, guid: 650d7171d5fc34c41b75f08969916982, type: 3}
+  - {fileID: 8200771020381563184, guid: 829c5f443f36bc74daee77c91a3cb16f, type: 3}
   amountToPool: 10
   customerSpawner: {fileID: 928444493}
 --- !u!1 &877064991
@@ -3067,12 +3070,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4558ce061d2521d468d3315f099f37d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CustomerSpawner
-  Targets:
-  - {fileID: 1143419523}
+  Target: {fileID: 1143419523}
   Entrance: {fileID: 599458425}
   objectPooling: {fileID: 845890853}
   amountCustomers: 8
-  outsidePos: {fileID: 1143419523}
   outsideCustomers: []
 --- !u!1 &1015739545
 GameObject:

@@ -5,7 +5,7 @@ public class ObjectPooling : MonoBehaviour
 {
     public static ObjectPooling Instance;
     public List<GameObject> PooledObjects;
-    public GameObject ObjectToPool;
+    public List<GameObject> ObjectToPool;
     [SerializeField] private int amountToPool;
     [SerializeField] private CustomerSpawner customerSpawner;
     
@@ -13,32 +13,27 @@ public class ObjectPooling : MonoBehaviour
     {
         Instance = this;
     }
-    // private void Start()
-    // {
-    //     PooledObjects = new List<GameObject>();
-    //     GameObject tmp;
-    //     for(var i = 0; i < amountToPool; i++)
-    //     {
-    //         tmp = Instantiate(ObjectToPool);
-    //         tmp.SetActive(false);
-    //         PooledObjects.Add(tmp);
-    //     }
-    // }
-    
-    // public GameObject GetPooledObject()
-    // {
-    //     for(var i = 0; i < amountToPool; i++)
-    //     {
-    //         InitializeObject(PooledObjects[i].transform );
-    //         if(!PooledObjects[i].activeInHierarchy) return PooledObjects[i];
-    //     }
-    //     return null;
-    // }
-
-    private void InitializeObject(Transform pooledObject)
+    private void Start()
     {
-        pooledObject.GetComponent<Customer>().targets = customerSpawner.Targets;
+        GameObject tmp;
+        for(var i = 0; i < amountToPool; i++)
+        {
+            var randomIndex = Random.Range(0, ObjectToPool.Count - 1);
+            tmp = Instantiate(ObjectToPool[randomIndex]);
+            tmp.SetActive(false);
+            PooledObjects.Add(tmp);
+        }
     }
+    
+    public GameObject GetPooledObject()
+    {
+        for(var i = 0; i < amountToPool; i++)
+        {
+            if(!PooledObjects[i].activeInHierarchy) return PooledObjects[i];
+        }
+        return null;
+    }
+    
     
     
     
