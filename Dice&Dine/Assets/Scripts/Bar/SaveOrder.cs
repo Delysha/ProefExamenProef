@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class SaveOrder : MonoBehaviour
 {
-    [SerializeField] private GameObject[] drinks;
+    [SerializeField] private GameObject[] _drinks;
 
-    public GameObject orderdDrink;
+    public GameObject OrderdDrink;
 
     private void Start()
     {
@@ -13,13 +13,13 @@ public class SaveOrder : MonoBehaviour
 
     public void StoreOrder()
     {
-        var orderdDrinkNumber = Random.Range(0, drinks.Length);
+        var orderdDrinkNumber = Random.Range(0, _drinks.Length);
 
-        orderdDrink = drinks[orderdDrinkNumber];
+        OrderdDrink = _drinks[orderdDrinkNumber];
     }
 
     public void StoreList()
     {
-        Debug.Log(orderdDrink);
+        Debug.Log(OrderdDrink);
     }
 }

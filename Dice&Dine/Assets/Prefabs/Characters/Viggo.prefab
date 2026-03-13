@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4470659759702893929}
   - component: {fileID: -7036696257618297271}
   - component: {fileID: 3377889998623179379}
-  - component: {fileID: -1211859113564499549}
+  - component: {fileID: -6871992565925433818}
   m_Layer: 0
   m_Name: Viggo
   m_TagString: Untagged
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3994606316245907317, guid: 6a3b234977e0ced46adffb3ea3305820, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -111,8 +111,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Customer
   _timer: {fileID: -7036696257618297271}
   money: 0
-  patience: 0
   interactionPoint: {fileID: 1221539980201077443}
+  table: {fileID: 0}
+  spriteRenderer: {fileID: 7433759553026864667}
+  normalMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  outlineMaterial: {fileID: 2100000, guid: 603244dc1ee302248ba1cf1dec97308b, type: 2}
 --- !u!50 &4470659759702893929
 Rigidbody2D:
   serializedVersion: 5
@@ -153,7 +156,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::npcTimer
   npcType: 3
-  angerOverlay: {fileID: 7433759553026864667}
+  white: {r: 1, g: 0, b: 0, a: 1}
+  red: {r: 1, g: 0, b: 0, a: 1}
   maxPatience: 60
   currentPatience: 0
 --- !u!61 &3377889998623179379
@@ -194,7 +198,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.41, y: 3.74}
+    oldSize: {x: 1.6066667, y: 2.4933333}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -202,7 +206,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.41, y: 3.74}
   m_EdgeRadius: 0
---- !u!95 &-1211859113564499549
+--- !u!95 &-6871992565925433818
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0

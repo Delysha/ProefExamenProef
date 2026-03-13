@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 8936274899336822283}
   - component: {fileID: 5544008281869931187}
   - component: {fileID: -7552622671064271136}
-  - component: {fileID: -2182060297051619723}
+  - component: {fileID: 368215072539303108}
   m_Layer: 0
   m_Name: Kevin
   m_TagString: Untagged
@@ -116,7 +116,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 1993710755605868245, guid: f8e626490f6b3bf4f83ac02f2c3f9ded, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -142,8 +142,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Customer
   _timer: {fileID: 5544008281869931187}
   money: 0
-  patience: 0
   interactionPoint: {fileID: 7117407659466418415}
+  table: {fileID: 0}
+  spriteRenderer: {fileID: 3281241883740900403}
+  normalMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  outlineMaterial: {fileID: 2100000, guid: 603244dc1ee302248ba1cf1dec97308b, type: 2}
 --- !u!50 &8936274899336822283
 Rigidbody2D:
   serializedVersion: 5
@@ -184,7 +187,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::npcTimer
   npcType: 2
-  angerOverlay: {fileID: 3281241883740900403}
+  white: {r: 1, g: 1, b: 1, a: 1}
+  red: {r: 1, g: 0, b: 0, a: 1}
   maxPatience: 60
   currentPatience: 0
 --- !u!61 &-7552622671064271136
@@ -225,7 +229,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.09, y: 4.08}
+    oldSize: {x: 0.7266667, y: 2.72}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -233,7 +237,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.09, y: 4.08}
   m_EdgeRadius: 0
---- !u!95 &-2182060297051619723
+--- !u!95 &368215072539303108
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
