@@ -113,6 +113,8 @@ MonoBehaviour:
   _timer: {fileID: 4042341430360209447}
   money: 0
   interactionPoint: {fileID: 2745257067337293372}
+  hasSeat: 0
+  DrinkAnim: {fileID: -7108183484907506142}
   spriteRenderer: {fileID: 4151564203119813881}
   normalMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   outlineMaterial: {fileID: 2100000, guid: 603244dc1ee302248ba1cf1dec97308b, type: 2}

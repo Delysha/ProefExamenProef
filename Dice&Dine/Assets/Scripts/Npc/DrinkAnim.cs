@@ -17,18 +17,9 @@ public class DrinkAnim : MonoBehaviour
         _animator = GetComponent<Animator>();
     }
 
-    private void Update()
-    {
-        DrinkingChampagne();
-        DrinkingCocktail();
-        DrinkingWishkey();
-        StopDrinking();
-    }
-
     public void DrinkingChampagne()
     {
-        if(!DrinkChampagne) { return; }
-        _animator.SetBool("IsDrinkingChampagne", true);
+        _animator.SetTrigger("IsDrinkingChampagne");
     }
 
     public void DrinkingCocktail()

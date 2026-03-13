@@ -23,6 +23,9 @@ public class EatingState : State
 
     private IEnumerator OrderReceived()
     {
+        customer.DrinkAnim.DrinkingChampagne();
+        yield return new WaitForSeconds(_delay);
+        Debug.Log("HEY");
         customer.Satisfied();
         yield return new WaitForSeconds(_delay);
         customer.GetComponent<Component>().gameObject.SetActive(false);

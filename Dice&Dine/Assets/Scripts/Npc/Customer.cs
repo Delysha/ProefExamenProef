@@ -21,6 +21,7 @@ public class Customer : MonoBehaviour, IWalkable, IWaitable, Iinteractable
 
     public bool hasSeat = false;
     //[SerializeField] private TableOrder table;
+    public DrinkAnim DrinkAnim;
     private Animator animator;
 
     private bool _wantsToOrder = false;
@@ -44,6 +45,8 @@ public class Customer : MonoBehaviour, IWalkable, IWaitable, Iinteractable
         _timer = GetComponent<npcTimer>();
         animator = GetComponent<Animator>();
         orderMenu = FindObjectOfType<ThereIsOder>();
+
+        DrinkAnim = GetComponent<DrinkAnim>();
 
         if (spriteRenderer != null)
         {
