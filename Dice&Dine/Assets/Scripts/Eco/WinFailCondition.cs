@@ -2,32 +2,44 @@ using UnityEngine;
 
 public class WinFailCondition : MonoBehaviour
 {
-    private MainEconomy _mainEconoyScript;
+    private MainEconomy _mainEconomyScript;
+    private DayTimerScript _dayTimerScript;
+
+    [Header("UI")]
+    [SerializeField] private GameObject winUI;
+    [SerializeField] private GameObject loseUI;
 
     private void Awake()
     {
-        _mainEconoyScript = FindAnyObjectByType<MainEconomy>();
+        _mainEconomyScript = FindAnyObjectByType<MainEconomy>();
+        _dayTimerScript = FindAnyObjectByType<DayTimerScript>();
     }
 
-    private void Update()
+    private void Start()
     {
-        DayCompleted();
-        GameOver();
+        _dayTimerScript.OnDayFinished += HandleDayFinished;
+
+        winUI.SetActive(false);
+        loseUI.SetActive(false);
     }
 
-    public void DayCompleted()
+    private void HandleDayFinished()
     {
-        if (_mainEconoyScript.Money >= _mainEconoyScript.DailyQuota)
+        if (_mainEconomyScript.Money >= _mainEconomyScript.DailyQuota)
         {
-            Debug.Log("You met the daily qouta");
+            Debug.Log("You met the daily quota!");
+            winUI.SetActive(true);
+        }
+        else
+        {
+            Debug.Log("You did not hit the daily quota!");
+            loseUI.SetActive(true);
         }
     }
 
-    public void GameOver()
+    private void OnDestroy()
     {
-        if (_mainEconoyScript.DailyQuota != _mainEconoyScript.Money && _mainEconoyScript.Money <= _mainEconoyScript.DailyQuota)
-        {
-            Debug.Log("You did not hit the daily quota");
-        }
+        if (_dayTimerScript != null)
+            _dayTimerScript.OnDayFinished -= HandleDayFinished;
     }
 }

@@ -132,8 +132,8 @@ TextureImporter:
       name: Ian_Drinking_Whiskey_0
       rect:
         serializedVersion: 2
-        x: 44
-        y: 69
+        x: 60
+        y: 31
         width: 437
         height: 548
       alignment: 0
@@ -154,10 +154,10 @@ TextureImporter:
       name: Ian_Drinking_Whiskey_1
       rect:
         serializedVersion: 2
-        x: 546
-        y: 69
+        x: 574
+        y: 31
         width: 440
-        height: 547
+        height: 548
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,7 +176,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 7f4eb54bcbcd7c14faf64ed8ae283363
+    spriteID: 4b41c3d0d92d9104dafe98c4392fd0c9
     internalID: 0
     vertices: []
     indices: 

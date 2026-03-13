@@ -1,22 +1,13 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Dice&Dine/Assets/Graphics/assets/Cocktail.png.meta
-guid: 08c76500ae77a8847bbabc3ee97c884d
+guid: 986db887fe1be4c439e68dc9a51a6e88
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6873080446834901343
-    second: Cocktail_0
-========
-guid: 23d56d5e9266f9a4291464902c455bfb
-TextureImporter:
-  internalIDToNameTable:
+      213: -8956321776182739577
+    second: Antonio_Idle_0
   - first:
-      213: 2253639577306037883
-    second: Antonio_0
-  - first:
-      213: -5338153101640517777
-    second: Antonio_1
->>>>>>>> develop:Dice&Dine/Assets/Graphics/characters/Antonio.png.meta
+      213: 1374135806162362328
+    second: Antonio_Idle_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -63,7 +54,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1500
+  spritePixelsToUnits: 300
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -138,60 +129,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-<<<<<<<< HEAD:Dice&Dine/Assets/Graphics/assets/Cocktail.png.meta
-      name: Cocktail_0
-      rect:
-        serializedVersion: 2
-        x: 78
-        y: 66
-        width: 435
-        height: 527
-========
-      name: Antonio_0
+      name: Antonio_Idle_0
       rect:
         serializedVersion: 2
         x: 56
         y: 63
         width: 293
         height: 792
->>>>>>>> develop:Dice&Dine/Assets/Graphics/characters/Antonio.png.meta
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-<<<<<<<< HEAD:Dice&Dine/Assets/Graphics/assets/Cocktail.png.meta
-      spriteID: f5107425046126f50800000000000000
-      internalID: 6873080446834901343
-========
-      spriteID: b7e76195149864f10800000000000000
-      internalID: 2253639577306037883
+      spriteID: 78d38841cc0c4b380800000000000000
+      internalID: -8956321776182739577
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Antonio_1
+      name: Antonio_Idle_1
       rect:
         serializedVersion: 2
-        x: 494
+        x: 493
         y: 63
         width: 293
-        height: 782
+        height: 792
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f67311c69021be5b0800000000000000
-      internalID: -5338153101640517777
->>>>>>>> develop:Dice&Dine/Assets/Graphics/characters/Antonio.png.meta
+      spriteID: 8dfd3773c39e11310800000000000000
+      internalID: 1374135806162362328
       vertices: []
       indices: 
       edges: []
@@ -200,7 +176,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 323aa63205f756b4593c29ae597dda33
     internalID: 0
     vertices: []
     indices: 
@@ -210,12 +186,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-<<<<<<<< HEAD:Dice&Dine/Assets/Graphics/assets/Cocktail.png.meta
-      Cocktail_0: 6873080446834901343
-========
-      Antonio_0: 2253639577306037883
-      Antonio_1: -5338153101640517777
->>>>>>>> develop:Dice&Dine/Assets/Graphics/characters/Antonio.png.meta
+      Antonio_Idle_0: -8956321776182739577
+      Antonio_Idle_1: 1374135806162362328
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

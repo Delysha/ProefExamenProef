@@ -1,21 +1,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class CustomerSpawner : MonoBehaviour
 {
-    public Transform Target;
+    public List<Transform> Targets;
     [SerializeField] private Entrance Entrance;
     [SerializeField] private ObjectPooling objectPooling;
     [SerializeField] private int amountCustomers;
+    [SerializeField] private Transform outsidePos;
     [SerializeField] private List<GameObject> outsideCustomers = new List<GameObject>();
     private void Start()
     {
-        //SpawnCustomers();
+        SpawnCustomers();
     }
 
     private void SpawnCustomers()
     {
+
         for (var i = 0; i < amountCustomers; i++)
         {
             var customerObject = objectPooling.GetPooledObject();
@@ -34,7 +35,7 @@ public class CustomerSpawner : MonoBehaviour
         if (index >= 6)
         {
             outsideCustomers.Add(customer);
-            customer.transform.position = Target.transform.position;
+            customer.transform.position = outsidePos.transform.position;
         }
     }
     
