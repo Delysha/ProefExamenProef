@@ -9,20 +9,20 @@ public class CustomerSpawner : MonoBehaviour
     [SerializeField] private int amountCustomers;
     [SerializeField] private Transform outsidePos;
     [SerializeField] private List<GameObject> outsideCustomers = new List<GameObject>();
-    private void Start()
-    {
-        SpawnCustomers();
-    }
+    // private void Start()
+    // {
+    //     SpawnCustomers();
+    // }
 
-    private void SpawnCustomers()
-    {
-
-        for (var i = 0; i < amountCustomers; i++)
-        {
-            var customerObject = objectPooling.GetPooledObject();
-            SetCustomerPos(customerObject, Entrance, i);
-        } 
-    }
+    // private void SpawnCustomers()
+    // {
+    //
+    //     for (var i = 0; i < amountCustomers; i++)
+    //     {
+    //         var customerObject = objectPooling.GetPooledObject();
+    //         SetCustomerPos(customerObject, Entrance, i);
+    //     } 
+    // }
     
     
     private void SetCustomerPos(GameObject customer, Entrance entranceRow, int index)
