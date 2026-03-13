@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public enum NPCType
 {
@@ -11,14 +12,12 @@ public enum NPCType
 
 public class npcTimer : MonoBehaviour
 {
-    [SerializeField] private npcSounds NPCSounds;
-
-
     public NPCType npcType;
-
+    
+    [SerializeField] private Color white;
+    [SerializeField] private Color red;
     private SpriteRenderer sprite;
-    public SpriteRenderer angerOverlay;
-
+    
     public float maxPatience = 60f;
     public float currentPatience;
 
@@ -28,45 +27,22 @@ public class npcTimer : MonoBehaviour
     private void Start()
     {
         sprite = GetComponent<SpriteRenderer>(); 
-
-        //test inputs
-        Debug.Log("Press 1 = Start Waiting");
-        Debug.Log("Press 2 = Stop Waiting");
-        Debug.Log("Press 3 = Add Patience (Drunk)");
-        Debug.Log("Press 4 = Remove Patience (Drunk)");
     }
-    void Update()
+    private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-            StartWaiting();
-
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-            StopWaiting();
-
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-            ModifyPatience(10f);
-
-        if (Input.GetKeyDown(KeyCode.Alpha4))
-            ModifyPatience(-10f);
-
         if (!isWaiting) return;
 
         currentPatience -= Time.deltaTime * timerSpeed;
 
-        if (currentPatience <= 0f )
+        var t = 1f - (currentPatience / maxPatience);
+        var lerpedColor = Color.Lerp(Color.white, Color.red, t);
+
+        sprite.color = lerpedColor;
+
+        if (currentPatience <= 0f)
         {
-            Leave();
+            StartCoroutine(Leave());
         }
-
-        float normalized = currentPatience / maxPatience; 
-
-        float anger = 1f - normalized;
-
-        Color c = angerOverlay.color;
-        c.a = anger;
-        angerOverlay.color = c;
-
-        NPCSounds.CheckFrustrated(currentPatience);
     }
 
     public void StartWaiting()
@@ -74,18 +50,17 @@ public class npcTimer : MonoBehaviour
         SetBasePatience();
         currentPatience = maxPatience;
         isWaiting = true;
-        NPCSounds.PlayHandsUpSound();
+
     }
 
     public void StopWaiting()
     {
         isWaiting = false;
-        NPCSounds.PlaySatisfied();
     }
 
-    void Leave ()
+    private IEnumerator Leave ()
     {
-        isWaiting = false;
+        yield return new WaitForSeconds(3f);
         Destroy(gameObject);
     }
 

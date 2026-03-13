@@ -5,7 +5,6 @@ using UnityEngine;
 public class Customer : MonoBehaviour, IWalkable, IWaitable, Iinteractable
 {
     public npcTimer _timer;
-
     public StateMachine StateMachine { get; private set; }
     public EatingState EatingState { get; private set; }
     public WaitState WaitState { get; private set; }
@@ -13,15 +12,18 @@ public class Customer : MonoBehaviour, IWalkable, IWaitable, Iinteractable
     public IdleState IdleState { get; private set; }
 
     public int money;
-    public int patience;
 
     public List<Transform> targets { get; set; }
 
     [SerializeField] private Transform interactionPoint;
-    [SerializeField] private TableOrder table;
-    [SerializeField] private Animator animator;
+
+    public bool hasSeat = false;
+    //[SerializeField] private TableOrder table;
+    private Animator animator;
 
     private bool _wantsToOrder = false;
+
+    private ThereIsOder orderMenu;
 
     [Header("Highlight Settings")]
     [SerializeField] private SpriteRenderer spriteRenderer;
@@ -38,6 +40,8 @@ public class Customer : MonoBehaviour, IWalkable, IWaitable, Iinteractable
         IdleState = new IdleState(this, StateMachine);
 
         _timer = GetComponent<npcTimer>();
+        animator = GetComponent<Animator>();
+        orderMenu = FindObjectOfType<ThereIsOder>();
 
         if (spriteRenderer != null)
         {
@@ -48,11 +52,19 @@ public class Customer : MonoBehaviour, IWalkable, IWaitable, Iinteractable
     private void Start()
     {
         StateMachine.Initialize(WalkState);
+
+        InitializeMoney();
     }
 
     private void Update()
     {
         StateMachine.CurrentState.FrameUpdate();
+    }
+
+    private void InitializeMoney()
+    {
+        var amount = Random.Range(20, 33);
+        money += amount;
     }
 
     public Transform GetTransform()
@@ -80,14 +92,28 @@ public class Customer : MonoBehaviour, IWalkable, IWaitable, Iinteractable
         RaiseHand();
     }
 
+    private void Order()
+    {
+        orderMenu._oderOnPanel = true;
+    }
+
     public void Interact(PlayerPickup player)
     {
-        player.TryLead(this);
+        Debug.Log(hasSeat);
+        if (!hasSeat)
+        {
+            player.TryLead(this);
+            hasSeat = true;
+        } 
+       
 
         if (!_wantsToOrder)
             return;
 
-        table.AddOrder();
+        Debug.Log("Customer wants to order!");
+
+        Order();
+        //table.AddOrder();
 
         animator.SetBool("RaiseHand", false);
 

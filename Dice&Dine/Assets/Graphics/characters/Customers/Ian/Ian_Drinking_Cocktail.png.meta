@@ -132,9 +132,9 @@ TextureImporter:
       name: Ian_Drinking_Cocktail_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 69
-        width: 505
+        x: 12
+        y: 32
+        width: 521
         height: 548
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -154,10 +154,10 @@ TextureImporter:
       name: Ian_Drinking_Cocktail_1
       rect:
         serializedVersion: 2
-        x: 546
-        y: 69
+        x: 574
+        y: 31
         width: 440
-        height: 546
+        height: 548
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,7 +176,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: ab34c8ed23db86f49a70e2130509e92a
+    spriteID: 7a6f683b44a06114d999af28c28cb0b9
     internalID: 0
     vertices: []
     indices: 
