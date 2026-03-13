@@ -1602,7 +1602,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -10.13, y: -2.42}
+  m_AnchoredPosition: {x: -8.52, y: -2.42}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &599458425
@@ -2910,7 +2910,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectPooling
   PooledObjects: []
-  ObjectToPool: {fileID: 73446652492280835, guid: 650d7171d5fc34c41b75f08969916982, type: 3}
+  ObjectToPool:
+  - {fileID: 8567623163354113906, guid: d983555006f657143a76c27627c5d55c, type: 3}
+  - {fileID: 73446652492280835, guid: 650d7171d5fc34c41b75f08969916982, type: 3}
+  - {fileID: 8200771020381563184, guid: 829c5f443f36bc74daee77c91a3cb16f, type: 3}
+  - {fileID: 7870255045465184602, guid: 208e8a8aed89b62469d0db1b6300a0b8, type: 3}
+  - {fileID: 7469813852834840569, guid: c7ce268914c17ed48a30b4f994ead3a2, type: 3}
   amountToPool: 10
   customerSpawner: {fileID: 928444493}
 --- !u!1 &877064991
@@ -3067,12 +3072,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4558ce061d2521d468d3315f099f37d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CustomerSpawner
-  Targets:
-  - {fileID: 1143419523}
+  Target: {fileID: 599458424}
   Entrance: {fileID: 599458425}
   objectPooling: {fileID: 845890853}
   amountCustomers: 8
-  outsidePos: {fileID: 1143419523}
   outsideCustomers: []
 --- !u!1 &1015739545
 GameObject:
@@ -5696,8 +5699,8 @@ Transform:
   m_GameObject: {fileID: 1865785642}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0142, y: -0.0525, z: 0}
-  m_LocalScale: {x: 0.9383321, y: 0.9788, z: 1}
+  m_LocalPosition: {x: 0.5405, y: -0.0525, z: 0}
+  m_LocalScale: {x: 0.8972331, y: 0.9788, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -5870,7 +5873,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 4.249939}
+  m_AnchoredPosition: {x: 0, y: 4.25}
   m_SizeDelta: {x: 0, y: 8.484009}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1894828467
@@ -6498,9 +6501,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bar
       objectReference: {fileID: 0}
+    - target: {fileID: 2638221060641209978, guid: 12fd3958634e564409af0824651ba6e0, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 6147752205085404925, guid: 12fd3958634e564409af0824651ba6e0, type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7423745914824758014, guid: 12fd3958634e564409af0824651ba6e0, type: 3}

@@ -10,8 +10,6 @@ public class Customer : MonoBehaviour, IWalkable, IWaitable, Iinteractable
     public WaitState WaitState { get; private set; }
     public WalkState WalkState { get; private set; }
     public IdleState IdleState { get; private set; }
-    
-    public LeaveState LeaveState { get; private set; }
 
     public int money;
 
