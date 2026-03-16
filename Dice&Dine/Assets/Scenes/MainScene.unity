@@ -129,7 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 511120}
   m_Layer: 5
-  m_Name: Wallet (1)
+  m_Name: Quota
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -148,7 +148,6 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 103616798}
-  - {fileID: 1488047223}
   m_Father: {fileID: 1824265812}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -378,7 +377,7 @@ GameObject:
   - component: {fileID: 103616800}
   - component: {fileID: 103616799}
   m_Layer: 5
-  m_Name: MoneyWallet
+  m_Name: Quota(img)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -395,7 +394,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.4137083, y: 0.884615, z: 0.8090738}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1488047223}
   m_Father: {fileID: 511120}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1023,7 +1023,7 @@ GameObject:
   - component: {fileID: 328384737}
   - component: {fileID: 328384736}
   m_Layer: 5
-  m_Name: MoneyWallet
+  m_Name: MoneyWallet(img)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1040,7 +1040,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.4137083, y: 0.884615, z: 0.8090738}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1159100023}
   m_Father: {fileID: 2111409737}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -4243,15 +4244,15 @@ RectTransform:
   m_GameObject: {fileID: 1159100022}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.967742, y: 0.8064517, z: 1.935484}
+  m_LocalScale: {x: 0.6845416, y: 0.9116414, z: 2.3922222}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2111409737}
+  m_Father: {fileID: 328384735}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 58.6, y: 2.1}
-  m_SizeDelta: {x: 211.589, y: 55.889}
+  m_AnchoredPosition: {x: 85.926414, y: -7.7999806}
+  m_SizeDelta: {x: 103.8638, y: 55.889}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1159100024
 MonoBehaviour:
@@ -4273,7 +4274,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ': '
+  m_text: '0
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 126e2c50a6b86bb479735b858974cdab, type: 2}
   m_sharedMaterial: {fileID: 2853695693882050901, guid: 126e2c50a6b86bb479735b858974cdab, type: 2}
@@ -4308,7 +4311,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
@@ -4565,6 +4568,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1190555244}
   - component: {fileID: 1190555245}
+  - component: {fileID: 1190555246}
   m_Layer: 0
   m_Name: Eco Manager
   m_TagString: Untagged
@@ -4605,6 +4609,22 @@ MonoBehaviour:
   amount: 10
   Money: 0
   DailyQuota: 100
+--- !u!114 &1190555246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190555243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5c900715473fc043b2da4d430ebef56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EconomyUI
+  dailyQuotaText: {fileID: 1488047224}
+  dailyQuotaTX: 
+  moneyText: {fileID: 1159100024}
+  moneyTX: 
 --- !u!1 &1193220277
 GameObject:
   m_ObjectHideFlags: 0
@@ -5414,15 +5434,15 @@ RectTransform:
   m_GameObject: {fileID: 1488047222}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.96774215, y: 0.8064518, z: 1.9354843}
+  m_LocalScale: {x: 0.68454164, y: 0.91164154, z: 2.3922224}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 511120}
+  m_Father: {fileID: 103616798}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 127.6, y: -21.9}
-  m_SizeDelta: {x: 199.008, y: 46.4299}
+  m_AnchoredPosition: {x: 40.4, y: 0.382}
+  m_SizeDelta: {x: 56.9975, y: 38.068}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1488047224
 MonoBehaviour:
@@ -5444,7 +5464,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 126e2c50a6b86bb479735b858974cdab, type: 2}
   m_sharedMaterial: {fileID: 2853695693882050901, guid: 126e2c50a6b86bb479735b858974cdab, type: 2}
@@ -5471,15 +5491,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
@@ -7756,7 +7776,6 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 328384735}
-  - {fileID: 1159100023}
   m_Father: {fileID: 1824265812}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
