@@ -20,11 +20,6 @@ public class MainEconomy : MonoBehaviour
         Instance = this;
     }
 
-    private void Start()
-    {
-        Debug.Log("The DailyQuota today is " + DailyQuota);
-    }
-
     public void CustomerLeavesMoney(int receivedMoney)
     {
         Money += receivedMoney;
