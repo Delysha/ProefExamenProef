@@ -23,6 +23,10 @@ public class EatingState : State
 
     private IEnumerator OrderReceived()
     {
+        customer.DrinkAnim.DrinkingChampagne();
+        yield return new WaitForSeconds(_delay);
+        Debug.Log("HEY");
+        customer.Satisfied();
         yield return new WaitForSeconds(_delay);
         customer.GetComponent<Component>().gameObject.SetActive(false);
     }
@@ -30,7 +34,6 @@ public class EatingState : State
     public override void ExitState()
     {
         base.ExitState();
-        Debug.Log(customer.money);
         customer._timer.StopWaiting();
     }
 }

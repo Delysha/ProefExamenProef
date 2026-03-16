@@ -13,17 +13,17 @@ public class ObjectPooling : MonoBehaviour
     {
         Instance = this;
     }
-    //private void Start()
-    //{
-    //    GameObject tmp;
-    //    for(var i = 0; i < amountToPool; i++)
-    //    {
-    //        var randomIndex = Random.Range(0, ObjectToPool.Count - 1);
-    //        tmp = Instantiate(ObjectToPool[randomIndex]);
-    //        tmp.SetActive(false);
-    //        PooledObjects.Add(tmp);
-    //    }
-    //}
+    private void Start()
+    {
+        GameObject tmp;
+        for(var i = 0; i < amountToPool; i++)
+        {
+            var randomIndex = Random.Range(0, ObjectToPool.Count - 1);
+            tmp = Instantiate(ObjectToPool[randomIndex]);
+            tmp.SetActive(false);
+            PooledObjects.Add(tmp);
+        }
+    }
     
     public GameObject GetPooledObject()
     {
