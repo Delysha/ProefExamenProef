@@ -9,11 +9,11 @@ public class EconomyUI : MonoBehaviour
 
     [Header("DailyQuotaText")]
     [SerializeField] private TMP_Text dailyQuotaText;
-    [SerializeField] private string dailyQuotaTX;
+    private string _dailyQuotaTX;
 
     [Header("MoneyText")]
     [SerializeField] private TMP_Text moneyText;
-    [SerializeField] private string moneyTX;
+    private string _moneyTX;
 
     private void Awake()
     {
@@ -22,7 +22,7 @@ public class EconomyUI : MonoBehaviour
 
     private void Update()
     {
-        dailyQuotaText.text = dailyQuotaTX + _mainEconomyScript.DailyQuota;
-        moneyText.text = moneyTX + _mainEconomyScript.Money;
+        dailyQuotaText.text = _dailyQuotaTX + _mainEconomyScript.DailyQuota;
+        moneyText.text = _moneyTX + _mainEconomyScript.Money;
     }
 }
