@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: -5298114511413669867}
   - component: {fileID: -3553391793276941678}
   - component: {fileID: 8842650928762696296}
+  - component: {fileID: 6948701255200531371}
   m_Layer: 0
   m_Name: Violet
   m_TagString: Untagged
@@ -141,9 +142,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Customer
   _timer: {fileID: -5298114511413669867}
-  money: 0
+  money: 30
   interactionPoint: {fileID: 5981537258817418213}
-  table: {fileID: 0}
+  hasSeat: 0
+  DrinkAnim: {fileID: 6948701255200531371}
   spriteRenderer: {fileID: 3268649939859479912}
   normalMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   outlineMaterial: {fileID: 2100000, guid: 603244dc1ee302248ba1cf1dec97308b, type: 2}
@@ -259,3 +261,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6948701255200531371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7469813852834840569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4760fece6d4a1994b9575b449f0fbe56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DrinkAnim
+  DrinkChampagne: 0
+  DrinkCocktail: 0
+  DrinkWhiskey: 0
+  NotDrinking: 0

@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 5544008281869931187}
   - component: {fileID: -7552622671064271136}
   - component: {fileID: 368215072539303108}
+  - component: {fileID: 8660295903048919795}
   m_Layer: 0
   m_Name: Kevin
   m_TagString: Untagged
@@ -141,9 +142,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Customer
   _timer: {fileID: 5544008281869931187}
-  money: 0
+  money: 35
   interactionPoint: {fileID: 7117407659466418415}
-  table: {fileID: 0}
+  hasSeat: 0
+  DrinkAnim: {fileID: 8660295903048919795}
   spriteRenderer: {fileID: 3281241883740900403}
   normalMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   outlineMaterial: {fileID: 2100000, guid: 603244dc1ee302248ba1cf1dec97308b, type: 2}
@@ -259,3 +261,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8660295903048919795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8200771020381563184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4760fece6d4a1994b9575b449f0fbe56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DrinkAnim
+  DrinkChampagne: 0
+  DrinkCocktail: 0
+  DrinkWhiskey: 0
+  NotDrinking: 0

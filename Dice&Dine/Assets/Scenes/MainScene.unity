@@ -3173,6 +3173,8 @@ MonoBehaviour:
   - {fileID: 8567623163354113906, guid: d983555006f657143a76c27627c5d55c, type: 3}
   - {fileID: 73446652492280835, guid: 650d7171d5fc34c41b75f08969916982, type: 3}
   - {fileID: 8200771020381563184, guid: 829c5f443f36bc74daee77c91a3cb16f, type: 3}
+  - {fileID: 7870255045465184602, guid: 208e8a8aed89b62469d0db1b6300a0b8, type: 3}
+  - {fileID: 7469813852834840569, guid: c7ce268914c17ed48a30b4f994ead3a2, type: 3}
   amountToPool: 10
   customerSpawner: {fileID: 928444493}
 --- !u!1 &877064991
